@@ -15,5 +15,3 @@
 `define FSUBL 4'h1
 `define FANDL 4'H2
 `define FXORL 4'h3
-
-//

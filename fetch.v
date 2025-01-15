@@ -1,3 +1,4 @@
+`include "defines.v"
 module fetch(
     input wire[63:0] PC_i,
 
@@ -33,15 +34,26 @@ assign instr={instr_mem[PC_i+9],instr_mem[PC_i+8],
 //人类的惯性思维下，icode应该在低4bit。但实际上读入文件的时候，按照字节读入，
 //所以实际上icode就放在了高位。
 
-assign icode_ifunc=instr[0];
 assign icode_o=instr[7:4];
 assign ifun_o=instr[3:0];
 
 
 assign instr_valid_o=(icode_o<4'hC);//检查指令是否出错
 
-//是否需要  
-assign need_regids=(icode_o==4'H2)||(icode_o==4'd3)||(icode_o==4'd4)||(icode_o==4'd5)||(icode_o==4'd6)||(icode_o==4'd10)||(icode_o==4'd11);
+//是否需要寄存器位，1B  
+assign need_regids=(icode_o==`ICMOVQ)||(icode_o==`IIRMOVQ)||(icode_o==`IRMMOVQ)||(icode_o==`IMRMOVQ)||(icode_o==`IOPQ)||(icode_o==`IPUSHQ)||(icode_o==`IPOPQ);
 
+//是否需要立即数
+assign need_valC=(icode_o==`IIRMOVQ)||(icode_o==`IRMMOVQ)||
+        (icode_o==`IMRMOVQ)||(icode_o==`IJXX)||(icode_o==`ICALL);
+
+//给出寄存器AB的索引值（如果用到了的话）
+
+assign rA_o=need_regids?{instr[11:8]}:4'hf;
+assign rB_o=need_regids?{instr[15:12]}:4'hf;
+
+assign valC_o=need_regids?instr[79:16]:instr[71:8];
+
+assign valP_o=PC_i+1+8*need_valC+need_regids;
 
 endmodule

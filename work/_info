@@ -4,21 +4,21 @@ K3
 cModel Technology
 Z0 dD:\altera\13.0sp1
 vfetch
-Z1 I20CV^jJDcOn;:P`QO3gAF3
-Z2 Vd0nOPQU=Xd3;2o:R5ebg@2
-Z3 dd:\project\ic\cpu\DawnCPU
-Z4 w1736943202
-Z5 8d:\project\ic\cpu\DawnCPU\fetch.v
-Z6 Fd:\project\ic\cpu\DawnCPU\fetch.v
-L0 1
-Z7 OV;L;10.1d;51
-r1
-31
-Z8 o-nologo -work {D:\project\ic\cpu\DawnCPU\work} -O0
-Z9 !s100 9zB:U;@gFMXcG;fhFmQHz0
-Z10 !s108 1736943202.382000
-Z11 !s107 d:\project\ic\cpu\DawnCPU\fetch.v|
-Z12 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\fetch.v|
 !i10b 1
+!s100 _V:z0d?PbVoaQGCaRc=:e2
+IlkmK27_Gn4=kVBLYVhKSZ2
+Z1 Vd0nOPQU=Xd3;2o:R5ebg@2
+dd:\project\ic\cpu\DawnCPU
+w1736950545
+8d:\project\ic\cpu\DawnCPU\fetch.v
+Fd:\project\ic\cpu\DawnCPU\fetch.v
+L0 2
+Z2 OV;L;10.1d;51
+r1
 !s85 0
+31
+!s108 1736950545.905000
+!s107 defines.v|d:\project\ic\cpu\DawnCPU\fetch.v|
+!s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\fetch.v|
 !s101 -O0
+o-nologo -work {D:\project\ic\cpu\DawnCPU\work} -O0
