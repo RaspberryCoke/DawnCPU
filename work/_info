@@ -3,41 +3,60 @@ K3
 13
 cModel Technology
 Z0 dD:\altera\13.0sp1
+vdecode
+!i10b 1
+!s100 OfW2Fe>ei593cb=oE05YE2
+IfieYe6mZHDZ0bZFK>cl_C2
+Z1 V3c_X92W8UQb<R1OgP;ESB1
+Z2 dd:\project\ic\cpu\DawnCPU
+w1737024344
+Z3 8d:\project\ic\cpu\DawnCPU\decode.v
+Z4 Fd:\project\ic\cpu\DawnCPU\decode.v
+L0 3
+Z5 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1737024344.825000
+!s107 define.v|d:\project\ic\cpu\DawnCPU\decode.v|
+Z6 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\decode.v|
+!s101 -O0
+Z7 o-nologo -work {D:\project\ic\cpu\DawnCPU\work} -O0
 vfetch
-!i10b 1
-!s100 ``;Od3[aH;Nd4ShYY_F@L0
-IDczQ17^^njNZd3ToDF^5b2
-Z1 Vd0nOPQU=Xd3;2o:R5ebg@2
-Z2 dD:\project\ic\cpu\DawnCPU
-Z3 w1736999337
-8fetch.v
-Ffetch.v
-L0 2
-Z4 OV;L;10.1d;51
-r1
-!s85 0
-31
-Z5 !s108 1737008868.203000
-Z6 !s107 fetch_tb.v|fetch.v|defines.v|
-Z7 !s90 defines.v|fetch.v|fetch_tb.v|
-!s101 -O0
-o-O0
-vfetch_tb
-!i10b 1
-!s100 <;O4?mE0JkgA;Fljoa<4z0
-IXNP;@S]U^WWYHd59a0c@^1
-Z8 VJW3RDAN]`z2QmhBi`nGY50
+Z8 IOnJTH:miMRAU9VAl?e1T83
+Z9 Vd0nOPQU=Xd3;2o:R5ebg@2
 R2
-Z9 w1737003950
-8fetch_tb.v
-Ffetch_tb.v
-L0 4
-R4
-r1
-!s85 0
-31
+Z10 w1737022529
+Z11 8d:\project\ic\cpu\DawnCPU\fetch.v
+Z12 Fd:\project\ic\cpu\DawnCPU\fetch.v
+L0 2
 R5
-R6
+r1
+31
 R7
+Z13 !s100 JO0RF2AH1gjMkT8]]6JXl2
+Z14 !s108 1737022529.166000
+Z15 !s107 define.v|d:\project\ic\cpu\DawnCPU\fetch.v|
+Z16 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\fetch.v|
+!i10b 1
+!s85 0
 !s101 -O0
+vfetch_tb
+Z17 IXNP;@S]U^WWYHd59a0c@^1
+Z18 VJW3RDAN]`z2QmhBi`nGY50
+Z19 dD:\project\ic\cpu\DawnCPU
+Z20 w1737003950
+Z21 8fetch_tb.v
+Z22 Ffetch_tb.v
+L0 4
+R5
+r1
+31
+Z23 !s108 1737008868.203000
+Z24 !s107 fetch_tb.v|fetch.v|defines.v|
+Z25 !s90 defines.v|fetch.v|fetch_tb.v|
 o-O0
+Z26 !s100 <;O4?mE0JkgA;Fljoa<4z0
+!i10b 1
+!s85 0
+!s101 -O0

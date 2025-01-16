@@ -1,4 +1,4 @@
-`include "defines.v"
+`include "define.v"
 module fetch(
     input wire[63:0] PC_i,
 
