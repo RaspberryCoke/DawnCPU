@@ -4,40 +4,40 @@ K3
 cModel Technology
 Z0 dD:\altera\13.0sp1
 vfetch
-Z1 IOnJTH:miMRAU9VAl?e1T83
-Z2 Vd0nOPQU=Xd3;2o:R5ebg@2
-Z3 dd:\project\ic\cpu\DawnCPU
-Z4 w1736999337
-Z5 8d:\project\ic\cpu\DawnCPU\fetch.v
-Z6 Fd:\project\ic\cpu\DawnCPU\fetch.v
-L0 2
-Z7 OV;L;10.1d;51
-r1
-31
-Z8 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\fetch.v|
-Z9 o-nologo -work {D:\project\ic\cpu\DawnCPU\work} -O0
-Z10 !s100 JO0RF2AH1gjMkT8]]6JXl2
-Z11 !s108 1736999337.896000
-Z12 !s107 defines.v|d:\project\ic\cpu\DawnCPU\fetch.v|
 !i10b 1
+!s100 ``;Od3[aH;Nd4ShYY_F@L0
+IDczQ17^^njNZd3ToDF^5b2
+Z1 Vd0nOPQU=Xd3;2o:R5ebg@2
+Z2 dD:\project\ic\cpu\DawnCPU
+Z3 w1736999337
+8fetch.v
+Ffetch.v
+L0 2
+Z4 OV;L;10.1d;51
+r1
 !s85 0
+31
+Z5 !s108 1737005167.656000
+Z6 !s107 fetch_tb.v|defines.v|fetch.v|
+Z7 !s90 fetch.v|defines.v|fetch_tb.v|
 !s101 -O0
+o-O0
 vfetch_tb
 !i10b 1
-Z13 !s100 M^[PHRojbLI=@IP;FG?n^0
-Z14 IVm:NLzbMUEmm[`FSHd9>H2
-Z15 VJW3RDAN]`z2QmhBi`nGY50
-R3
-w1737000417
-Z16 8d:\project\ic\cpu\DawnCPU\fetch_tb.v
-Z17 Fd:\project\ic\cpu\DawnCPU\fetch_tb.v
+!s100 <;O4?mE0JkgA;Fljoa<4z0
+IXNP;@S]U^WWYHd59a0c@^1
+Z8 VJW3RDAN]`z2QmhBi`nGY50
+R2
+Z9 w1737003950
+8fetch_tb.v
+Ffetch_tb.v
 L0 4
-R7
+R4
 r1
 !s85 0
 31
-!s108 1737000417.275000
-!s107 defines.v|d:\project\ic\cpu\DawnCPU\fetch_tb.v|
-Z18 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\fetch_tb.v|
+R5
+R6
+R7
 !s101 -O0
-R9
+o-O0
