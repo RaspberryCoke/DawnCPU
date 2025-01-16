@@ -4,21 +4,40 @@ K3
 cModel Technology
 Z0 dD:\altera\13.0sp1
 vfetch
-!i10b 1
-Z1 !s100 _V:z0d?PbVoaQGCaRc=:e2
-Z2 IlkmK27_Gn4=kVBLYVhKSZ2
-Z3 Vd0nOPQU=Xd3;2o:R5ebg@2
-Z4 dd:\project\ic\cpu\DawnCPU
-Z5 w1736950545
-Z6 8d:\project\ic\cpu\DawnCPU\fetch.v
-Z7 Fd:\project\ic\cpu\DawnCPU\fetch.v
+Z1 IOnJTH:miMRAU9VAl?e1T83
+Z2 Vd0nOPQU=Xd3;2o:R5ebg@2
+Z3 dd:\project\ic\cpu\DawnCPU
+Z4 w1736999337
+Z5 8d:\project\ic\cpu\DawnCPU\fetch.v
+Z6 Fd:\project\ic\cpu\DawnCPU\fetch.v
 L0 2
-Z8 OV;L;10.1d;51
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\fetch.v|
+Z9 o-nologo -work {D:\project\ic\cpu\DawnCPU\work} -O0
+Z10 !s100 JO0RF2AH1gjMkT8]]6JXl2
+Z11 !s108 1736999337.896000
+Z12 !s107 defines.v|d:\project\ic\cpu\DawnCPU\fetch.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vfetch_tb
+!i10b 1
+Z13 !s100 M^[PHRojbLI=@IP;FG?n^0
+Z14 IVm:NLzbMUEmm[`FSHd9>H2
+Z15 VJW3RDAN]`z2QmhBi`nGY50
+R3
+w1737000417
+Z16 8d:\project\ic\cpu\DawnCPU\fetch_tb.v
+Z17 Fd:\project\ic\cpu\DawnCPU\fetch_tb.v
+L0 4
+R7
 r1
 !s85 0
 31
-!s108 1736996530.700000
-!s107 defines.v|d:\project\ic\cpu\DawnCPU\fetch.v|
-Z9 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\fetch.v|
+!s108 1737000417.275000
+!s107 defines.v|d:\project\ic\cpu\DawnCPU\fetch_tb.v|
+Z18 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\fetch_tb.v|
 !s101 -O0
-Z10 o-nologo -work {D:\project\ic\cpu\DawnCPU\work} -O0
+R9
