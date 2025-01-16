@@ -1,7 +1,6 @@
 # Makefile
 
 # 设置TOP文件
-TOP := $(basename $(notdir $(firstword $(wildcard *.v)))) )
 
 # 编译所有的 .v 文件
 VFILES := $(wildcard *.v)

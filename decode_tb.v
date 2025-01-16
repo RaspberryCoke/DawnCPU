@@ -51,7 +51,7 @@ end
 
 initial begin
 
-$monitor("PC=%d\t,icode=%h\t,ifun=%h\t,rA=%h\t,rB=%h\t,valC=%h\t,valP=%d\t,instr_valid_o=%h\t,imem_error=%h\t\nA=%h\nB=%h\n",
+$monitor("PC=%d\t,icode=%h\t,ifun=%h\t,rA=%h\t,rB=%h\t,valC=%h\t,valP=%d\t,instr_valid_o=%h\t,imem_error=%h\tA=%h\tB=%h",
 PC_i,icode_o,ifun_o,rA_o,rB_o,valC_o,valP_o,instr_valid_o,imem_error_o,valA_o,valB_o);
 
 

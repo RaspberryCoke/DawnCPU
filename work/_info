@@ -4,78 +4,97 @@ K3
 cModel Technology
 Z0 dD:\altera\13.0sp1
 vdecode
-Z1 !s100 FnYCj89UC2PM9BnWzH5Rk2
-Z2 I7ERSZPTSnJeM<YaMV5jfQ1
-Z3 V3c_X92W8UQb<R1OgP;ESB1
-Z4 dD:\project\ic\cpu\DawnCPU
-Z5 w1737026979
-Z6 8decode.v
-Z7 Fdecode.v
-L0 3
-Z8 OV;L;10.1d;51
-r1
-31
-Z9 !s108 1737031421.147000
-Z10 !s107 define.v|fetch_tb.v|decode_tb.v|decode.v|fetch.v|
-Z11 !s90 fetch.v|decode.v|decode_tb.v|fetch_tb.v|define.v|
-o-O0
 !i10b 1
+!s100 FnYCj89UC2PM9BnWzH5Rk2
+I7ERSZPTSnJeM<YaMV5jfQ1
+Z1 V3c_X92W8UQb<R1OgP;ESB1
+Z2 dD:\project\ic\cpu\DawnCPU
+Z3 w1737026979
+8decode.v
+Fdecode.v
+L0 3
+Z4 OV;L;10.1d;51
+r1
 !s85 0
+31
+Z5 !s108 1737038806.166000
+Z6 !s107 define.v|fetch_tb.v|decode_tb.v|execute.v|decode.v|fetch.v|
+Z7 !s90 fetch.v|decode.v|execute.v|decode_tb.v|fetch_tb.v|define.v|
 !s101 -O0
+o-O0
 vdecode_tb
 !i10b 1
-!s100 gn867MWlemYQNfF9RP:782
-I8lKXe^2o<EZ_m7aIEOSi72
-Z12 VCIP:j4GW:QWZS@[JX_XQ50
-dd:\project\ic\cpu\DawnCPU
-w1737031535
-8d:\project\ic\cpu\DawnCPU\decode_tb.v
-Fd:\project\ic\cpu\DawnCPU\decode_tb.v
+Z8 !s100 VYEX?JPk<bz?WS=QdXS:B3
+Z9 IV3L1I=KkzVUd344D3iI;92
+Z10 VCIP:j4GW:QWZS@[JX_XQ50
+R2
+Z11 w1737031755
+Z12 8decode_tb.v
+Z13 Fdecode_tb.v
 L0 4
-R8
+R4
 r1
 !s85 0
 31
-!s108 1737031535.838000
-!s107 define.v|d:\project\ic\cpu\DawnCPU\decode_tb.v|
-!s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\decode_tb.v|
+R5
+R6
+R7
 !s101 -O0
-o-nologo -work {D:\project\ic\cpu\DawnCPU\work} -O0
-vfetch
-Z13 !s100 aJcm?cO<54dElAcbdEC>j1
-Z14 IH;`Ye_ZESVzQ3JY?5L2b_1
-Z15 Vd0nOPQU=Xd3;2o:R5ebg@2
-R4
-Z16 w1737029064
-Z17 8fetch.v
-Z18 Ffetch.v
+o-O0
+vexecute
+!i10b 1
+!s100 MT4aZi]NI4JCMYDizgFCA3
+IUVl_C;WfY3PM:EBW;fQKN1
+Z14 ViF2<O24hWIM]@f`gb=]2F0
+R2
+Z15 w1737038794
+8execute.v
+Fexecute.v
 L0 2
-R8
-r1
-31
-R9
-R10
-R11
-o-O0
-!i10b 1
-!s85 0
-!s101 -O0
-vfetch_tb
-Z19 !s100 dk8<gbd51DP9md3:78S5H0
-Z20 IZkS>KQZK8URXQhgCS5dz=1
-Z21 VJW3RDAN]`z2QmhBi`nGY50
 R4
-Z22 w1737029134
-Z23 8fetch_tb.v
-Z24 Ffetch_tb.v
-L0 4
-R8
 r1
-31
-R9
-R10
-R11
-o-O0
-!i10b 1
 !s85 0
+31
+R5
+R6
+R7
 !s101 -O0
+o-O0
+vfetch
+!i10b 1
+Z16 !s100 aJcm?cO<54dElAcbdEC>j1
+Z17 IH;`Ye_ZESVzQ3JY?5L2b_1
+Z18 Vd0nOPQU=Xd3;2o:R5ebg@2
+R2
+Z19 w1737029064
+Z20 8fetch.v
+Z21 Ffetch.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+o-O0
+vfetch_tb
+!i10b 1
+Z22 !s100 dk8<gbd51DP9md3:78S5H0
+Z23 IZkS>KQZK8URXQhgCS5dz=1
+Z24 VJW3RDAN]`z2QmhBi`nGY50
+R2
+Z25 w1737029134
+Z26 8fetch_tb.v
+Z27 Ffetch_tb.v
+L0 4
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+o-O0

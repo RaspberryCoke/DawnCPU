@@ -1,4 +1,4 @@
-# vsim -c decode_tb 
+# vsim -do {run -all; exit} -c decode_tb 
 # //  ModelSim ALTERA 10.1d Nov  2 2012 
 # //
 # //  Copyright 1991-2012 Mentor Graphics Corporation
@@ -11,27 +11,11 @@
 # Loading work.decode_tb
 # Loading work.fetch
 # Loading work.decode
-# PC=                   0	,icode=3	,ifun=0	,rA=f	,rB=8	,valC=0000000000000008	,valP=                  10	,instr_valid_o=1	,imem_error=0	
-# A=0000000000000000
-# B=0000000000000008
-# 
-# PC=                  10	,icode=3	,ifun=0	,rA=f	,rB=3	,valC=0000000000000021	,valP=                  20	,instr_valid_o=1	,imem_error=0	
-# A=0000000000000000
-# B=0000000000000003
-# 
-# PC=                  20	,icode=4	,ifun=0	,rA=0	,rB=3	,valC=0000000000000001	,valP=                  30	,instr_valid_o=1	,imem_error=0	
-# A=0000000000000000
-# B=0000000000000003
-# 
-# PC=                  30	,icode=6	,ifun=1	,rA=2	,rB=3	,valC=xxxxxxxx0fb02fa0	,valP=                  32	,instr_valid_o=1	,imem_error=0	
-# A=0000000000000002
-# B=0000000000000003
-# 
-# PC=                  32	,icode=a	,ifun=0	,rA=2	,rB=f	,valC=xxxxxxxxxxxx0fb0	,valP=                  34	,instr_valid_o=1	,imem_error=0	
-# A=0000000000000002
-# B=0000000000000000
-# 
-# PC=                  34	,icode=b	,ifun=0	,rA=0	,rB=f	,valC=xxxxxxxxxxxxxxxx	,valP=                  36	,instr_valid_o=1	,imem_error=0	
-# A=0000000000000000
-# B=0000000000000000
-# 
+# run -all 
+# PC=                   0	,icode=3	,ifun=0	,rA=f	,rB=8	,valC=0000000000000008	,valP=                  10	,instr_valid_o=1	,imem_error=0	A=0000000000000000	B=0000000000000008
+# PC=                  10	,icode=3	,ifun=0	,rA=f	,rB=3	,valC=0000000000000021	,valP=                  20	,instr_valid_o=1	,imem_error=0	A=0000000000000000	B=0000000000000003
+# PC=                  20	,icode=4	,ifun=0	,rA=0	,rB=3	,valC=0000000000000001	,valP=                  30	,instr_valid_o=1	,imem_error=0	A=0000000000000000	B=0000000000000003
+# PC=                  30	,icode=6	,ifun=1	,rA=2	,rB=3	,valC=xxxxxxxx0fb02fa0	,valP=                  32	,instr_valid_o=1	,imem_error=0	A=0000000000000002	B=0000000000000003
+# PC=                  32	,icode=a	,ifun=0	,rA=2	,rB=f	,valC=xxxxxxxxxxxx0fb0	,valP=                  34	,instr_valid_o=1	,imem_error=0	A=0000000000000002	B=0000000000000000
+# PC=                  34	,icode=b	,ifun=0	,rA=0	,rB=f	,valC=xxxxxxxxxxxxxxxx	,valP=                  36	,instr_valid_o=1	,imem_error=0	A=0000000000000000	B=0000000000000000
+#  exit 
