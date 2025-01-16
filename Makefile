@@ -14,14 +14,18 @@ compile:
 	@echo "Compiling files..."
 	vlog $(VFILES)
 
-# 设置仿真目标
-sim:
-	@if [ "$(words $(MAKECMDGOALS))" -ne 1 ]; then \
-		echo "Error: You must specify exactly one parameter for the top module."; \
-		exit 1; \
-	fi
-	@echo "Running simulation with vsim -c $(firstword $(MAKECMDGOALS))..."
-	vsim -c $(firstword $(MAKECMDGOALS))
+
+
+# 目标是 sim，依赖于传递给 make 的 str
+sim: $(str)
+	@echo "Starting simulation with str=${str}"
+	@vsim -c ${str} -do "run -all; exit"
+#; exit"
+
+# 通过 make 命令传递 str 的值
+$(str):
+	@echo "Assigning value to str: ${str}"
+	@echo ${str}
 
 # 设置另一种仿真目标
 SIM:
