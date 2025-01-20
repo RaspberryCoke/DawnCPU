@@ -11,7 +11,7 @@ module decode(
     input wire[63:0] valE_i,
     input wire[63:0] valM_i,
 
-    input wire cnd_i,
+    //input wire cnd_i,
 
     output wire[63:0] valA_o,
     output wire[63:0] valB_o

@@ -9,7 +9,6 @@ entity decode is
         icode           : in     vl_logic_vector(3 downto 0);
         valE_i          : in     vl_logic_vector(63 downto 0);
         valM_i          : in     vl_logic_vector(63 downto 0);
-        cnd_i           : in     vl_logic;
         valA_o          : out    vl_logic_vector(63 downto 0);
         valB_o          : out    vl_logic_vector(63 downto 0)
     );
