@@ -26,6 +26,16 @@ reg [63:0] pc_mem [0:1023];
 
 reg [1024:0] pc_i;
 
+reg [3:0]temp4_1;
+reg [3:0]temp4_2;
+reg [3:0]temp4_3;
+reg [3:0]temp4_4;
+
+reg [7:0]temp8_1;
+reg [7:0]temp8_2;
+reg [7:0]temp8_3;
+reg [7:0]temp8_4;
+
 
   // 函数：将16进制字符转换为其对应的真实值
   function [3:0] hex_to_decimal;
@@ -81,29 +91,36 @@ initial begin
     end
    
     while(char_num!=0)begin
-        $display("while...") ;
+        $display("enter main loop...") ;
         //先跳过#行
+        $display("----------------skip # hang-------------- \n",pc_i) ;
         while(char_num!=0&&fbuf!=8'd10)begin //8'b10 换行
-            $display("skip # hang \n") ;
+            $display("skip # hang ,this char is %c .",fbuf) ;
             char_num=$fgets(fbuf,fd);
         end
 
+
+
         //现在fbuf='\n'
-        $display("set pc \n") ;
+        $display("----------------set pc = %d -------------",pc_i) ;
         pc_mem[pc_i]=i;
 
         char_num=$fgets(fbuf,fd);
-        $display("\ngetting num :  %h  ",hex_to_decimal(fbuf)) ;
+        $display("getting num :  %h  ",hex_to_decimal(fbuf)) ;
+
+        $monitor("buff_i is %d",buff_i);
 
         while(char_num!=0&&fbuf!=8'd35)begin //8'd35 #
-            $display("while...the char_num=%d",char_num) ;
 
             //开始获取一行指令数据
+            temp4_1=hex_to_decimal(fbuf);
             buff[buff_i][7:4]=hex_to_decimal(fbuf);
-            buff_i=buff_i+1;
+            
 
             char_num=$fgets(fbuf,fd);
+            $display("getting num :  %h  ",hex_to_decimal(fbuf)) ;
 
+            temp4_2=hex_to_decimal(fbuf);
             buff[buff_i][3:0]=hex_to_decimal(fbuf);
             buff_i=buff_i+1;
             //获取数据结束
@@ -114,8 +131,11 @@ initial begin
             char_num=$fgets(fbuf,fd);
 
 
-            if(char_num==0||(fbuf!=8'd10))begin 
+            if(char_num==0)begin 
                 $display("file end...or format wrong...");
+            end
+
+            if((fbuf!=8'd10))
                 $display("char_num= %d ...fbuf=%c...",char_num,fbuf);
                 disable loop;
 
@@ -126,16 +146,18 @@ initial begin
 
     end
 
-    end
 end
 
     initial begin:loop
     j=0;
+    $display("begin to output:....buff_i is %d.",buff_i);
     while(j<buff_i)begin
-        $display("开始遍历输出");
-        $display("\n%h%h",buff[j][7:4],buff[j][3:0]);
+        $display("\n  %h:%h",buff[j][7:4],buff[j][3:0]);
         j=j+1;
+
+
     end
+    
 
  
     // char_num = $fgets(fbuf,fd);

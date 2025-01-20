@@ -11,156 +11,110 @@
 # Loading work.sim_top
 # 
 #  ============= file opened... ============= 
-# while...
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# skip # hang 
-# 
-# set pc 
-# 
-# 
+# enter main loop...
+# ----------------skip # hang-------------- 
+#                                                                                                                                                                                                                                                                                                                     0
+# skip # hang ,this char is # .
+# skip # hang ,this char is i .
+# skip # hang ,this char is r .
+# skip # hang ,this char is m .
+# skip # hang ,this char is o .
+# skip # hang ,this char is v .
+# skip # hang ,this char is q .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is x .
+# skip # hang ,this char is 8 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 8 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 3 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is f .
+# skip # hang ,this char is 8 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is 8 .
+# ----------------set pc =                                                                                                                                                                                                                                                                                                                     0 -------------
 # getting num :  3  
-# while...the char_num=          1
-# while...the char_num=          1
+# getting num :  0  
+# getting num :  8  
+# getting num :  8  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# enter main loop...
+# ----------------skip # hang-------------- 
+#                                                                                                                                                                                                                                                                                                                     0
+# skip # hang ,this char is # .
+# skip # hang ,this char is a .
+# skip # hang ,this char is s .
+# skip # hang ,this char is d .
+# skip # hang ,this char is f .
+# skip # hang ,this char is h .
+# skip # hang ,this char is k .
+# skip # hang ,this char is w .
+# skip # hang ,this char is f .
+# skip # hang ,this char is h .
+# skip # hang ,this char is k .
+# skip # hang ,this char is e .
+# ----------------set pc =                                                                                                                                                                                                                                                                                                                     0 -------------
+# getting num :  1  
+# getting num :  3  
+# getting num :  4  
+# getting num :  5  
+# getting num :  7  
+# getting num :  2  
+# getting num :  e  
 # file end...or format wrong...
-# char_num=           1 ...fbuf=8...
-# while...the char_num=          1
-# file end...or format wrong...
-# char_num=           1 ...fbuf=8...
-# while...the char_num=          1
-# file end...or format wrong...
-# char_num=           1 ...fbuf=0...
-# while...the char_num=          1
-# file end...or format wrong...
-# char_num=           1 ...fbuf=0...
-# while...the char_num=          1
-# file end...or format wrong...
-# char_num=           1 ...fbuf=0...
-# while...the char_num=          1
-# file end...or format wrong...
-# char_num=           1 ...fbuf=0...
-# while...the char_num=          1
-# file end...or format wrong...
-# char_num=           1 ...fbuf=0...
-# while...the char_num=          1
-# file end...or format wrong...
-# char_num=           1 ...fbuf=0...
-# while...the char_num=          1
-# file end...or format wrong...
-# char_num=           1 ...fbuf=0...
-# 开始遍历输出
+# char_num=           0 ...fbuf=...
+# begin to output:....buff_i is                                                                                                                                                                                                                                                                                                                    16.
 # 
-# 3x
-# 开始遍历输出
+#   3:0
 # 
-# x0
-# 开始遍历输出
+#   f:8
 # 
-# 0x
-# 开始遍历输出
+#   0:8
 # 
-# xf
-# 开始遍历输出
+#   0:0
 # 
-# 0x
-# 开始遍历输出
+#   0:0
 # 
-# x0
-# 开始遍历输出
+#   0:0
 # 
-# 0x
-# 开始遍历输出
+#   0:0
 # 
-# x0
-# 开始遍历输出
+#   0:0
 # 
-# 0x
-# 开始遍历输出
+#   0:0
 # 
-# x0
-# 开始遍历输出
+#   0:0
 # 
-# 0x
-# 开始遍历输出
+#   1:3
 # 
-# x0
-# 开始遍历输出
+#   2:4
 # 
-# 0x
-# 开始遍历输出
+#   3:5
 # 
-# x0
-# 开始遍历输出
+#   f:7
 # 
-# 0x
-# 开始遍历输出
+#   e:2
 # 
-# x0
-# 开始遍历输出
-# 
-# 0x
-# 开始遍历输出
-# 
-# x0
-# 开始遍历输出
-# 
-# 0x
-# 开始遍历输出
-# 
-# x0
+#   1:e
 # 
 #  ============= file middle... ============= 
+# buff_i is                                                                                                                                                                                                                                                                                                                    16
 # 
 #  ============= file closed... ============= 
-# Break in NamedBeginStat loop at read_test.v line 167
-# Stopped at read_test.v line 167 
+# Break in NamedBeginStat loop at read_test.v line 189
+# Stopped at read_test.v line 189 
