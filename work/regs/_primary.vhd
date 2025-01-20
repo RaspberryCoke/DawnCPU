@@ -3,6 +3,7 @@ use verilog.vl_types.all;
 entity regs is
     port(
         clk_i           : in     vl_logic;
+        rst_n           : in     vl_logic;
         srcA            : in     vl_logic_vector(3 downto 0);
         srcB            : in     vl_logic_vector(3 downto 0);
         dstA            : in     vl_logic_vector(3 downto 0);

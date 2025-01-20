@@ -1,14 +1,15 @@
 module regs(
-    input clk_i,
-    input [3:0] srcA,
-    input [3:0] srcB,
-    input [3:0] dstA,
-    input [3:0] dstB,
-    input [63:0] dstA_data,
-    input [63:0] dstB_data,
+    input wire clk_i,
+    input wire rst_n,
+    input wire [3:0] srcA,
+    input wire [3:0] srcB,
+    input wire [3:0] dstA,
+    input wire [3:0] dstB,
+    input wire [63:0] dstA_data,
+    input wire [63:0] dstB_data,
 
-    output  [63:0] valA,
-    output  [63:0] valB
+    output wire [63:0] valA,
+    output wire [63:0] valB
 );
 
 reg [63:0] regfile[14:0];

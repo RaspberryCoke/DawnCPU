@@ -1,4 +1,4 @@
-# vsim -c execute_tb 
+# vsim execute_tb 
 # //  ModelSim ALTERA 10.1d Nov  2 2012 
 # //
 # //  Copyright 1991-2012 Mentor Graphics Corporation
@@ -10,5 +10,13 @@
 # //
 # Loading work.execute_tb
 # Loading work.execute
-# valE: 0000000000000002
-# 
+add wave -position insertpoint  \
+sim:/execute_tb/rst_n_i \
+sim:/execute_tb/icode_i \
+sim:/execute_tb/ifun_i \
+sim:/execute_tb/valA_i \
+sim:/execute_tb/valB_i \
+sim:/execute_tb/valC_i \
+sim:/execute_tb/valE_o \
+sim:/execute_tb/cc
+run -all
