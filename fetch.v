@@ -8,7 +8,7 @@ module fetch(
     output wire [3:0] rB_o,
     output wire [63:0] valC_o ,
     output wire [63:0] valP_o ,
-    output wire       instr_valid_o,
+    output wire        instr_valid_o,
     output wire       imem_error_o 
 );
 
@@ -18,7 +18,7 @@ wire[79:0] instr;
 wire     need_regids;
 wire     need_valC;
 
-assign imem_error_o=(PC_i>1023);//检查越界  --  这个检查恐怕不完善
+assign imem_error_o=(PC_i>1023-9);//检查越界  --  这个检查恐怕不完善
 
 //对二维数组的访问，instr_mem[0]为地址最低的8bit。
 
@@ -38,7 +38,20 @@ assign icode_o=instr[7:4];
 assign ifun_o=instr[3:0];
 
 
-assign instr_valid_o=(icode_o<4'hC);//检查指令是否出错
+// always @(*) begin
+//     case (icode_o)
+//         `IHALT,`INOP,`ICMOVQ,`IRRMOVQ,`IIRMOVQ,`IRMMOVQ,`IMRMOVQ,`ICALL,`IRET,`IPUSHQ,`IPOPQ: 
+//             instr_valid_o = (ifun_o == 4'b0000);
+//         `IOPQ:
+//             instr_valid_o = (ifun_o < 4'H4); 
+//         `IJXX:
+//             instr_valid_o = (ifun_o < 4'H7); 
+//         default:
+//             instr_valid_o = 0; // Invalid instruction
+//     endcase
+// end
+
+ assign instr_valid_o=(icode_o<4'hC);//检查指令是否出错
 
 //是否需要寄存器位，1B  
 assign need_regids=(icode_o==`ICMOVQ)||(icode_o==`IIRMOVQ)||(icode_o==`IRMMOVQ)||(icode_o==`IMRMOVQ)||(icode_o==`IOPQ)||(icode_o==`IPUSHQ)||(icode_o==`IPOPQ);
@@ -52,7 +65,7 @@ assign need_valC=(icode_o==`IIRMOVQ)||(icode_o==`IRMMOVQ)||
 assign rA_o=need_regids?{instr[15:12]}:4'hf;
 assign rB_o=need_regids?{instr[11:8]}:4'hf;
 
-assign valC_o=need_regids?instr[79:16]:instr[71:8];
+assign valC_o=need_valC?(need_regids?instr[79:16]:instr[71:8]):64'B0;
 
 assign valP_o=PC_i+1+8*need_valC+need_regids;
 
@@ -75,9 +88,9 @@ assign valP_o=PC_i+1+8*need_valC+need_regids;
         instr_mem[8]=8'h00;
         instr_mem[9]=8'h00;
 
-        //irmovq 0x21 %rbx 30 f3 21
+        //irmovq 0x21 %r9 30 f9 21
         instr_mem[10]=8'h30;
-        instr_mem[11]=8'hf3;
+        instr_mem[11]=8'hf9;
         instr_mem[12]=8'h21;
         instr_mem[13]=8'h00;
         instr_mem[14]=8'h00;
@@ -87,11 +100,15 @@ assign valP_o=PC_i+1+8*need_valC+need_regids;
         instr_mem[18]=8'h00;
         instr_mem[19]=8'h00;
 
-        //rmmovq rax D(rbx),D=1 40 03 01
-        instr_mem[20]=8'h40;
-        instr_mem[21]=8'h03;
-        instr_mem[22]=8'h01;
-        instr_mem[23]=8'h00;
+        //rrmovq %r8 %r10 
+        instr_mem[20]=8'h20;
+        instr_mem[21]=8'h8A;
+
+        //addq %8 %10
+        instr_mem[22]=8'h60;
+        instr_mem[23]=8'h8A;
+
+        //subq %10 %8
         instr_mem[24]=8'h00;
         instr_mem[25]=8'h00;
         instr_mem[26]=8'h00;
@@ -103,6 +120,7 @@ assign valP_o=PC_i+1+8*need_valC+need_regids;
         instr_mem[30]=8'h61;
         instr_mem[31]=8'h23;
 
+
         //pushq %rdx
         instr_mem[32]=8'ha0;
         instr_mem[33]=8'h2f;
@@ -111,6 +129,7 @@ assign valP_o=PC_i+1+8*need_valC+need_regids;
         instr_mem[34]=8'hb0;
         instr_mem[35]=8'h0f;
 
+ 
 //instr_mem[]=8'h;
     end
 
