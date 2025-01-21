@@ -9,21 +9,21 @@ module writeback(
     input wire imem_error_i, 
 
     output wire [63:0] valE_o,
-    output wire [63:0] valM_o,
+    output wire [63:0] valM_o
 
-    output wire [1:0]stat_o
+    //output wire [1:0]stat_o
 );
 
 assign valE_o=valE_i;
 assign valM_o=valE_i;
 
-stat_module stat(
-    .instr_valid_i(instr_valid_i),
-    .hlt_i(hlt_i),
-    .instr_error_i(instr_error_i),
-    .imem_error_i(imem_error_i),
-    .stat_o(stat_o)
-);
+// stat_module stat(
+//     .instr_valid_i(instr_valid_i),
+//     .hlt_i(hlt_i),
+//     .instr_error_i(instr_error_i),
+//     .imem_error_i(imem_error_i),
+//     .stat_o(stat_o)
+// );
 
 
 endmodule

@@ -11,7 +11,7 @@ module execute(
     input wire signed[63:0] valC_i,
 
     output reg signed[63:0] valE_o,
-
+    output reg [2:0] cc,
     output wire Cnd_o
 );
 
@@ -19,7 +19,7 @@ reg [63:0] aluA;
 reg[63:0] aluB;
 reg [3:0] alu_fun;
 reg[2:0]new_cc;
-reg[2:0]cc;
+//reg[2:0]cc;
 wire set_cc;
 wire sf;
 wire of;

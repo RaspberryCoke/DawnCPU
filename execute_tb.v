@@ -1,23 +1,23 @@
 `timescale 1ns/1ps
 `include "define.v"
 module execute_tb;
-      wire clk_i;
-      reg rst_n_i ;
+wire clk_i;
+reg rst_n_i ;
 
-      wire[3:0] icode_i ;
-      reg [3:0] ifun_i ;
+wire[3:0] icode_i ;
+reg [3:0] ifun_i ;
 
-      wire signed[63:0] valA_i ;
-      wire signed[63:0] valB_i ;
-      wire signed[63:0] valC_i ;
+wire signed[63:0] valA_i ;
+wire signed[63:0] valB_i ;
+wire signed[63:0] valC_i ;
 
-    wire signed[63:0] valE_o ;
+wire signed[63:0] valE_o ;
 
-    wire Cnd_o;
+wire Cnd_o;
 
-    wire [2:0] cc;
+wire [2:0] cc;
 
-execute emodule(
+execute exec_module(
     .clk_i(clk_i),
     .rst_n_i(rst_n_i),
     .icode_i(icode_i),
@@ -28,12 +28,14 @@ execute emodule(
     .valE_o(valE_o),
     .Cnd_o(Cnd_o)
 );
-   assign clk_i=1;
-    assign cc=emodule.new_cc;
-   assign icode_i=`IOPQ;
-   
-   assign valA_i=64'd3;
-   assign valB_i=64'd2;
+
+assign clk_i=1;
+assign cc=exec_module.new_cc;
+assign icode_i=`IOPQ;
+
+assign valA_i=64'd3;
+assign valB_i=64'd2;
+
 initial begin 
     ifun_i=`FADDL;
     rst_n_i=1;
