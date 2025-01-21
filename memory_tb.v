@@ -42,15 +42,21 @@ module memory_tb;
         $display("M[valE] = valA_o");
         $display("valA_o = %h", valA_i);
         $display("valE_o = %h", valE_i);
-        $display("M[valE_o]= %h", memory_module.rams.rams[valE_i]);
+        $display("M[valE_o]= %h", {memory_module.rams.rams[valE_i+7],
+        memory_module.rams.rams[valE_i+6],memory_module.rams.rams[valE_i+5],
+        memory_module.rams.rams[valE_i+4],memory_module.rams.rams[valE_i+3],
+        memory_module.rams.rams[valE_i+2],memory_module.rams.rams[valE_i+1],
+        memory_module.rams.rams[valE_i]});
         
         #2;
         icode_i = `IRMMOVQ;  // 设定指令
         #2;
         $display("------------EXECUTE-------");
-        //$display("valM_o = %h", valM_o);
-        $display("M[valE_o]= %h", memory_module.rams.rams[valE_i]);
-        //$display("valA_o = %h", valA_i);
+        $display("M[valE_o]= %h", {memory_module.rams.rams[valE_i+7],
+        memory_module.rams.rams[valE_i+6],memory_module.rams.rams[valE_i+5],
+        memory_module.rams.rams[valE_i+4],memory_module.rams.rams[valE_i+3],
+        memory_module.rams.rams[valE_i+2],memory_module.rams.rams[valE_i+1],
+        memory_module.rams.rams[valE_i]});
         $display("------------Finesh--------------------------------------");
         #2;
 
@@ -58,45 +64,58 @@ module memory_tb;
         $display("valM=M[valE]");
         $display("valM_o = %h", valM_o);
         $display("valE_i = %h", valE_i);
-        $display("M[valE]= %h", memory_module.rams.rams[valE_i]);
+        $display("M[valE]= %h", {memory_module.rams.rams[valE_i+7],
+        memory_module.rams.rams[valE_i+6],memory_module.rams.rams[valE_i+5],
+        memory_module.rams.rams[valE_i+4],memory_module.rams.rams[valE_i+3],
+        memory_module.rams.rams[valE_i+2],memory_module.rams.rams[valE_i+1],
+        memory_module.rams.rams[valE_i]});
         
         #2;
         icode_i = `IMRMOVQ;  // 设定指令
         #2;
         $display("------------EXECUTE-------");
-        //$display("valM_o = %h", valM_o);
-        //$display("rams[valE_o]= %h", memory_module.rams.rams[valE_i]);
         $display("valM = %h", valM_o);
         $display("------------Finesh--------------------------------------");
         #2;
 
+        memory_module.rams.rams[valE_i]=1;
         $display("------------3rd instruction pushq: ----------------");
         $display("M[valE] = valA_i");
         $display("valA_i = %h", valA_i);
         $display("valE_i = %h", valE_i);
-        $display("M[valE]= %h", memory_module.rams.rams[valE_i]);
+        $display("M[valE]= %h", {memory_module.rams.rams[valE_i+7],
+        memory_module.rams.rams[valE_i+6],memory_module.rams.rams[valE_i+5],
+        memory_module.rams.rams[valE_i+4],memory_module.rams.rams[valE_i+3],
+        memory_module.rams.rams[valE_i+2],memory_module.rams.rams[valE_i+1],
+        memory_module.rams.rams[valE_i]});
         
         #2;
         icode_i = `IPUSHQ;  // 设定指令
         #2;
         $display("------------EXECUTE-------");
-        $display("M[valE_o]= %h", memory_module.rams.rams[valE_i]);
-        //$display("valM = %h", valM_o);
+        $display("M[valE_o]= %h", {memory_module.rams.rams[valE_i+7],
+        memory_module.rams.rams[valE_i+6],memory_module.rams.rams[valE_i+5],
+        memory_module.rams.rams[valE_i+4],memory_module.rams.rams[valE_i+3],
+        memory_module.rams.rams[valE_i+2],memory_module.rams.rams[valE_i+1],
+        memory_module.rams.rams[valE_i]});
         $display("------------Finesh--------------------------------------");
         #2;
 
 
         $display("------------4th instruction popq: ----------------");
         $display("valM=M[valA]");
-        $display("valM_i = %h", valM_o);
+        $display("valM_o = %h", valM_o);
         $display("valA_i = %h", valA_i);
-        $display("M[valE]= %h", memory_module.rams.rams[valE_i]);
+        $display("M[valA]= %h", {memory_module.rams.rams[valA_i+7],
+        memory_module.rams.rams[valA_i+6],memory_module.rams.rams[valA_i+5],
+        memory_module.rams.rams[valA_i+4],memory_module.rams.rams[valA_i+3],
+        memory_module.rams.rams[valA_i+2],memory_module.rams.rams[valA_i+1],
+        memory_module.rams.rams[valA_i]});
         
         #2;
         icode_i = `IPOPQ;  // 设定指令
         #2;
         $display("------------EXECUTE-------");
-        //$display("rams[valE_o]= %h", memory_module.rams.rams[valE_i]);
         $display("valM = %h", valM_o);
         $display("------------Finesh--------------------------------------");
         #2;
@@ -104,15 +123,18 @@ module memory_tb;
 
         $display("------------5th instruction popq: ----------------");
         $display("valM=M[valA]");
-        $display("valM_i = %h", valM_o);
+        $display("valM_o = %h", valM_o);
         $display("valA_i = %h", valA_i);
-        $display("M[valE]= %h", memory_module.rams.rams[valE_i]);
+        $display("M[valA]= %h", {memory_module.rams.rams[valA_i+7],
+        memory_module.rams.rams[valA_i+6],memory_module.rams.rams[valA_i+5],
+        memory_module.rams.rams[valA_i+4],memory_module.rams.rams[valA_i+3],
+        memory_module.rams.rams[valA_i+2],memory_module.rams.rams[valA_i+1],
+        memory_module.rams.rams[valA_i]});
         
         #2;
         icode_i = `IPOPQ;  // 设定指令
         #2;
         $display("------------EXECUTE-------");
-        //$display("rams[valE_o]= %h", memory_module.rams.rams[valE_i]);
         $display("valM = %h", valM_o);
         $display("------------Finesh--------------------------------------");
         #2;
@@ -122,14 +144,159 @@ module memory_tb;
         $display("M[valE] = valP");
         $display("valP = %h", valP_i);
         $display("valE_i = %h", valE_i);
-        $display("rams[valE]= %h", memory_module.rams.rams[valE_i]);
+        $display("M[valE]= %h", {memory_module.rams.rams[valE_i+7],
+        memory_module.rams.rams[valE_i+6],memory_module.rams.rams[valE_i+5],
+        memory_module.rams.rams[valE_i+4],memory_module.rams.rams[valE_i+3],
+        memory_module.rams.rams[valE_i+2],memory_module.rams.rams[valE_i+1],
+        memory_module.rams.rams[valE_i]});
         
         #2;
         icode_i = `ICALL;  // 设定指令
         #2;
         $display("------------EXECUTE-------");
-        //$display("rams[valE_o]= %h", memory_module.rams.rams[valE_i]);
-        $display("M[valE] = %h", memory_module.rams.rams[valE_i]);
+        $display("M[valE] = %h", {memory_module.rams.rams[valE_i+7],
+        memory_module.rams.rams[valE_i+6],memory_module.rams.rams[valE_i+5],
+        memory_module.rams.rams[valE_i+4],memory_module.rams.rams[valE_i+3],
+        memory_module.rams.rams[valE_i+2],memory_module.rams.rams[valE_i+1],
+        memory_module.rams.rams[valE_i]});
+        $display("------------Finesh--------------------------------------");
+        #2;
+
+
+        $display("------------7th instruction RET: ----------------");
+        $display("valM=M[valA]");
+        $display("valA = %h", valA_i);
+        $display("valM = %h", valM_o);
+        $display("M[valA]= %h", {memory_module.rams.rams[valA_i+7],
+        memory_module.rams.rams[valA_i+6],memory_module.rams.rams[valA_i+5],
+        memory_module.rams.rams[valA_i+4],memory_module.rams.rams[valA_i+3],
+        memory_module.rams.rams[valA_i+2],memory_module.rams.rams[valA_i+1],
+        memory_module.rams.rams[valA_i]});
+        
+        #2;
+        icode_i = `IRET;  // 设定指令
+        #2;
+        $display("------------EXECUTE-------");
+        $display("valM = %h", valM_o);
+        $display("------------Finesh--------------------------------------");
+        #2;
+
+
+        $display("------------8th instruction IRMOV: ----------------");
+        $display("NOTHING TO DO...");
+        $display("valA = %h", valA_i);
+        $display("valE = %h", valE_i);
+        $display("valM = %h", valP_i);
+        $display("M[valA] = %h", {memory_module.rams.rams[valA_i+7],
+        memory_module.rams.rams[valA_i+6],memory_module.rams.rams[valA_i+5],
+        memory_module.rams.rams[valA_i+4],memory_module.rams.rams[valA_i+3],
+        memory_module.rams.rams[valA_i+2],memory_module.rams.rams[valA_i+1],
+        memory_module.rams.rams[valA_i]});
+        $display("M[valE] = %h", {memory_module.rams.rams[valE_i+7],
+        memory_module.rams.rams[valE_i+6],memory_module.rams.rams[valE_i+5],
+        memory_module.rams.rams[valE_i+4],memory_module.rams.rams[valE_i+3],
+        memory_module.rams.rams[valE_i+2],memory_module.rams.rams[valE_i+1],
+        memory_module.rams.rams[valE_i]});
+        $display("M[valM] = %h", memory_module.rams.rams[valM_o]);
+
+        
+        #2;
+        icode_i = `IIRMOVQ;  // 设定指令
+        #2;
+        $display("------------EXECUTE-------");
+        $display("valA = %h", valA_i);
+        $display("valE = %h", valE_i);
+        $display("valM = %h", valP_i);
+        $display("M[valA] = %h", {memory_module.rams.rams[valA_i+7],
+        memory_module.rams.rams[valA_i+6],memory_module.rams.rams[valA_i+5],
+        memory_module.rams.rams[valA_i+4],memory_module.rams.rams[valA_i+3],
+        memory_module.rams.rams[valA_i+2],memory_module.rams.rams[valA_i+1],
+        memory_module.rams.rams[valA_i]});
+        $display("M[valE] = %h", {memory_module.rams.rams[valE_i+7],
+        memory_module.rams.rams[valE_i+6],memory_module.rams.rams[valE_i+5],
+        memory_module.rams.rams[valE_i+4],memory_module.rams.rams[valE_i+3],
+        memory_module.rams.rams[valE_i+2],memory_module.rams.rams[valE_i+1],
+        memory_module.rams.rams[valE_i]});
+        $display("M[valM] = %h", memory_module.rams.rams[valM_o]);
+        $display("------------Finesh--------------------------------------");
+        #2;
+
+
+        $display("------------9th instruction IOPQ: ----------------");
+        $display("NOTHING TO DO...");
+        $display("valA = %h", valA_i);
+        $display("valE = %h", valE_i);
+        $display("valM = %h", valP_i);
+        $display("M[valA] = %h", {memory_module.rams.rams[valA_i+7],
+        memory_module.rams.rams[valA_i+6],memory_module.rams.rams[valA_i+5],
+        memory_module.rams.rams[valA_i+4],memory_module.rams.rams[valA_i+3],
+        memory_module.rams.rams[valA_i+2],memory_module.rams.rams[valA_i+1],
+        memory_module.rams.rams[valA_i]});
+        $display("M[valE] = %h", {memory_module.rams.rams[valE_i+7],
+        memory_module.rams.rams[valE_i+6],memory_module.rams.rams[valE_i+5],
+        memory_module.rams.rams[valE_i+4],memory_module.rams.rams[valE_i+3],
+        memory_module.rams.rams[valE_i+2],memory_module.rams.rams[valE_i+1],
+        memory_module.rams.rams[valE_i]});
+        $display("M[valM] = %h", memory_module.rams.rams[valM_o]);
+
+        
+        #2;
+        icode_i = `IOPQ;  // 设定指令
+        #2;
+        $display("------------EXECUTE-------");
+        $display("valA = %h", valA_i);
+        $display("valE = %h", valE_i);
+        $display("valM = %h", valP_i);
+        $display("M[valA] = %h", {memory_module.rams.rams[valA_i+7],
+        memory_module.rams.rams[valA_i+6],memory_module.rams.rams[valA_i+5],
+        memory_module.rams.rams[valA_i+4],memory_module.rams.rams[valA_i+3],
+        memory_module.rams.rams[valA_i+2],memory_module.rams.rams[valA_i+1],
+        memory_module.rams.rams[valA_i]});
+        $display("M[valE] = %h", {memory_module.rams.rams[valE_i+7],
+        memory_module.rams.rams[valE_i+6],memory_module.rams.rams[valE_i+5],
+        memory_module.rams.rams[valE_i+4],memory_module.rams.rams[valE_i+3],
+        memory_module.rams.rams[valE_i+2],memory_module.rams.rams[valE_i+1],
+        memory_module.rams.rams[valE_i]});
+        $display("M[valM] = %h", memory_module.rams.rams[valM_o]);
+        $display("------------Finesh--------------------------------------");
+        #2;
+
+        $display("------------9th instruction IJXX: ----------------");
+        $display("NOTHING TO DO...");
+        $display("valA = %h", valA_i);
+        $display("valE = %h", valE_i);
+        $display("valM = %h", valP_i);
+        $display("M[valA] = %h", {memory_module.rams.rams[valA_i+7],
+        memory_module.rams.rams[valA_i+6],memory_module.rams.rams[valA_i+5],
+        memory_module.rams.rams[valA_i+4],memory_module.rams.rams[valA_i+3],
+        memory_module.rams.rams[valA_i+2],memory_module.rams.rams[valA_i+1],
+        memory_module.rams.rams[valA_i]});
+        $display("M[valE] = %h",{memory_module.rams.rams[valE_i+7],
+        memory_module.rams.rams[valE_i+6],memory_module.rams.rams[valE_i+5],
+        memory_module.rams.rams[valE_i+4],memory_module.rams.rams[valE_i+3],
+        memory_module.rams.rams[valE_i+2],memory_module.rams.rams[valE_i+1],
+        memory_module.rams.rams[valE_i]});
+        $display("M[valM] = %h", memory_module.rams.rams[valM_o]);
+
+        
+        #2;
+        icode_i = `IJXX;  // 设定指令
+        #2;
+        $display("------------EXECUTE-------");
+        $display("valA = %h", valA_i);
+        $display("valE = %h", valE_i);
+        $display("valM = %h", valP_i);
+        $display("M[valA] = %h", {memory_module.rams.rams[valA_i+7],
+        memory_module.rams.rams[valA_i+6],memory_module.rams.rams[valA_i+5],
+        memory_module.rams.rams[valA_i+4],memory_module.rams.rams[valA_i+3],
+        memory_module.rams.rams[valA_i+2],memory_module.rams.rams[valA_i+1],
+        memory_module.rams.rams[valA_i]});
+        $display("M[valE] = %h", {memory_module.rams.rams[valE_i+7],
+        memory_module.rams.rams[valE_i+6],memory_module.rams.rams[valE_i+5],
+        memory_module.rams.rams[valE_i+4],memory_module.rams.rams[valE_i+3],
+        memory_module.rams.rams[valE_i+2],memory_module.rams.rams[valE_i+1],
+        memory_module.rams.rams[valE_i]});
+        $display("M[valM] = %h", memory_module.rams.rams[valM_o]);
         $display("------------Finesh--------------------------------------");
         #2;
 
