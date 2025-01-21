@@ -24,7 +24,7 @@ wire write_en,read_en;
 assign write_en=(icode_i==`IRMMOVQ)||(icode_i==`ICALL)||(icode_i==`IPUSHQ);
 assign read_en=(icode_i==`IMRMOVQ)||(icode_i==`IRET)||(icode_i==`IPOPQ);
 
-wire addr;
+wire [63:0]addr;
 
 assign addr=((icode_i==`IRMMOVQ)||(icode_i==`IMRMOVQ)||(icode_i==`ICALL)||(icode_i==`IPUSHQ))?valE_i:
     (((icode_i==`IRET)||(icode_i==`IPOPQ))?valA_i:64'b0);
@@ -43,5 +43,7 @@ ram rams(
     .read_data_o(valM_o),
     .dmem_error_o(dmem_error_o)
 );
+
+
 
 endmodule

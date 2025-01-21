@@ -1,4 +1,4 @@
-# vsim -c cpu_top 
+# vsim -c ram_tb 
 # //  ModelSim ALTERA 10.1d Nov  2 2012 
 # //
 # //  Copyright 1991-2012 Mentor Graphics Corporation
@@ -8,29 +8,5 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# Loading work.cpu_top
-# Loading work.regs
+# Loading work.ram_tb
 # Loading work.ram
-# Loading work.fetch
-# Loading work.decode
-# ** Warning: (vsim-3015) top.v(170): [PCDPC] - Port size (80 or 80) does not match connection size (1) for port 'read_instruction_o'. The port definition is at: ram.v(10).
-# 
-#         Region: /cpu_top/rams
-# ** Error: (vsim-3053) top.v(201): Illegal output or inout port connection for "port 'valA_o'".
-# 
-#         Region: /cpu_top/decode_model
-# ** Error: (vsim-3053) top.v(201): Illegal output or inout port connection for "port 'valB_o'".
-# 
-#         Region: /cpu_top/decode_model
-# ** Warning: (vsim-3017) decode.v(150): [TFMPC] - Too few port connections. Expected 10, found 9.
-# 
-#         Region: /cpu_top/decode_model/regfile
-# ** Warning: (vsim-3015) decode.v(150): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'valA'. The port definition is at: regs.v(11).
-# 
-#         Region: /cpu_top/decode_model/regfile
-# ** Warning: (vsim-3015) decode.v(150): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'valB'. The port definition is at: regs.v(12).
-# 
-#         Region: /cpu_top/decode_model/regfile
-# ** Warning: (vsim-3722) decode.v(150): [TFMPC] - Missing connection for port 'rst_n'.
-# 
-# Error loading design
