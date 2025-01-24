@@ -11,7 +11,6 @@ module execute(
     input wire signed[63:0] valC_i,
 
     output reg signed[63:0] valE_o,
-    output reg [2:0] cc_o,
     output wire cnd_o
 );
 
@@ -19,14 +18,14 @@ reg [63:0] aluA;
 reg[63:0] aluB;
 reg [3:0] alu_fun;
 reg[2:0]new_cc;
-//reg[2:0]cc;
+reg[2:0]cc;
 wire set_cc;
 wire sf;
 wire of;
 wire zf;
-assign of=cc_o[0];
-assign sf=cc_o[1];
-assign zf=cc_o[2];
+assign of=cc[0];
+assign sf=cc[1];
+assign zf=cc[2];
 
 assign set_cc=icode_i==`IOPQ;
 
@@ -122,9 +121,9 @@ assign set_cc=(icode_i==`IOPQ)?1:0;
 
 always@(posedge clk_i)begin 
     if(~rst_n_i)
-        cc_o<=3'b100;
+        cc<=3'b100;
     else if(set_cc)
-        cc_o<=new_cc;
+        cc<=new_cc;
 end
 
 

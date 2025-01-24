@@ -22,19 +22,21 @@ reg [63:0] regfile[14:0];  //regfile
 integer i;
 
 always@(negedge rst_n_i)begin 
-    $display("regs.v: initial...");
+    $display("decode.v: regfile initial...");
     for(i=0;i<15;i=i+1)begin
-        regfile[i]<=64'b0;
+        regfile[i]<=i;
     end
 end
 
 
 
+//这里千万不要赋初值为0，否则导致竞态。访问0号寄存器永远失败。
+reg [3:0] srcA;
+reg [3:0] srcB;
+reg [3:0] dstE;
+reg [3:0] dstM;
 
-reg [3:0] srcA=0;
-reg [3:0] srcB=0;
-reg [3:0] dstE=0;
-reg [3:0] dstM=0;
+
 
 always@(*)begin
     case(icode_i)
@@ -54,7 +56,8 @@ always@(*)begin
 
         `IRRMOVQ:begin 
             srcA=rA_i;
-            srcB=rB_i;
+            srcB=4'hf;
+            //srcB=rB_i;
             dstE=rB_i;
             dstM=4'hf;
         end
@@ -110,7 +113,7 @@ always@(*)begin
 
         `IPUSHQ:begin 
             srcA=rA_i;
-            srcB=4'hf;
+            srcB=4'h4;//%rsp
             dstE=4'h4;
             dstM=4'hf;
         end
@@ -131,9 +134,8 @@ always@(*)begin
     endcase
 end
 
-
-assign valA_o=(rA_i==4'hf)?64'b0:regfile[rA_i];
-assign valB_o=(rB_i==4'hf)?64'b0:regfile[rB_i];
+assign valA_o=(srcA==4'hf)?64'b0:regfile[srcA];
+assign valB_o=(srcB==4'hf)?64'b0:regfile[srcB];
 
 always@(posedge clk_i)begin 
     if(dstE!=4'hf)begin

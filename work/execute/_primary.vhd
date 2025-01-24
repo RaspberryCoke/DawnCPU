@@ -10,7 +10,6 @@ entity execute is
         valB_i          : in     vl_logic_vector(63 downto 0);
         valC_i          : in     vl_logic_vector(63 downto 0);
         valE_o          : out    vl_logic_vector(63 downto 0);
-        cc_o            : out    vl_logic_vector(2 downto 0);
         cnd_o           : out    vl_logic
     );
 end execute;
