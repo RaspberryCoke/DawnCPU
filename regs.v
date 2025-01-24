@@ -1,25 +1,25 @@
 module regs(
     input wire clk_i,
-    input wire rst_n,
-    input wire [3:0] srcA,
-    input wire [3:0] srcB,
-    input wire [3:0] dstA,
-    input wire [3:0] dstB,
-    input wire [63:0] dstA_data,
-    input wire [63:0] dstB_data,
+    input wire rst_n_i,
+    input wire [3:0] srcA_i,
+    input wire [3:0] srcB_i,
+    input wire [3:0] dstA_i,
+    input wire [3:0] dstB_i,
+    input wire [63:0] dstA_data_i,
+    input wire [63:0] dstB_data_i,
 
-    output wire [63:0] valA,
-    output wire [63:0] valB
+    output wire [63:0] valA_o,
+    output wire [63:0] valB_o
 );
 
 reg [63:0] regfile[14:0];
 
-assign valA=(srcA==4'hf)?64'b0:regfile[srcA];
-assign valB=(srcB==4'hf)?64'b0:regfile[srcB];
+assign valA_o=(srcA_i==4'hf)?64'b0:regfile[srcA_i];
+assign valB_o=(srcB_i==4'hf)?64'b0:regfile[srcB_i];
 
 always@(posedge clk_i)begin 
-    if(dstA!=4'hf)regfile[dstA]<=dstA_data;
-    if(dstB!=4'hf)regfile[dstB]<=dstB_data;
+    if(dstA_i!=4'hf)regfile[dstA_i]<=dstA_data_i;
+    if(dstB_i!=4'hf)regfile[dstB_i]<=dstB_data_i;
 end
 
 endmodule

@@ -1,4 +1,4 @@
-# vsim execute_tb 
+# vsim -c top_single_module 
 # //  ModelSim ALTERA 10.1d Nov  2 2012 
 # //
 # //  Copyright 1991-2012 Mentor Graphics Corporation
@@ -8,18 +8,41 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# Loading work.execute_tb
+# Loading work.top_single_module
+# Loading work.regs
+# Loading work.ram
+# Loading work.fetch
+# Loading work.decode
 # Loading work.execute
-add wave -position insertpoint  \
-sim:/execute_tb/rst_n_i \
-sim:/execute_tb/icode_i \
-sim:/execute_tb/ifun_i \
-sim:/execute_tb/valA_i \
-sim:/execute_tb/valB_i \
-sim:/execute_tb/valC_i \
-sim:/execute_tb/valE_o \
-sim:/execute_tb/cc
-run -all
-# WARNING: No extended dataflow license exists
-add wave -position insertpoint  \
-sim:/execute_tb/Cnd_o
+# Loading work.memory_access
+# Loading work.writeback
+# Loading work.pc_update
+# ** Error: (vsim-3053) top_single_module.v(125): Illegal output or inout port connection for "port 'valE_o'".
+# 
+#         Region: /top_single_module/execute_module
+# ** Error: (vsim-3053) top_single_module.v(125): Illegal output or inout port connection for "port 'cc_o'".
+# 
+#         Region: /top_single_module/execute_module
+# ** Warning: (vsim-3015) top_single_module.v(136): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'valM_o'. The port definition is at: d:/project/ic/cpu/DawnCPU/memory_access.v(8).
+# 
+#         Region: /top_single_module/memory_module
+# ** Warning: (vsim-3017) d:/project/ic/cpu/DawnCPU/memory_access.v(45): [TFMPC] - Too few port connections. Expected 10, found 7.
+# 
+#         Region: /top_single_module/memory_module/rams
+# ** Warning: (vsim-3722) d:/project/ic/cpu/DawnCPU/memory_access.v(45): [TFMPC] - Missing connection for port 'rst_n_i'.
+# 
+# ** Warning: (vsim-3722) d:/project/ic/cpu/DawnCPU/memory_access.v(45): [TFMPC] - Missing connection for port 'read_instruction_i'.
+# 
+# ** Warning: (vsim-3722) d:/project/ic/cpu/DawnCPU/memory_access.v(45): [TFMPC] - Missing connection for port 'read_instruction_o'.
+# 
+# ** Warning: (vsim-3017) top_single_module.v(148): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /top_single_module/writeback_module
+# ** Warning: (vsim-3722) top_single_module.v(148): [TFMPC] - Missing connection for port 'valE_i'.
+# 
+# ** Warning: (vsim-3722) top_single_module.v(148): [TFMPC] - Missing connection for port 'valM_i'.
+# 
+# ** Warning: (vsim-3015) top_single_module.v(160): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'valM_i'. The port definition is at: d:/project/ic/cpu/DawnCPU/pc_update.v(13).
+# 
+#         Region: /top_single_module/pc_update_module
+# Error loading design

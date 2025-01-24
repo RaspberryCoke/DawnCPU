@@ -4,9 +4,9 @@ module decode(
     input wire clk_i,
     input wire rst_n_i,
 
-    input [3:0] rA,
-    input [3:0] rB,
-    input [3:0] icode,
+    input [3:0] rA_i,
+    input [3:0] rB_i,
+    input [3:0] icode_i,
 
     input wire[63:0] valE_i,
     input wire[63:0] valM_i,
@@ -24,7 +24,7 @@ reg [3:0] dstE=0;
 reg [3:0] dstM=0;
 
 always@(*)begin
-    case(icode)
+    case(icode_i)
         `IHALT:begin 
             srcA=4'hf;
             srcB=4'hf;
@@ -40,37 +40,37 @@ always@(*)begin
         end
 
         `IRRMOVQ:begin 
-            srcA=rA;
-            srcB=rB;
-            dstE=rB;
+            srcA=rA_i;
+            srcB=rB_i;
+            dstE=rB_i;
             dstM=4'hf;
         end
 
         `IIRMOVQ:begin 
             srcA=4'hf;
-            srcB=rB;
-            dstE=rB;
+            srcB=rB_i;
+            dstE=rB_i;
             dstM=4'hf;
         end
 
         `IRMMOVQ:begin 
-            srcA=rA;
-            srcB=rB;
+            srcA=rA_i;
+            srcB=rB_i;
             dstE=4'hf;
             dstM=4'hf;
         end
 
         `IMRMOVQ:begin 
-            srcA=rA;
-            srcB=rB;
+            srcA=rA_i;
+            srcB=rB_i;
             dstE=4'hf;
-            dstM=rA;
+            dstM=rA_i;
         end
 
         `IOPQ:begin 
-            srcA=rA;
-            srcB=rB;
-            dstE=rB;
+            srcA=rA_i;
+            srcB=rB_i;
+            dstE=rB_i;
             dstM=4'hf;
         end
 
@@ -96,17 +96,17 @@ always@(*)begin
         end
 
         `IPUSHQ:begin 
-            srcA=rA;
+            srcA=rA_i;
             srcB=4'hf;
             dstE=4'h4;
             dstM=4'hf;
         end
 
         `IPOPQ:begin 
-            srcA=rA;
+            srcA=rA_i;
             srcB=4'hf;
             dstE=4'h4;
-            dstM=rA;
+            dstM=rA_i;
         end
 
         default: begin 
@@ -137,16 +137,16 @@ end
 //     output  [63:0] valB
 // );
 
-regs regfile(
-    .clk_i(clk_i),
-    .srcA(srcA),
-    .srcB(srcB),
-    .dstA(dstE),
-    .dstB(dstM),
-    .dstA_data(valE_i),
-    .dstB_data(valM_i),
-    .valA(valA),
-    .valB(valB)
-);
+// regs regfile(
+//     .clk_i(clk_i),
+//     .srcA(srcA),
+//     .srcB(srcB),
+//     .dstA(dstE),
+//     .dstB(dstM),
+//     .dstA_data(valE_i),
+//     .dstB_data(valM_i),
+//     .valA(valA),
+//     .valB(valB)
+// );
 
 endmodule
