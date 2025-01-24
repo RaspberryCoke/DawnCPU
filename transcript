@@ -1,4 +1,4 @@
-# vsim -c top_single_module 
+# vsim -c top_single_module2 
 # //  ModelSim ALTERA 10.1d Nov  2 2012 
 # //
 # //  Copyright 1991-2012 Mentor Graphics Corporation
@@ -8,12 +8,568 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# Loading work.top_single_module
-# Loading work.regs
-# Loading work.ram
+# Loading work.top_single_module2
 # Loading work.fetch
-# Loading work.decode
-# Loading work.execute
-# Loading work.memory_access
-# Loading work.writeback
-# regs.v: initial...
+# 
+#  ============= file opened... ============= 
+# enter main loop...
+# ----------------skip # hang-------------- 
+#                                                                                                                                                                                                                                                                                                                     0
+# skip # hang ,this char is # .
+# skip # hang ,this char is   .
+# skip # hang ,this char is i .
+# skip # hang ,this char is r .
+# skip # hang ,this char is m .
+# skip # hang ,this char is o .
+# skip # hang ,this char is v .
+# skip # hang ,this char is q .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is x .
+# skip # hang ,this char is 8 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 8 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 3 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is f .
+# skip # hang ,this char is 8 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is 8 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 8 .
+# skip # hang ,this char is = .
+# skip # hang ,this char is 8 .
+# ----------------set pc =                                                                                                                                                                                                                                                                                                                     0 -------------
+# getting num :  3  
+# getting num :  0  
+# getting num :  8  
+# getting num :  8  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# enter main loop...
+# ----------------skip # hang-------------- 
+#                                                                                                                                                                                                                                                                                                                     0
+# skip # hang ,this char is # .
+# skip # hang ,this char is   .
+# skip # hang ,this char is i .
+# skip # hang ,this char is r .
+# skip # hang ,this char is m .
+# skip # hang ,this char is o .
+# skip # hang ,this char is v .
+# skip # hang ,this char is q .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is x .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 3 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is f .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is = .
+# skip # hang ,this char is 9 .
+# ----------------set pc =                                                                                                                                                                                                                                                                                                                     0 -------------
+# getting num :  3  
+# getting num :  0  
+# getting num :  9  
+# getting num :  9  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# enter main loop...
+# ----------------skip # hang-------------- 
+#                                                                                                                                                                                                                                                                                                                     0
+# skip # hang ,this char is # .
+# skip # hang ,this char is   .
+# skip # hang ,this char is r .
+# skip # hang ,this char is r .
+# skip # hang ,this char is m .
+# skip # hang ,this char is o .
+# skip # hang ,this char is v .
+# skip # hang ,this char is q .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 8 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is = .
+# skip # hang ,this char is 8 .
+# ----------------set pc =                                                                                                                                                                                                                                                                                                                     0 -------------
+# getting num :  2  
+# getting num :  0  
+# getting num :  a  
+# enter main loop...
+# ----------------skip # hang-------------- 
+#                                                                                                                                                                                                                                                                                                                     0
+# skip # hang ,this char is # .
+# skip # hang ,this char is   .
+# skip # hang ,this char is r .
+# skip # hang ,this char is r .
+# skip # hang ,this char is m .
+# skip # hang ,this char is o .
+# skip # hang ,this char is v .
+# skip # hang ,this char is q .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is = .
+# skip # hang ,this char is 9 .
+# ----------------set pc =                                                                                                                                                                                                                                                                                                                     0 -------------
+# getting num :  2  
+# getting num :  0  
+# getting num :  b  
+# enter main loop...
+# ----------------skip # hang-------------- 
+#                                                                                                                                                                                                                                                                                                                     0
+# skip # hang ,this char is # .
+# skip # hang ,this char is   .
+# skip # hang ,this char is a .
+# skip # hang ,this char is d .
+# skip # hang ,this char is d .
+# skip # hang ,this char is q .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 8 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is = .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is + .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 8 .
+# skip # hang ,this char is = .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is + .
+# skip # hang ,this char is 8 .
+# skip # hang ,this char is = .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 7 .
+# ----------------set pc =                                                                                                                                                                                                                                                                                                                     0 -------------
+# getting num :  6  
+# getting num :  0  
+# getting num :  9  
+# enter main loop...
+# ----------------skip # hang-------------- 
+#                                                                                                                                                                                                                                                                                                                     0
+# skip # hang ,this char is # .
+# skip # hang ,this char is   .
+# skip # hang ,this char is s .
+# skip # hang ,this char is u .
+# skip # hang ,this char is b .
+# skip # hang ,this char is q .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is = .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is - .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is = .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is - .
+# skip # hang ,this char is 8 .
+# skip # hang ,this char is = .
+# skip # hang ,this char is 1 .
+# ----------------set pc =                                                                                                                                                                                                                                                                                                                     0 -------------
+# getting num :  6  
+# getting num :  1  
+# getting num :  b  
+# enter main loop...
+# ----------------skip # hang-------------- 
+#                                                                                                                                                                                                                                                                                                                     0
+# skip # hang ,this char is # .
+# skip # hang ,this char is   .
+# skip # hang ,this char is a .
+# skip # hang ,this char is n .
+# skip # hang ,this char is d .
+# skip # hang ,this char is q .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is = .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is & .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is = .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 7 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is & .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is = .
+# skip # hang ,this char is 1 .
+# ----------------set pc =                                                                                                                                                                                                                                                                                                                     0 -------------
+# getting num :  6  
+# getting num :  2  
+# getting num :  9  
+# enter main loop...
+# ----------------skip # hang-------------- 
+#                                                                                                                                                                                                                                                                                                                     0
+# skip # hang ,this char is # .
+# skip # hang ,this char is   .
+# skip # hang ,this char is x .
+# skip # hang ,this char is o .
+# skip # hang ,this char is r .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is = .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is ^ .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is 9 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is = .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is ^ .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 1 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is = .
+# skip # hang ,this char is 0 .
+# ----------------set pc =                                                                                                                                                                                                                                                                                                                     0 -------------
+# getting num :  6  
+# getting num :  3  
+# getting num :  b  
+# enter main loop...
+# ----------------skip # hang-------------- 
+#                                                                                                                                                                                                                                                                                                                     0
+# skip # hang ,this char is # .
+# skip # hang ,this char is   .
+# skip # hang ,this char is i .
+# skip # hang ,this char is r .
+# skip # hang ,this char is m .
+# skip # hang ,this char is o .
+# skip # hang ,this char is v .
+# skip # hang ,this char is q .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is x .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is s .
+# skip # hang ,this char is p .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 3 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is f .
+# skip # hang ,this char is 4 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is 0 .
+# skip # hang ,this char is   .
+# skip # hang ,this char is   .
+# skip # hang ,this char is % .
+# skip # hang ,this char is r .
+# skip # hang ,this char is s .
+# skip # hang ,this char is p .
+# skip # hang ,this char is = .
+# skip # hang ,this char is 0 .
+# ----------------set pc =                                                                                                                                                                                                                                                                                                                     0 -------------
+# getting num :  3  
+# getting num :  0  
+# getting num :  4  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# getting num :  0  
+# file end...or format wrong...
+# char_num=           0 ...fbuf=...
+# buff_i is         42
+# Time=10000|PC=                   x|icode=0|ifun=X|rA=f|rB=f|valC=0000000000000000|valP=xxxxxxxxxxxxxxxx|instr_valid=1|imem_error_o=x
+# Time=20000|PC=                   0|icode=0|ifun=0|rA=f|rB=f|valC=0000000000000000|valP=0000000000000001|instr_valid=1|imem_error_o=0
+# Time=30000|PC=                  10|icode=0|ifun=0|rA=f|rB=f|valC=0000000000000000|valP=000000000000000b|instr_valid=1|imem_error_o=0
+# Time=40000|PC=                  20|icode=0|ifun=0|rA=f|rB=f|valC=0000000000000000|valP=0000000000000015|instr_valid=1|imem_error_o=0
+# Time=50000|PC=                  22|icode=0|ifun=0|rA=f|rB=f|valC=0000000000000000|valP=0000000000000017|instr_valid=1|imem_error_o=0
+# Time=60000|PC=                  24|icode=0|ifun=0|rA=f|rB=f|valC=0000000000000000|valP=0000000000000019|instr_valid=1|imem_error_o=0
+# Time=70000|PC=                  26|icode=0|ifun=0|rA=f|rB=f|valC=0000000000000000|valP=000000000000001b|instr_valid=1|imem_error_o=0
+# Time=80000|PC=                  28|icode=0|ifun=0|rA=f|rB=f|valC=0000000000000000|valP=000000000000001d|instr_valid=1|imem_error_o=0
+# Time=90000|PC=                  30|icode=0|ifun=0|rA=f|rB=f|valC=0000000000000000|valP=000000000000001f|instr_valid=1|imem_error_o=0
+# begin to output:....buff_i is         42.
+# 
+#   3:0
+# 
+#   f:8
+# 
+#   0:8
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   3:0
+# 
+#   f:9
+# 
+#   0:9
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   2:0
+# 
+#   8:a
+# 
+#   2:0
+# 
+#   9:b
+# 
+#   6:0
+# 
+#   8:9
+# 
+#   6:1
+# 
+#   a:b
+# 
+#   6:2
+# 
+#   b:9
+# 
+#   6:3
+# 
+#   9:b
+# 
+#   3:0
+# 
+#   f:4
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#   0:0
+# 
+#  ============= file closed... ============= 
+# Time=100000|PC=                  32|icode=0|ifun=0|rA=f|rB=f|valC=0000000000000000|valP=0000000000000021|instr_valid=1|imem_error_o=0

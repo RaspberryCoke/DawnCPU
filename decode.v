@@ -17,6 +17,19 @@ module decode(
     output wire[63:0] valB_o
 );
 
+reg [63:0] regfile[14:0];  //regfile
+
+integer i;
+
+always@(negedge rst_n_i)begin 
+    $display("regs.v: initial...");
+    for(i=0;i<15;i=i+1)begin
+        regfile[i]<=64'b0;
+    end
+end
+
+
+
 
 reg [3:0] srcA=0;
 reg [3:0] srcB=0;
@@ -115,38 +128,20 @@ always@(*)begin
             dstE=4'hf;
             dstM=4'hf;
         end
-
     endcase
-
-
 end
 
 
-// //假设这里是 r0 r1 r2 r3 .... r14
-// reg [63:0] regfile[14:0];
-// module regs(
-//     input clk_i,
-//     input [3:0] srcA,
-//     input [3:0] srcB,
-//     input [3:0] dstA,
-//     input [3:0] dstB,
-//     input [63:0] dstA_data,
-//     input [63:0] dstB_data,
+assign valA_o=(rA_i==4'hf)?64'b0:regfile[rA_i];
+assign valB_o=(rB_i==4'hf)?64'b0:regfile[rB_i];
 
-//     output  [63:0] valA,
-//     output  [63:0] valB
-// );
-
-// regs regfile(
-//     .clk_i(clk_i),
-//     .srcA(srcA),
-//     .srcB(srcB),
-//     .dstA(dstE),
-//     .dstB(dstM),
-//     .dstA_data(valE_i),
-//     .dstB_data(valM_i),
-//     .valA(valA),
-//     .valB(valB)
-// );
+always@(posedge clk_i)begin 
+    if(dstE!=4'hf)begin
+        regfile[dstE]<=valE_i;
+    end
+    if(dstM!=4'hf)begin
+        regfile[dstM]<=valM_i;
+    end
+end
 
 endmodule

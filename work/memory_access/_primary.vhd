@@ -8,8 +8,6 @@ entity memory_access is
         valE_i          : in     vl_logic_vector(63 downto 0);
         valP_i          : in     vl_logic_vector(63 downto 0);
         addr_io         : out    vl_logic_vector(63 downto 0);
-        read_en         : out    vl_logic;
-        write_en        : out    vl_logic;
         valM_o          : out    vl_logic_vector(63 downto 0);
         write_data      : out    vl_logic_vector(63 downto 0);
         dmem_error_o    : out    vl_logic

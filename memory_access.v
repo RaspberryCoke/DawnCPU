@@ -8,17 +8,14 @@ module  memory_access(
 
     output wire[63:0]addr_io,
     
-    output wire read_en,
-    output wire write_en,
-
     output wire [63:0] valM_o,
     output wire[63:0]write_data,
 
     output wire dmem_error_o
 );
 
-
-
+wire read_en;
+wire write_en;
 
 assign write_en=(icode_i==`IRMMOVQ)||(icode_i==`ICALL)||(icode_i==`IPUSHQ);
 assign read_en=(icode_i==`IMRMOVQ)||(icode_i==`IRET)||(icode_i==`IPOPQ);
