@@ -17,8 +17,6 @@ wire        instr_valid_o;
 wire       imem_error_o ;
 
 fetch fetch_module(
-    .clk_i(clk_i),
-    .rst_n_i(rst_n_i),
     .PC_i(PC_i),
     .icode_o(icode_o),
     .ifun_o(ifun_o),
@@ -30,6 +28,27 @@ fetch fetch_module(
     .imem_error_o(imem_error_o)
 );
 
+
+module decode(
+    input wire clk_i,
+    input wire rst_n_i,
+
+    input [3:0] rA_i,
+    input [3:0] rB_i,
+    input [3:0] icode_i,
+
+    input wire[63:0] valE_i,
+    input wire[63:0] valM_i,
+
+    //input wire cnd_i,
+
+    output wire[63:0] valA_o,
+    output wire[63:0] valB_o
+);
+
+
+
+
 initial begin
     #10
 
@@ -39,13 +58,13 @@ initial begin
     // clk_i=1;
     // rst_n_i=1;q
 
-    #10 PC_i=64'D0;
+    #10 PC_i=64'D0; 
     $monitor("Time=%0t|PC=%d|icode=%h|ifun=%h|rA=%h|rB=%h|valC=%h|valP=%h|instr_valid=%h|imem_error_o=%h",
                 $time, PC_i, icode_o, ifun_o,rA_o, rB_o,  valC_o, valP_o, instr_valid_o,imem_error_o);
-    #10 PC_i=64'D10;
+    #10 PC_i=64'D10;#10
     $monitor("Time=%0t|PC=%d|icode=%h|ifun=%h|rA=%h|rB=%h|valC=%h|valP=%h|instr_valid=%h|imem_error_o=%h",
                 $time, PC_i, icode_o, ifun_o,rA_o, rB_o,  valC_o, valP_o, instr_valid_o,imem_error_o);
-    #10 PC_i=64'D20;
+    #10 PC_i=64'D20;#10
     $monitor("Time=%0t|PC=%d|icode=%h|ifun=%h|rA=%h|rB=%h|valC=%h|valP=%h|instr_valid=%h|imem_error_o=%h",
                 $time, PC_i, icode_o, ifun_o,rA_o, rB_o,  valC_o, valP_o, instr_valid_o,imem_error_o);
     #10 PC_i=64'D22;
