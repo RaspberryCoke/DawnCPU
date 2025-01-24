@@ -12,26 +12,30 @@
 # Loading work.fetch
 # Loading work.decode
 # Loading work.execute
+# Loading work.memory_access
+# Loading work.writeback
+# Loading work.pc_update
 # run -all 
+# memory_access.v: drams initial......
 # decode.v: regfile initial...
-# Time=11000|PC=   0|icode=3|ifun=0|rA=f|rB=8|valA=0000000000000000|valB=0000000000000008|valC=0000000000000008|valE=0000000000000008|valP=000000000000000a|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=21000|PC=  10|icode=3|ifun=0|rA=f|rB=9|valA=0000000000000000|valB=0000000000000009|valC=0000000000000021|valE=0000000000000021|valP=0000000000000014|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=31000|PC=  20|icode=2|ifun=0|rA=8|rB=a|valA=0000000000000008|valB=0000000000000000|valC=0000000000000000|valE=0000000000000008|valP=0000000000000016|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=41000|PC=  22|icode=6|ifun=0|rA=8|rB=a|valA=0000000000000008|valB=000000000000000a|valC=0000000000000000|valE=0000000000000012|valP=0000000000000018|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=51000|PC=  24|icode=6|ifun=1|rA=8|rB=a|valA=0000000000000008|valB=000000000000000a|valC=0000000000000000|valE=0000000000000002|valP=000000000000001a|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=61000|PC=  26|icode=6|ifun=1|rA=8|rB=a|valA=0000000000000008|valB=000000000000000a|valC=0000000000000000|valE=0000000000000002|valP=000000000000001c|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=71000|PC=  28|icode=6|ifun=3|rA=2|rB=0|valA=0000000000000002|valB=0000000000000000|valC=0000000000000000|valE=0000000000000002|valP=000000000000001e|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=81000|PC=  30|icode=6|ifun=2|rA=1|rB=3|valA=0000000000000001|valB=0000000000000003|valC=0000000000000000|valE=0000000000000001|valP=0000000000000020|instr_valid=1|imem_error_o=0|cc=4|cnd=0.
-# Time=91000|PC=  32|icode=3|ifun=0|rA=f|rB=4|valA=0000000000000000|valB=0000000000000004|valC=0000000000000090|valE=0000000000000090|valP=000000000000002a|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=101000|PC=  42|icode=a|ifun=0|rA=2|rB=f|valA=0000000000000002|valB=0000000000000004|valC=0000000000000000|valE=fffffffffffffffc|valP=000000000000002c|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=111000|PC=  44|icode=b|ifun=0|rA=0|rB=f|valA=0000000000000000|valB=0000000000000000|valC=0000000000000000|valE=0000000000000008|valP=000000000000002e|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=121000|PC=  46|icode=4|ifun=0|rA=0|rB=2|valA=0000000000000000|valB=0000000000000002|valC=0000000000000006|valE=0000000000000008|valP=0000000000000038|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=131000|PC=  56|icode=5|ifun=0|rA=3|rB=0|valA=0000000000000003|valB=0000000000000000|valC=0000000000000006|valE=0000000000000006|valP=0000000000000042|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=141000|PC=  66|icode=7|ifun=0|rA=f|rB=f|valA=0000000000000000|valB=0000000000000000|valC=0000000000000080|valE=0000000000000000|valP=000000000000004b|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=151000|PC=  80|icode=6|ifun=1|rA=b|rB=c|valA=000000000000000b|valB=000000000000000c|valC=0000000000000000|valE=0000000000000001|valP=0000000000000052|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=161000|PC=  82|icode=7|ifun=6|rA=f|rB=f|valA=0000000000000000|valB=0000000000000000|valC=0000000000000060|valE=0000000000000000|valP=000000000000005b|instr_valid=1|imem_error_o=0|cc=4|cnd=0.
-# Time=171000|PC=  96|icode=8|ifun=0|rA=f|rB=f|valA=0000000000000000|valB=0000000000000000|valC=0000000000000080|valE=fffffffffffffff8|valP=0000000000000069|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=181000|PC= 128|icode=9|ifun=0|rA=f|rB=f|valA=0000000000000000|valB=0000000000000000|valC=0000000000000000|valE=0000000000000008|valP=0000000000000081|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=191000|PC= 105|icode=7|ifun=0|rA=f|rB=f|valA=0000000000000000|valB=0000000000000000|valC=0000000000000081|valE=0000000000000000|valP=0000000000000072|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
-# Time=201000|PC= 129|icode=0|ifun=0|rA=f|rB=f|valA=0000000000000000|valB=0000000000000000|valC=0000000000000000|valE=0000000000000000|valP=0000000000000082|instr_valid=1|imem_error_o=0|cc=4|cnd=1.
+# Time=11000|PC=   0|icode=3|ifun=0|rA=f|rB=8|valA=0000000000000000|valB=0000000000000008|valC=0000000000000008|valE=0000000000000008|valP=000000000000000a|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=21000|PC=  10|icode=3|ifun=0|rA=f|rB=9|valA=0000000000000000|valB=0000000000000009|valC=0000000000000021|valE=0000000000000021|valP=0000000000000014|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=31000|PC=  20|icode=2|ifun=0|rA=8|rB=a|valA=0000000000000008|valB=0000000000000000|valC=0000000000000000|valE=0000000000000008|valP=0000000000000016|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=41000|PC=  22|icode=6|ifun=0|rA=8|rB=a|valA=0000000000000008|valB=000000000000000a|valC=0000000000000000|valE=0000000000000012|valP=0000000000000018|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=51000|PC=  24|icode=6|ifun=1|rA=8|rB=a|valA=0000000000000008|valB=000000000000000a|valC=0000000000000000|valE=0000000000000002|valP=000000000000001a|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=61000|PC=  26|icode=6|ifun=1|rA=8|rB=a|valA=0000000000000008|valB=000000000000000a|valC=0000000000000000|valE=0000000000000002|valP=000000000000001c|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=71000|PC=  28|icode=6|ifun=3|rA=2|rB=0|valA=0000000000000002|valB=0000000000000000|valC=0000000000000000|valE=0000000000000002|valP=000000000000001e|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=81000|PC=  30|icode=6|ifun=2|rA=1|rB=3|valA=0000000000000001|valB=0000000000000003|valC=0000000000000000|valE=0000000000000001|valP=0000000000000020|instr_valid=1|imem_error_o=0|cnd=0|npc=                   0.
+# Time=91000|PC=  32|icode=3|ifun=0|rA=f|rB=4|valA=0000000000000000|valB=0000000000000004|valC=0000000000000090|valE=0000000000000090|valP=000000000000002a|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=101000|PC=  42|icode=a|ifun=0|rA=2|rB=f|valA=0000000000000002|valB=0000000000000004|valC=0000000000000000|valE=fffffffffffffffc|valP=000000000000002c|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=111000|PC=  44|icode=b|ifun=0|rA=0|rB=f|valA=0000000000000000|valB=0000000000000000|valC=0000000000000000|valE=0000000000000008|valP=000000000000002e|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=121000|PC=  46|icode=4|ifun=0|rA=0|rB=2|valA=0000000000000000|valB=0000000000000002|valC=0000000000000006|valE=0000000000000008|valP=0000000000000038|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=131000|PC=  56|icode=5|ifun=0|rA=3|rB=0|valA=0000000000000003|valB=0000000000000000|valC=0000000000000006|valE=0000000000000006|valP=0000000000000042|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=141000|PC=  66|icode=7|ifun=0|rA=f|rB=f|valA=0000000000000000|valB=0000000000000000|valC=0000000000000080|valE=0000000000000000|valP=000000000000004b|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=151000|PC=  80|icode=6|ifun=1|rA=b|rB=c|valA=000000000000000b|valB=000000000000000c|valC=0000000000000000|valE=0000000000000001|valP=0000000000000052|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=161000|PC=  82|icode=7|ifun=6|rA=f|rB=f|valA=0000000000000000|valB=0000000000000000|valC=0000000000000060|valE=0000000000000000|valP=000000000000005b|instr_valid=1|imem_error_o=0|cnd=0|npc=                   0.
+# Time=171000|PC=  96|icode=8|ifun=0|rA=f|rB=f|valA=0000000000000000|valB=0000000000000000|valC=0000000000000080|valE=fffffffffffffff8|valP=0000000000000069|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=181000|PC= 128|icode=9|ifun=0|rA=f|rB=f|valA=0000000000000000|valB=0000000000000000|valC=0000000000000000|valE=0000000000000008|valP=0000000000000081|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=191000|PC= 105|icode=7|ifun=0|rA=f|rB=f|valA=0000000000000000|valB=0000000000000000|valC=0000000000000081|valE=0000000000000000|valP=0000000000000072|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
+# Time=201000|PC= 129|icode=0|ifun=0|rA=f|rB=f|valA=0000000000000000|valB=0000000000000000|valC=0000000000000000|valE=0000000000000000|valP=0000000000000082|instr_valid=1|imem_error_o=0|cnd=1|npc=                   0.
 #  exit 

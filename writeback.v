@@ -1,6 +1,6 @@
 module writeback(
 
-    input wire [63:0] icode_i,
+    input wire [3:0] icode_i,
     input wire [63:0] valE_i,
     input wire [63:0] valM_i,
 

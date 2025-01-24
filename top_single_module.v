@@ -92,6 +92,8 @@ writeback writeback_module(
     .stat_o(stat_o)
 );
 
+wire [63:0]pc_o;
+
 pc_update pc_update_module(
     .clk_i(clk_i),
     .rst_n_i(rst_n_i),
@@ -101,7 +103,7 @@ pc_update pc_update_module(
     .valC_i(valC_o),
     .valP_i(valP_o),
     .valM_i(valM_o),
-    .pc_o(PC_i)
+    .pc_o(pc_o)
 );
 
 
@@ -115,8 +117,8 @@ initial begin
     rst_n_i=0;
     #1 rst_n_i=1;
     #10 PC_i=64'D0; 
-    $monitor("Time=%0t|PC=%4d|icode=%h|ifun=%h|rA=%h|rB=%h|valA=%h|valB=%h|valC=%h|valE=%h|valP=%h|instr_valid=%h|imem_error_o=%h|cc=%h|cnd=%h.",
-                $time, PC_i, icode_o, ifun_o,rA_o, rB_o, valA_o, valB_o,valC_o,valE_o, valP_o, instr_valid_o,imem_error_o,cc_o,cnd_o);
+    $monitor("Time=%0t|PC=%4d|icode=%h|ifun=%h|rA=%h|rB=%h|valA=%h|valB=%h|valC=%h|valE=%h|valP=%h|instr_valid=%h|imem_error_o=%h|cnd=%h|npc=%d.",
+                $time, PC_i, icode_o, ifun_o,rA_o, rB_o, valA_o, valB_o,valC_o,valE_o, valP_o, instr_valid_o,imem_error_o,cnd_o,pc_o);
     #10 PC_i=64'D10;
     #10 PC_i=64'D20;
     #10 PC_i=64'D22;
