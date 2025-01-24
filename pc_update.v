@@ -2,7 +2,7 @@
 module pc_update(
     input wire clk_i,
     input wire rst_n_i,
-    input wire instr_valid_i,
+    //input wire instr_valid_i,
 
     input wire cnd_i,
 

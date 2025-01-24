@@ -3,10 +3,10 @@ module writeback(
     input wire [63:0] valE_i,
     input wire [63:0] valM_i,
 
-    input wire instr_valid_i,
-    input wire hlt_i,
-    input wire instr_error_i,
-    input wire imem_error_i, 
+    // input wire instr_valid_i,
+    // input wire hlt_i,
+    // input wire instr_error_i,
+    // input wire imem_error_i, 
 
     output wire [63:0] valE_o,
     output wire [63:0] valM_o

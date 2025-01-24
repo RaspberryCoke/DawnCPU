@@ -12,7 +12,7 @@ module execute(
 
     output reg signed[63:0] valE_o,
     output reg [2:0] cc_o,
-    output wire Cnd_o
+    output wire cnd_o
 );
 
 reg [63:0] aluA;
@@ -128,7 +128,7 @@ always@(posedge clk_i)begin
 end
 
 
-assign Cnd_o=
+assign cnd_o=
     (ifun_i==`C_YES)|
     (ifun_i==`C_LE & ((sf^of)|zf))|
     (ifun_i==`C_L &(sf^of))|
