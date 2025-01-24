@@ -21,6 +21,7 @@ wire [63:0] ram_read_data_o;
 wire ram_dmem_error_o;
 wire [79:0] ram_read_instruction_o;
 
+
 //寄存器
 
 wire [3:0] reg_srcA_i;
@@ -94,7 +95,7 @@ regs regfile(
 );
 
 //实例化内存
-ram ram_module(
+ram iram_module(
     .clk_i(clk),
     .rst_n_i(rst_n_i),
     .read_en(ram_read_en),
@@ -107,6 +108,20 @@ ram ram_module(
     .dmem_error_o(ram_dmem_error_o)
 );
 
+
+//实例化内存
+ram dram_module(
+    .clk_i(clk),
+    .rst_n_i(rst_n_i),
+    .read_en(ram_read_en),
+    .write_en(ram_write_en),
+    .read_instruction_en(ram_read_instruction_en),
+    .addr_i(ram_addr_i),
+    .write_data_i(ram_write_data_i),
+    .read_data_o(ram_read_data_o),
+    .read_instruction_o(ram_read_instruction_o),
+    .dmem_error_o(ram_dmem_error_o)
+);
 
 //实例化fetch_module
 fetch fetch_module(
