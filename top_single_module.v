@@ -2,16 +2,21 @@ module top_single_module(
      input wire clk_i,
      input wire rst_n_i
 );
-
+//GLOBAL
 //global input
 wire[63:0] PC;
 
-//decode and write_back
+
+//DECODE
+//used for decode stage and write_back stage
 wire[63:0] valE;
 wire[63:0] valM;
 
 
-//iram
+//RAM
+//put two ram out of memory_module.
+
+//iram for instructions
 reg iram_read_en;
 reg iram_write_en;
 reg iram_read_instruction_en;
@@ -21,7 +26,7 @@ wire [63:0] iram_read_data_o;
 wire iram_dmem_error_o;
 wire [79:0] iram_read_instruction_o;
 
-//dram
+//dram for data
 reg dram_read_en;
 reg dram_write_en;
 reg dram_read_instruction_en;
@@ -32,8 +37,7 @@ wire dram_dmem_error_o;
 wire [79:0] dram_read_instruction_o;
 
 
-//寄存器
-
+//REGFILE
 wire [3:0] reg_srcA_i;
 wire [3:0] reg_srcB_i;
 wire [3:0] reg_dstA_i;
@@ -44,6 +48,7 @@ wire [63:0] reg_valA_o;
 wire [63:0] reg_valB_o;
 
 
+//FETCH
 //fetch_module
 wire[79:0] fetch_instruction_i;
 wire [3:0] fetch_icode_o;
@@ -55,9 +60,11 @@ wire [63:0]fetch_valP_o ;
 wire fetch_instr_valid_o;
 wire fetch_imem_error_o; 
 
-assign fetch_rA_o=reg_srcA_i;
+assign fetch_rA_o=reg_srcA_i;//connect fetch to regfile
 assign fetch_rB_o=reg_srcB_i;
 
+
+//DECODE
 //decode_module
 
 /*
@@ -66,37 +73,35 @@ assign fetch_rB_o=reg_srcB_i;
 // wire[63:0] decode_valE_i;
 // wire[63:0] decode_valM_i;
 */
+
 wire[63:0] decode_valA_o;
 wire[63:0] decode_valB_o;
 
-assign decode_valA_o=reg_valA_o;
+assign decode_valA_o=reg_valA_o;//connect decode to regfile
 assign decode_valB_o=reg_valB_o;
 
 
+//EXECUTE
 //execute_module
 reg signed[63:0] execute_valE_o;
 reg [2:0] execute_cc_o;
 wire execute_cnd_o;
 
 
+//MEMORY
 //memory_access
-wire[63:0]memory_addr_io;
 
-wire memory_read_en;
-wire memory_write_en;
+//   all initial in dram
 
-wire [63:0] memory_valM_o;//data to read
-wire [63:0] memory_write_data_o;//data to write
 
-wire memory_dmem_error_o;
-
+//WRIET_BACK
 //write_back module
 wire memory_hlt_i;
 wire memory_instr_error_i;
 
 
 
-//实例化寄存器文件
+//instantiate
 regs regfile(
     .clk_i(clk),
     .rst_n_i(rst_n_i),
@@ -188,15 +193,14 @@ memory_access  memory_module(
     .valE_i(execute_valE_o),
     .valP_i(fetch_valP_o),
 
-    .addr_io(memory_addr_io),
+    .addr_io(dram_addr_i),
 
-    .read_en(memory_read_en),
-    .write_en(memory_write_en),
+    .read_en(dram_read_en),
+    .write_en(dram_write_en),
 
-    .memory_valM_o
-
-    .valM_o(memory_valM_o),
-    .dmem_error_o(memory_dmem_error)
+    .valM_o(dram_read_data_o),
+    .write_data(dram_write_data_i),
+    .dmem_error_o(dram_dmem_error_o)
 );
 
 //实例化writeback_module
@@ -206,7 +210,7 @@ writeback writeback_module(
     // .instr_error_i(instr_error_i),
     // .imem_error_i(imem_error_i), 
     .valE_i(execute_valE_o),
-    .valM_i(memory_valM_o),
+    .valM_i(dram_read_data_o),
     .valE_o(valE),
     .valM_o(valM)
     //output wire [1:0]stat_o
@@ -221,7 +225,7 @@ pc_update pc_update_module(
     .icode_i(fetch_icode_o),
     .valC_i(fetch_valC_o),
     .valP_i(fetch_valP_o),
-    .valM_i(memory_valM_o),
+    .valM_i(dram_read_data_o),
     .pc_o(PC)
 );
 
@@ -229,13 +233,13 @@ pc_update pc_update_module(
 // 初始化PC并从RAM中获取指令
 always @(posedge clk_i or negedge rst_n_i) begin
     if (~rst_n_i) begin
-        ram_addr_i <= 64'b0; // 初始PC为0
-        ram_read_en <= 1'b1;
-        ram_read_instruction_en <= 1'b1; // 启用内存读取指令
+        iram_addr_i <= 64'b0; // 初始PC为0
+        iram_read_en <= 1'b1;
+        iram_read_instruction_en <= 1'b1; // 启用内存读取指令
     end else begin
-        ram_addr_i <= PC; // 根据当前PC地址来读取指令
-        ram_read_en <= 1'b1;
-        ram_read_instruction_en <= 1'b1; // 读取指令
+        iram_addr_i <= PC; // 根据当前PC地址来读取指令
+        iram_read_en <= 1'b1;
+        iram_read_instruction_en <= 1'b1; // 读取指令
     end
 end
 

@@ -3,439 +3,459 @@ K3
 13
 cModel Technology
 Z0 dD:\altera\13.0sp1
-vcpu_top
-Z1 !s100 mzY>Z`jN`kOP7Ya43?QkW2
-Z2 IXagUo<FY045SAZE7N3jSA0
-Z3 V[14DFNz@1M_44nFBeTY`k0
-Z4 dD:\project\ic\cpu\DawnCPU
-Z5 w1737392525
-Z6 8top.v
-Z7 Ftop.v
-L0 2
+vall_tb
+!i10b 1
+Z1 !s100 Y`l1k21UD6k^mUQY_aScH0
+Z2 If_fXM0@@Z1iiiVL[k_ALD0
+Z3 V=8;HEXLYFZ20oOggi;S6D1
+Z4 dc:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch
+Z5 w1737709968
+Z6 8c:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\all_tb.v
+Z7 Fc:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\all_tb.v
+L0 4
 Z8 OV;L;10.1d;51
 r1
+!s85 0
 31
-Z9 !s108 1737466076.161000
-Z10 !s107 writeback.v|top_single_module_tb.v|top_single_module.v|top.v|stat_module.v|regs.v|read_test.v|read_func.v|ram_tb.v|ram.v|pc_update_tb.v|pc_update.v|memory_tb.v|memory_access.v|fetch_tb.v|fetch.v|execute_tb.v|execute.v|define.v|decode_tb.v|decode.v|
-Z11 !s90 decode.v|decode_tb.v|define.v|execute.v|execute_tb.v|fetch.v|fetch_tb.v|memory_access.v|memory_tb.v|pc_update.v|pc_update_tb.v|ram.v|ram_tb.v|read_func.v|read_test.v|regs.v|stat_module.v|top.v|top_single_module.v|top_single_module_tb.v|writeback.v|
+!s108 1737714991.997000
+!s107 define.v|c:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\all_tb.v|
+Z9 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|c:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\all_tb.v|
+!s101 -O0
+Z10 o-nologo -work {D:\project\ic\cpu\DawnCPU\work} -O0
+vcpu_top
+Z11 !s100 mzY>Z`jN`kOP7Ya43?QkW2
+Z12 IXagUo<FY045SAZE7N3jSA0
+Z13 V[14DFNz@1M_44nFBeTY`k0
+Z14 dD:\project\ic\cpu\DawnCPU
+Z15 w1737392525
+Z16 8top.v
+Z17 Ftop.v
+L0 2
+R8
+r1
+31
+Z18 !s108 1737466076.161000
+Z19 !s107 writeback.v|top_single_module_tb.v|top_single_module.v|top.v|stat_module.v|regs.v|read_test.v|read_func.v|ram_tb.v|ram.v|pc_update_tb.v|pc_update.v|memory_tb.v|memory_access.v|fetch_tb.v|fetch.v|execute_tb.v|execute.v|define.v|decode_tb.v|decode.v|
+Z20 !s90 decode.v|decode_tb.v|define.v|execute.v|execute_tb.v|fetch.v|fetch_tb.v|memory_access.v|memory_tb.v|pc_update.v|pc_update_tb.v|ram.v|ram_tb.v|read_func.v|read_test.v|regs.v|stat_module.v|top.v|top_single_module.v|top_single_module_tb.v|writeback.v|
 o-O0
 !i10b 1
 !s85 0
 !s101 -O0
 vdecode
-Z12 !s100 Cl49WD<9YIPTD5P2kcjmn3
-Z13 IDkCRDOM7GC?_XZORC^b^P2
-Z14 V4dNeJKHXPzB<Hi]f>]og70
-Z15 dd:\project\ic\cpu\DawnCPU
-Z16 w1737469940
-Z17 8d:\project\ic\cpu\DawnCPU\decode.v
-Z18 Fd:\project\ic\cpu\DawnCPU\decode.v
+Z21 !s100 Cl49WD<9YIPTD5P2kcjmn3
+Z22 IDkCRDOM7GC?_XZORC^b^P2
+Z23 V4dNeJKHXPzB<Hi]f>]og70
+Z24 dd:\project\ic\cpu\DawnCPU
+Z25 w1737469940
+Z26 8d:\project\ic\cpu\DawnCPU\decode.v
+Z27 Fd:\project\ic\cpu\DawnCPU\decode.v
 L0 3
 R8
 r1
 31
-Z19 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\decode.v|
-Z20 o-nologo -work {D:\project\ic\cpu\DawnCPU\work} -O0
+Z28 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\decode.v|
+R10
+Z29 !s108 1737712318.101000
+Z30 !s107 define.v|d:\project\ic\cpu\DawnCPU\decode.v|
 !i10b 1
 !s85 0
-Z21 !s108 1737712318.101000
-Z22 !s107 define.v|d:\project\ic\cpu\DawnCPU\decode.v|
 !s101 -O0
 vdecode_tb
-Z23 !s100 VYEX?JPk<bz?WS=QdXS:B3
-Z24 IV3L1I=KkzVUd344D3iI;92
-Z25 VCIP:j4GW:QWZS@[JX_XQ50
-R4
-Z26 w1737031755
-Z27 8decode_tb.v
-Z28 Fdecode_tb.v
+Z31 !s100 VYEX?JPk<bz?WS=QdXS:B3
+Z32 IV3L1I=KkzVUd344D3iI;92
+Z33 VCIP:j4GW:QWZS@[JX_XQ50
+R14
+Z34 w1737031755
+Z35 8decode_tb.v
+Z36 Fdecode_tb.v
 L0 4
 R8
 r1
 31
-R9
-R10
-R11
+R18
+R19
+R20
 o-O0
 !i10b 1
 !s85 0
 !s101 -O0
 vexecute
-Z29 Iah[^10hAzd=[bX=B[Ii:V2
-Z30 VJ[?aMmVI^WPWXhW8IHe9`1
-R15
-Z31 w1737704288
-Z32 8d:\project\ic\cpu\DawnCPU\execute.v
-Z33 Fd:\project\ic\cpu\DawnCPU\execute.v
+Z37 Iah[^10hAzd=[bX=B[Ii:V2
+Z38 VJ[?aMmVI^WPWXhW8IHe9`1
+R24
+Z39 w1737704288
+Z40 8d:\project\ic\cpu\DawnCPU\execute.v
+Z41 Fd:\project\ic\cpu\DawnCPU\execute.v
 L0 2
 R8
 r1
 31
-Z34 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\execute.v|
-R20
-Z35 !s100 CEannKh0MbZG^PekkA6ej2
-Z36 !s108 1737704288.813000
-Z37 !s107 define.v|d:\project\ic\cpu\DawnCPU\execute.v|
+Z42 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\execute.v|
+R10
+Z43 !s100 CEannKh0MbZG^PekkA6ej2
+Z44 !s108 1737704288.813000
+Z45 !s107 define.v|d:\project\ic\cpu\DawnCPU\execute.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vexecute_tb
-Z38 !s100 LU1nk@fE8^jDzc?=hP3zj0
-Z39 IAHG`j[S[AdiQkJ;n1Pm=@3
-Z40 V:[B`FVi61kNlca8=4zJ`j2
-R4
-Z41 w1737448652
-Z42 8execute_tb.v
-Z43 Fexecute_tb.v
+Z46 !s100 LU1nk@fE8^jDzc?=hP3zj0
+Z47 IAHG`j[S[AdiQkJ;n1Pm=@3
+Z48 V:[B`FVi61kNlca8=4zJ`j2
+R14
+Z49 w1737448652
+Z50 8execute_tb.v
+Z51 Fexecute_tb.v
 L0 3
 R8
 r1
 31
-R9
-R10
-R11
+R18
+R19
+R20
 o-O0
 !i10b 1
 !s85 0
 !s101 -O0
 vfetch
-Z44 !s100 ;?PO]kN;iRa0H7:6?DMhm2
-Z45 Ia1@OAd>TljZ61U2RI1aec2
-Z46 VE5FYmSI5@A2?jSJ2b3YQ62
-R15
-Z47 w1737469942
-Z48 8d:\project\ic\cpu\DawnCPU\fetch.v
-Z49 Fd:\project\ic\cpu\DawnCPU\fetch.v
-L0 2
-R8
-r1
-31
-Z50 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\fetch.v|
-R20
-Z51 !s108 1737700544.425000
-Z52 !s107 define.v|d:\project\ic\cpu\DawnCPU\fetch.v|
-!i10b 1
-!s85 0
-!s101 -O0
-vfetch_tb
-Z53 !s100 YVU^co`63zdVMlI61n9eM2
-Z54 IYQ0fj;k2Y7gcVz>GK4fZ;0
-Z55 VJW3RDAN]`z2QmhBi`nGY50
+Z52 IlXF4Q2BDn`Rf0zkCU4iL32
+Z53 Vd0nOPQU=Xd3;2o:R5ebg@2
 R4
-Z56 w1737358563
-Z57 8fetch_tb.v
-Z58 Ffetch_tb.v
+Z54 w1737713131
+Z55 8c:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\fetch.v
+Z56 Fc:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\fetch.v
 L0 3
 R8
 r1
 31
-R9
+Z57 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|c:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\fetch.v|
 R10
-R11
+Z58 !s100 iO0XeHL8l1KJz4OLV1hd:3
+Z59 !s108 1737713131.208000
+Z60 !s107 define.v|c:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\fetch.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vfetch_tb
+Z61 !s100 YVU^co`63zdVMlI61n9eM2
+Z62 IYQ0fj;k2Y7gcVz>GK4fZ;0
+Z63 VJW3RDAN]`z2QmhBi`nGY50
+R14
+Z64 w1737358563
+Z65 8fetch_tb.v
+Z66 Ffetch_tb.v
+L0 3
+R8
+r1
+31
+R18
+R19
+R20
 o-O0
 !i10b 1
 !s85 0
 !s101 -O0
 vmemory
-Z59 Il3N@k4o6o=N<9]?0o108T3
-Z60 V>GW1ee5_[n7lMH<XRSg8L2
-R15
-Z61 w1737103775
-Z62 8d:\project\ic\cpu\DawnCPU\memory.v
-Z63 Fd:\project\ic\cpu\DawnCPU\memory.v
+Z67 Il3N@k4o6o=N<9]?0o108T3
+Z68 V>GW1ee5_[n7lMH<XRSg8L2
+R24
+Z69 w1737103775
+Z70 8d:\project\ic\cpu\DawnCPU\memory.v
+Z71 Fd:\project\ic\cpu\DawnCPU\memory.v
 L0 1
 R8
 r1
 31
-R20
-Z64 !s100 RmI<19ocY8>^8Oib@:DoF2
-Z65 !s108 1737103775.310000
-Z66 !s107 d:\project\ic\cpu\DawnCPU\memory.v|
-Z67 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\memory.v|
+R10
+Z72 !s100 RmI<19ocY8>^8Oib@:DoF2
+Z73 !s108 1737103775.310000
+Z74 !s107 d:\project\ic\cpu\DawnCPU\memory.v|
+Z75 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\memory.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmemory_access
-Z68 IDh:?ZBHU2;_oYOABLDG983
-Z69 VK`FIEhmbIG@WBL4SQghB61
-R15
-Z70 w1737711188
-Z71 8d:\project\ic\cpu\DawnCPU\memory_access.v
-Z72 Fd:\project\ic\cpu\DawnCPU\memory_access.v
+Z76 I@KPb49;>B>iK9foBjaLeU3
+Z77 V4[e?^3eEe]c7bM6Ani15L3
+R4
+Z78 w1737166487
+Z79 8c:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\memory_access.v
+Z80 Fc:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\memory_access.v
 L0 2
 R8
 r1
 31
-Z73 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\memory_access.v|
-R20
-Z74 !s100 mWCFFDUoh?]>Jf=>B[Enh0
-Z75 !s108 1737711188.782000
-Z76 !s107 define.v|d:\project\ic\cpu\DawnCPU\memory_access.v|
+R10
+Z81 !s100 QNIhbILA8Ml6TJ`I19U2Q1
+Z82 !s108 1737712855.845000
+Z83 !s107 define.v|c:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\memory_access.v|
+Z84 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|c:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\memory_access.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmemory_tb
-Z77 !s100 CGaW>jReN4K9BbK4e5m=e2
-Z78 I;;X78G>^ioBSRNT=;8i3Q2
-Z79 V7TaG]HTKIa:cj5HbbmFW63
-R4
-Z80 w1737446489
-Z81 8memory_tb.v
-Z82 Fmemory_tb.v
+Z85 !s100 CGaW>jReN4K9BbK4e5m=e2
+Z86 I;;X78G>^ioBSRNT=;8i3Q2
+Z87 V7TaG]HTKIa:cj5HbbmFW63
+R14
+Z88 w1737446489
+Z89 8memory_tb.v
+Z90 Fmemory_tb.v
 L0 4
 R8
 r1
 31
-R9
-R10
-R11
+R18
+R19
+R20
 o-O0
 !i10b 1
 !s85 0
 !s101 -O0
 vpc_update
-Z83 IUZMfmgzZOn=nBNVammXRQ2
-Z84 VIdQVjk8HF?]YC9cBWblPN3
-R15
-Z85 w1737704194
-Z86 8d:\project\ic\cpu\DawnCPU\pc_update.v
-Z87 Fd:\project\ic\cpu\DawnCPU\pc_update.v
+Z91 IUZMfmgzZOn=nBNVammXRQ2
+Z92 VIdQVjk8HF?]YC9cBWblPN3
+R24
+Z93 w1737704194
+Z94 8d:\project\ic\cpu\DawnCPU\pc_update.v
+Z95 Fd:\project\ic\cpu\DawnCPU\pc_update.v
 L0 2
 R8
 r1
 31
-Z88 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\pc_update.v|
-R20
-Z89 !s100 5:5l:Tz5c^FRL:WoKW>k91
-Z90 !s108 1737704194.412000
-Z91 !s107 define.v|d:\project\ic\cpu\DawnCPU\pc_update.v|
+Z96 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\pc_update.v|
+R10
+Z97 !s100 5:5l:Tz5c^FRL:WoKW>k91
+Z98 !s108 1737704194.412000
+Z99 !s107 define.v|d:\project\ic\cpu\DawnCPU\pc_update.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vpc_update_module
-Z92 !s100 knCFBQU_:bo?QdZ5Qd2?I0
-Z93 I2j1=@k1kd]_CZKfdH1[BP3
-Z94 VlA;5F=c6bQo12T60iY>a]1
-R4
-Z95 w1737447452
-Z96 8pc_update_tb.v
-Z97 Fpc_update_tb.v
+Z100 !s100 knCFBQU_:bo?QdZ5Qd2?I0
+Z101 I2j1=@k1kd]_CZKfdH1[BP3
+Z102 VlA;5F=c6bQo12T60iY>a]1
+R14
+Z103 w1737447452
+Z104 8pc_update_tb.v
+Z105 Fpc_update_tb.v
 L0 2
 R8
 r1
 31
-R9
-R10
-R11
+R18
+R19
+R20
 o-O0
 !i10b 1
 !s85 0
 !s101 -O0
 vram
-Z98 IbiJf6?oSIjf4NEhaCOc^i3
-Z99 V7@TmLgeB2S9_o@lAEn:DW3
-R15
-Z100 w1737699705
-Z101 8d:\project\ic\cpu\DawnCPU\ram.v
-Z102 Fd:\project\ic\cpu\DawnCPU\ram.v
-L0 1
-R8
-r1
-31
-Z103 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\ram.v|
-R20
-Z104 !s100 b`KzljOXemJ>GG`l95zzU3
-Z105 !s108 1737699705.135000
-Z106 !s107 d:\project\ic\cpu\DawnCPU\ram.v|
-!i10b 1
-!s85 0
-!s101 -O0
-vram_tb
-Z107 !s100 aaBzMFi5D4D4bDDPGUcd50
-Z108 Ihf[;fIY``0oO8nNlNI8^?2
-Z109 VCRW2<UhheaW;LIL2_B5o31
+Z106 !s100 9KnOVmlZnz0W4X<2]O@hf0
+Z107 I[EI=dX8LeAFkm3ThOB?aS2
+Z108 V7GJOY6:1[^2IRSaR^L@E@3
 R4
-Z110 w1737439439
-Z111 8ram_tb.v
-Z112 Fram_tb.v
+Z109 w1737713135
+Z110 8c:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\ram.v
+Z111 Fc:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\ram.v
 L0 2
 R8
 r1
 31
-R9
+Z112 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|c:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\ram.v|
 R10
-R11
+!i10b 1
+!s85 0
+Z113 !s108 1737714987.358000
+Z114 !s107 c:\Users\ydliu\Documents\WeChat Files\wxid_2jj6gfod34hi32\FileStorage\File\2025-01\fetch\ram.v|
+!s101 -O0
+vram_tb
+Z115 !s100 aaBzMFi5D4D4bDDPGUcd50
+Z116 Ihf[;fIY``0oO8nNlNI8^?2
+Z117 VCRW2<UhheaW;LIL2_B5o31
+R14
+Z118 w1737439439
+Z119 8ram_tb.v
+Z120 Fram_tb.v
+L0 2
+R8
+r1
+31
+R18
+R19
+R20
 o-O0
 !i10b 1
 !s85 0
 !s101 -O0
 vread_func
-Z113 I1CJG<;Dg=^3cIDhFhUY8G1
-Z114 VY]TNIScP>432IGCmndFGc2
-R15
-Z115 w1737463767
-Z116 8d:\project\ic\cpu\DawnCPU\read_func.v
-Z117 Fd:\project\ic\cpu\DawnCPU\read_func.v
+Z121 I1CJG<;Dg=^3cIDhFhUY8G1
+Z122 VY]TNIScP>432IGCmndFGc2
+R24
+Z123 w1737463767
+Z124 8d:\project\ic\cpu\DawnCPU\read_func.v
+Z125 Fd:\project\ic\cpu\DawnCPU\read_func.v
 L0 2
 R8
 r1
 31
-Z118 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\read_func.v|
-R20
-Z119 !s100 T8X6>OdOLlE_8`m_45_jL0
-Z120 !s108 1737463767.883000
-Z121 !s107 d:\project\ic\cpu\DawnCPU\read_func.v|
+Z126 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\read_func.v|
+R10
+Z127 !s100 T8X6>OdOLlE_8`m_45_jL0
+Z128 !s108 1737463767.883000
+Z129 !s107 d:\project\ic\cpu\DawnCPU\read_func.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vread_instr
-Z122 IHlY?U55Wdz8Fd1d]Ymlo>3
-Z123 Vf?QcmmTGADYjRCheT?]7Q2
-R15
-Z124 w1737465885
-R116
-R117
+Z130 IHlY?U55Wdz8Fd1d]Ymlo>3
+Z131 Vf?QcmmTGADYjRCheT?]7Q2
+R24
+Z132 w1737465885
+R124
+R125
 L0 2
 R8
 r1
 31
-R118
-R20
-Z125 !s100 G=:EiK2=m7gM5T;zQoPzj1
-Z126 !s108 1737468828.325000
-R121
+R126
+R10
+Z133 !s100 G=:EiK2=m7gM5T;zQoPzj1
+Z134 !s108 1737468828.325000
+R129
 !i10b 1
 !s85 0
 !s101 -O0
 vregs
-Z127 !s100 LjA:j3hW>Bh3JJHDX?dc00
-Z128 IYDc5?1`DR3Ta00OhZ_Ia[2
-Z129 VV4@J92`h0L?RTgS;f>;Ca0
-R15
-Z130 w1737470084
-Z131 8d:\project\ic\cpu\DawnCPU\regs.v
-Z132 Fd:\project\ic\cpu\DawnCPU\regs.v
+Z135 !s100 LjA:j3hW>Bh3JJHDX?dc00
+Z136 IYDc5?1`DR3Ta00OhZ_Ia[2
+Z137 VV4@J92`h0L?RTgS;f>;Ca0
+R24
+Z138 w1737470084
+Z139 8d:\project\ic\cpu\DawnCPU\regs.v
+Z140 Fd:\project\ic\cpu\DawnCPU\regs.v
 L0 1
 R8
 r1
 31
-Z133 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\regs.v|
-R20
-Z134 !s108 1737700152.248000
-Z135 !s107 d:\project\ic\cpu\DawnCPU\regs.v|
+Z141 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\regs.v|
+R10
+Z142 !s108 1737700152.248000
+Z143 !s107 d:\project\ic\cpu\DawnCPU\regs.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vsim_top
-Z136 II6h11dHOEd6EDZ1<0B]He2
-Z137 Vh@;A9d1XZS4Y0[okGCPc70
-R4
-Z138 w1737375395
-Z139 8read_test.v
-Z140 Fread_test.v
+Z144 II6h11dHOEd6EDZ1<0B]He2
+Z145 Vh@;A9d1XZS4Y0[okGCPc70
+R14
+Z146 w1737375395
+Z147 8read_test.v
+Z148 Fread_test.v
 L0 2
 R8
 r1
 31
-R9
-R10
-R11
+R18
+R19
+R20
 o-O0
-Z141 !s100 ADKLLAbBI;lnRX1M5d`_B1
+Z149 !s100 ADKLLAbBI;lnRX1M5d`_B1
 !i10b 1
 !s85 0
 !s101 -O0
 vstat_module
-Z142 !s100 d^917@@O=5N`<oL[K=O]E0
-Z143 IL4?49z7;5Bl6NgnJXXR[n1
-Z144 V>Q;2ckOzmMEQC[hN4ch3]1
-R4
-Z145 w1737123346
-Z146 8stat_module.v
-Z147 Fstat_module.v
+Z150 !s100 d^917@@O=5N`<oL[K=O]E0
+Z151 IL4?49z7;5Bl6NgnJXXR[n1
+Z152 V>Q;2ckOzmMEQC[hN4ch3]1
+R14
+Z153 w1737123346
+Z154 8stat_module.v
+Z155 Fstat_module.v
 L0 1
 R8
 r1
 31
-R9
-R10
-R11
+R18
+R19
+R20
 o-O0
 !i10b 1
 !s85 0
 !s101 -O0
 vtop
-Z148 I;ck7<k4LegLM;@URkU;@i0
-Z149 Ve:gFW1CKLAXc^T:7k2HoD1
-R15
-Z150 w1737382245
-Z151 8d:\project\ic\cpu\DawnCPU\top.v
-Z152 Fd:\project\ic\cpu\DawnCPU\top.v
+Z156 I;ck7<k4LegLM;@URkU;@i0
+Z157 Ve:gFW1CKLAXc^T:7k2HoD1
+R24
+Z158 w1737382245
+Z159 8d:\project\ic\cpu\DawnCPU\top.v
+Z160 Fd:\project\ic\cpu\DawnCPU\top.v
 L0 1
 R8
 r1
 31
-Z153 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\top.v|
-R20
-Z154 !s100 @`C]Um3[IBZX_FV^H@Tg_3
-Z155 !s108 1737382245.113000
-Z156 !s107 d:\project\ic\cpu\DawnCPU\top.v|
+Z161 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\top.v|
+R10
+Z162 !s100 @`C]Um3[IBZX_FV^H@Tg_3
+Z163 !s108 1737382245.113000
+Z164 !s107 d:\project\ic\cpu\DawnCPU\top.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vtop_single_module
-Z157 ID`F3I1<i^>cO:?40?mO__1
-Z158 VWf@JkR>BV0oMcim<A@h:82
-R15
-Z159 w1737710346
-Z160 8d:\project\ic\cpu\DawnCPU\top_single_module.v
-Z161 Fd:\project\ic\cpu\DawnCPU\top_single_module.v
+Z165 Ig[aGM8j@QVlClEDbG:EXe1
+Z166 VWf@JkR>BV0oMcim<A@h:82
+R24
+Z167 w1737714813
+Z168 8d:\project\ic\cpu\DawnCPU\top_single_module.v
+Z169 Fd:\project\ic\cpu\DawnCPU\top_single_module.v
 L0 1
 R8
 r1
 31
-Z162 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\top_single_module.v|
-R20
-Z163 !s100 :XHK6dB4RTZmSDbUgIdnl0
-Z164 !s108 1737710346.474000
-Z165 !s107 d:\project\ic\cpu\DawnCPU\top_single_module.v|
+Z170 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\top_single_module.v|
+R10
+Z171 !s100 VA9[:hYN?TQTG7SPUlKPI2
+Z172 !s108 1737714813.963000
+Z173 !s107 d:\project\ic\cpu\DawnCPU\top_single_module.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vtop_single_module_tb
-Z166 IT4Rcfl@`lSD5?eJz@Z9FH2
-Z167 V?0=OfBXYMd@2_^BR=B0DQ1
-R4
-Z168 w1737468791
-Z169 8top_single_module_tb.v
-Z170 Ftop_single_module_tb.v
+Z174 IT4Rcfl@`lSD5?eJz@Z9FH2
+Z175 V?0=OfBXYMd@2_^BR=B0DQ1
+R14
+Z176 w1737468791
+Z177 8top_single_module_tb.v
+Z178 Ftop_single_module_tb.v
 L0 2
 R8
 r1
 31
 o-O0
-Z171 !s100 dU^Wa8GNE@71`enK8G;5:2
-Z172 !s108 1737469363.688000
-Z173 !s107 top_single_module_tb.v|
-Z174 !s90 top_single_module_tb.v|
+Z179 !s100 dU^Wa8GNE@71`enK8G;5:2
+Z180 !s108 1737469363.688000
+Z181 !s107 top_single_module_tb.v|
+Z182 !s90 top_single_module_tb.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vwriteback
-Z175 Ia0P`@5CTGcDfg@QKIFlP]1
-Z176 V]Z3ja>[:R?KSd@??4IVYj2
-R15
-Z177 w1737701532
-Z178 8d:\project\ic\cpu\DawnCPU\writeback.v
-Z179 Fd:\project\ic\cpu\DawnCPU\writeback.v
+Z183 Ia0P`@5CTGcDfg@QKIFlP]1
+Z184 V]Z3ja>[:R?KSd@??4IVYj2
+R24
+Z185 w1737701532
+Z186 8d:\project\ic\cpu\DawnCPU\writeback.v
+Z187 Fd:\project\ic\cpu\DawnCPU\writeback.v
 L0 1
 R8
 r1
 31
-Z180 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\writeback.v|
-R20
-Z181 !s100 A6Ozd[SNGeWXfKEf[SX3m0
-Z182 !s108 1737701532.959000
-Z183 !s107 d:\project\ic\cpu\DawnCPU\writeback.v|
+Z188 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\writeback.v|
+R10
+Z189 !s100 A6Ozd[SNGeWXfKEf[SX3m0
+Z190 !s108 1737701532.959000
+Z191 !s107 d:\project\ic\cpu\DawnCPU\writeback.v|
 !i10b 1
 !s85 0
+!s101 -O0
