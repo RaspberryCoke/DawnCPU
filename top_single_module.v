@@ -11,15 +11,25 @@ wire[63:0] valE;
 wire[63:0] valM;
 
 
-//ram
-reg ram_read_en;
-reg ram_write_en;
-reg ram_read_instruction_en;
-reg [63:0] ram_addr_i;
-wire [63:0] ram_write_data_i;
-wire [63:0] ram_read_data_o;
-wire ram_dmem_error_o;
-wire [79:0] ram_read_instruction_o;
+//iram
+reg iram_read_en;
+reg iram_write_en;
+reg iram_read_instruction_en;
+reg [63:0] iram_addr_i;
+wire [63:0] iram_write_data_i;
+wire [63:0] iram_read_data_o;
+wire iram_dmem_error_o;
+wire [79:0] iram_read_instruction_o;
+
+//dram
+reg dram_read_en;
+reg dram_write_en;
+reg dram_read_instruction_en;
+reg [63:0] dram_addr_i;
+wire [63:0] dram_write_data_i;
+wire [63:0] dram_read_data_o;
+wire dram_dmem_error_o;
+wire [79:0] dram_read_instruction_o;
 
 
 //寄存器
@@ -70,9 +80,15 @@ wire execute_cnd_o;
 
 
 //memory_access
-wire memory_dmem_error_o;
-wire [63:0] memory_valM_o;
+wire[63:0]memory_addr_io;
 
+wire memory_read_en;
+wire memory_write_en;
+
+wire [63:0] memory_valM_o;//data to read
+wire [63:0] memory_write_data_o;//data to write
+
+wire memory_dmem_error_o;
 
 //write_back module
 wire memory_hlt_i;
@@ -98,14 +114,14 @@ regs regfile(
 ram iram_module(
     .clk_i(clk),
     .rst_n_i(rst_n_i),
-    .read_en(ram_read_en),
-    .write_en(ram_write_en),
-    .read_instruction_en(ram_read_instruction_en),
-    .addr_i(ram_addr_i),
-    .write_data_i(ram_write_data_i),
-    .read_data_o(ram_read_data_o),
-    .read_instruction_o(ram_read_instruction_o),
-    .dmem_error_o(ram_dmem_error_o)
+    .read_en(iram_read_en),
+    .write_en(iram_write_en),
+    .read_instruction_en(iram_read_instruction_en),
+    .addr_i(iram_addr_i),
+    .write_data_i(iram_write_data_i),
+    .read_data_o(iram_read_data_o),
+    .read_instruction_o(iram_read_instruction_o),
+    .dmem_error_o(iram_dmem_error_o)
 );
 
 
@@ -113,20 +129,20 @@ ram iram_module(
 ram dram_module(
     .clk_i(clk),
     .rst_n_i(rst_n_i),
-    .read_en(ram_read_en),
-    .write_en(ram_write_en),
-    .read_instruction_en(ram_read_instruction_en),
-    .addr_i(ram_addr_i),
-    .write_data_i(ram_write_data_i),
-    .read_data_o(ram_read_data_o),
-    .read_instruction_o(ram_read_instruction_o),
-    .dmem_error_o(ram_dmem_error_o)
+    .read_en(dram_read_en),
+    .write_en(dram_write_en),
+    .read_instruction_en(dram_read_instruction_en),
+    .addr_i(dram_addr_i),
+    .write_data_i(dram_write_data_i),
+    .read_data_o(dram_read_data_o),
+    .read_instruction_o(dram_read_instruction_o),
+    .dmem_error_o(dram_dmem_error_o)
 );
 
 //实例化fetch_module
 fetch fetch_module(
     .PC_i(PC),
-    .instruction_i(ram_read_instruction_o),
+    .instruction_i(iram_read_instruction_o),
     .icode_o(fetch_icode_o),
     .ifun_o(fetch_ifun_o),
     .rA_o(fetch_rA_o),
@@ -171,6 +187,14 @@ memory_access  memory_module(
     .valA_i(decode_valA_o),
     .valE_i(execute_valE_o),
     .valP_i(fetch_valP_o),
+
+    .addr_io(memory_addr_io),
+
+    .read_en(memory_read_en),
+    .write_en(memory_write_en),
+
+    .memory_valM_o
+
     .valM_o(memory_valM_o),
     .dmem_error_o(memory_dmem_error)
 );
