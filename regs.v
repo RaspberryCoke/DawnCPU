@@ -18,8 +18,17 @@ assign valA_o=(srcA_i==4'hf)?64'b0:regfile[srcA_i];
 assign valB_o=(srcB_i==4'hf)?64'b0:regfile[srcB_i];
 
 always@(posedge clk_i)begin 
+    $display("regs.v: write to regfile...");
     if(dstA_i!=4'hf)regfile[dstA_i]<=dstA_data_i;
     if(dstB_i!=4'hf)regfile[dstB_i]<=dstB_data_i;
+end
+
+integer i;
+always@(negedge rst_n_i)begin 
+    $display("regs.v: initial...");
+    for(i=0;i<15;i=i+1)begin
+        regfile[i]<=64'b0;
+    end
 end
 
 endmodule

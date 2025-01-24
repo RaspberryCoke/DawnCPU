@@ -29,12 +29,14 @@ assign read_instruction_o=(read_en==1'b1&&read_instruction_en==1'b1)?
 //异步复位的ram，在初始化的时候可以复位。
 always@(posedge clk_i )begin 
     if(~rst_n_i)begin 
+        $display("ram.v: initial...");
         for(i=0;i<1024;i=i+1)begin 
             rams[i]<=8'b0;
        end
     end 
     else 
     if((dmem_error_o==1'b0)&&(write_en==1'b1))begin 
+        $display("ram.v: write data to rams...");
         {rams[addr_i+7],       
         rams[addr_i+6],  
         rams[addr_i+5],  

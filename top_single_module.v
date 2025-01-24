@@ -1,11 +1,12 @@
-module top_single_module(
-     input wire clk_i,
-     input wire rst_n_i
-);
+`timescale 1ns/1ps
+module top_single_module();
 //GLOBAL
 //global input
+reg clk_i;
+reg rst_n_i;
 wire[63:0] PC;
-
+reg[63:0] PC_reg;
+assign PC=PC_reg;
 
 //DECODE
 //used for decode stage and write_back stage
@@ -17,9 +18,9 @@ wire[63:0] valM;
 //put two ram out of memory_module.
 
 //iram for instructions
-reg iram_read_en;
-reg iram_write_en;
-reg iram_read_instruction_en;
+wire iram_read_en=1;
+wire iram_write_en=0;
+wire iram_read_instruction_en=1;
 reg [63:0] iram_addr_i;
 wire [63:0] iram_write_data_i;
 wire [63:0] iram_read_data_o;
@@ -27,10 +28,10 @@ wire iram_dmem_error_o;
 wire [79:0] iram_read_instruction_o;
 
 //dram for data
-reg dram_read_en;
-reg dram_write_en;
+wire dram_read_en;
+wire dram_write_en;
 reg dram_read_instruction_en;
-reg [63:0] dram_addr_i;
+wire [63:0] dram_addr_i;//
 wire [63:0] dram_write_data_i;
 wire [63:0] dram_read_data_o;
 wire dram_dmem_error_o;
@@ -83,8 +84,9 @@ assign decode_valB_o=reg_valB_o;
 
 //EXECUTE
 //execute_module
-reg signed[63:0] execute_valE_o;
-reg [2:0] execute_cc_o;
+//reg signed[63:0] execute_valE_o;
+wire [63:0] execute_valE_o;
+wire [2:0] execute_cc_o;
 wire execute_cnd_o;
 
 
@@ -216,32 +218,125 @@ writeback writeback_module(
     //output wire [1:0]stat_o
 );
 
-//实例化pc_update_module
-pc_update pc_update_module(
-    .clk_i(clk_i),
-    .rst_n_i(rst_n_i),
-    // .instr_valid_i(instr_valid_i),
-    .cnd_i(execute_cnd_o),
-    .icode_i(fetch_icode_o),
-    .valC_i(fetch_valC_o),
-    .valP_i(fetch_valP_o),
-    .valM_i(dram_read_data_o),
-    .pc_o(PC)
-);
+// //实例化pc_update_module
+// pc_update pc_update_module(
+//     .clk_i(clk_i),
+//     .rst_n_i(rst_n_i),
+//     // .instr_valid_i(instr_valid_i),
+//     .cnd_i(execute_cnd_o),
+//     .icode_i(fetch_icode_o),
+//     .valC_i(fetch_valC_o),
+//     .valP_i(fetch_valP_o),
+//     .valM_i(dram_read_data_o),
+//     .pc_o(PC)
+// );
 
 
-// 初始化PC并从RAM中获取指令
-always @(posedge clk_i or negedge rst_n_i) begin
-    if (~rst_n_i) begin
-        iram_addr_i <= 64'b0; // 初始PC为0
-        iram_read_en <= 1'b1;
-        iram_read_instruction_en <= 1'b1; // 启用内存读取指令
-    end else begin
-        iram_addr_i <= PC; // 根据当前PC地址来读取指令
-        iram_read_en <= 1'b1;
-        iram_read_instruction_en <= 1'b1; // 读取指令
-    end
-end
+// // 初始化PC并从RAM中获取指令
+// always @(posedge clk_i or negedge rst_n_i) begin
+//     if (~rst_n_i) begin
+//         $display("---------------reset----------------");
+//         PC_reg<=0;
+//         iram_addr_i <= 64'b0; // 初始PC为0
+//     end else begin
+//         $display("---------------NEXT PC----------------");
+//         iram_addr_i <= PC; // 根据当前PC地址来读取指令
+//     end
+// end
 
+// initial begin
+//     rst_n_i=0;#1;
+//     rst_n_i=1;#10000;
+// end
+
+// initial begin
+    
+//     clk_i = 0;
+//     forever begin
+//         #1 clk_i = ~clk_i; // 每 5ns 反转一次时钟
+//     end
+// end
+
+// initial begin
+//     #100 $stop;
+// end
+
+
+// initial begin
+//     #1;
+//     $monitor("Time=%0t|PC=%d|icode=%h|rA=%h|rB=%h|valA_o=%h|valB_o=%h|valC_o=%h|valE_o=%h|valM_o=%h|valP_o=%h|",
+//                 $time, PC_reg, fetch_icode_o, fetch_rA_o, fetch_rB_o, reg_valA_o, reg_valB_o, fetch_valC_o, valE, valM, fetch_valP_o);
+// end
+
+initial begin
+    rst_n_i=0;#1;
+    rst_n_i=1;#1;
+    rst_n_i=0;#1;
+    rst_n_i=1;#1;
+
+    
+		//IRMOVQ�����������أ�
+		iram_module.rams[0] = 8'h30; // icode=3, ifun=0
+		iram_module.rams[1] = 8'hf8; // rA=F, rB=8
+		iram_module.rams[2] = 8'hF0; // valC=0x123456789ABCDEF0 (little-endian)
+		iram_module.rams[3] = 8'hDE;
+		iram_module.rams[4] = 8'hBC;
+		iram_module.rams[5] = 8'h9A;
+		iram_module.rams[6] = 8'h78;
+		iram_module.rams[7] = 8'h56;
+		iram_module.rams[8] = 8'h34;
+		iram_module.rams[9] = 8'h12;
+		
+		//RMMOVQ���Ĵ������ڴ�洢��
+		iram_module.rams[10] = 8'h40; // icode=4, ifun=0
+		iram_module.rams[11] = 8'h34; // rA=3, rB=4
+		iram_module.rams[12] = 8'h10; // valC=0x0010 (little-endian) 16��ʼ
+		iram_module.rams[13] = 8'h00;
+		iram_module.rams[14] = 8'h00;
+		iram_module.rams[15] = 8'h00;
+		iram_module.rams[16] = 8'h00;
+		iram_module.rams[17] = 8'h00;
+		iram_module.rams[18] = 8'h00;
+		iram_module.rams[19] = 8'h00;
+		
+		//MRMOVQ���ڴ浽�Ĵ������أ�
+		iram_module.rams[20] = 8'h50; // icode=5, ifun=0
+		iram_module.rams[21] = 8'h25; // rA=2, rB=5
+		iram_module.rams[22] = 8'h00; // valC=0x0000 (little-endian) 32��ʼ
+		iram_module.rams[23] = 8'h0;
+		iram_module.rams[24] = 8'h00;
+		iram_module.rams[25] = 8'h00;
+		iram_module.rams[26] = 8'h00;
+		iram_module.rams[27] = 8'h00;
+		iram_module.rams[28] = 8'h00;
+		iram_module.rams[29] = 8'h00;
+
+		//OPQ�������߼�������
+		iram_module.rams[30] = 8'h60; // icode=6, ifun=0 (�ӷ�)
+		iram_module.rams[31] = 8'h12; // rA=1, rB=2
+
+		//JXX��������ת��
+		iram_module.rams[40] = 8'h70; // icode=7, ifun=0 (��������ת)
+		iram_module.rams[41] = 8'h00; // valC=0x3000 (little-endian)
+		iram_module.rams[42] = 8'h30;
+		iram_module.rams[43] = 8'h00;
+		iram_module.rams[44] = 8'h00;
+		iram_module.rams[45] = 8'h00;
+		iram_module.rams[46] = 8'h00;
+		iram_module.rams[47] = 8'h00;
+		iram_module.rams[48] = 8'h00;
+		iram_module.rams[49] = 8'h00;
+
+        #1;
+
+        iram_addr_i <= 64'b0;
+        PC_reg<=0;
+        $monitor("Time=%0t|PC=%d|icode=%h|rA=%h|rB=%h|valA_o=%h|valB_o=%h|valC_o=%h|valE_o=%h|valM_o=%h|valP_o=%h|",
+                $time, PC_reg, fetch_icode_o, fetch_rA_o, fetch_rB_o, reg_valA_o, reg_valB_o, fetch_valC_o, valE, valM, fetch_valP_o);
+
+                #1;
+                $monitor("Time=%0t|PC=%d|icode=%h|rA=%h|rB=%h|valA_o=%h|valB_o=%h|valC_o=%h|valE_o=%h|valM_o=%h|valP_o=%h|",
+                $time, PC_reg, fetch_icode_o, fetch_rA_o, fetch_rB_o, reg_valA_o, reg_valB_o, fetch_valC_o, valE, valM, fetch_valP_o);
+	end
 
 endmodule
