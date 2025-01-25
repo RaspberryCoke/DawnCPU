@@ -34,7 +34,7 @@ L0 2
 R8
 r1
 31
-Z20 !s108 1737765922.862000
+Z20 !s108 1737781376.743000
 Z21 !s107 define.v|top_single_module.v|regs.v|fetch_tb.v|top.v|pc_update_tb.v|top_single_module_tb.v|ram.v|read_test.v|memory_access.v|decode_tb.v|writeback.v|execute.v|initial_ram.v|decode.v|fetch.v|pc_update.v|read2.v|ram_tb.v|memory_tb.v|stat_module.v|execute_tb.v|read_func.v|
 Z22 !s90 read_func.v|execute_tb.v|stat_module.v|memory_tb.v|ram_tb.v|read2.v|pc_update.v|fetch.v|decode.v|initial_ram.v|execute.v|writeback.v|decode_tb.v|memory_access.v|read_test.v|ram.v|top_single_module_tb.v|pc_update_tb.v|top.v|fetch_tb.v|regs.v|top_single_module.v|define.v|
 o-O0
@@ -118,32 +118,32 @@ o-O0
 !s85 0
 !s101 -O0
 vfetch
-Z47 I^f<J<oj1gVaG?TKSfLMF^0
-Z48 Vd0nOPQU=Xd3;2o:R5ebg@2
-R16
+!i10b 1
+!s100 i]RVYccO<??E<R87iW3l;2
+ImBE>8>NGMKSAEYVJE9]W_3
+Z47 Vd0nOPQU=Xd3;2o:R5ebg@2
+Z48 dd:\project\ic\cpu\DawnCPU
 Z49 w1737765915
-Z50 8fetch.v
-Z51 Ffetch.v
+8d:\project\ic\cpu\DawnCPU\fetch.v
+Fd:\project\ic\cpu\DawnCPU\fetch.v
 L0 2
 R8
 r1
-31
-R20
-R21
-R22
-o-O0
-!i10b 1
-Z52 !s100 QhT>QWQbd=f9CFF08OhcI2
 !s85 0
+31
+!s108 1737810988.974000
+!s107 define.v|d:\project\ic\cpu\DawnCPU\fetch.v|
+!s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\fetch.v|
 !s101 -O0
+R10
 vfetch_tb
-Z53 !s100 d;<dX7JTJURZ^56WR<DNN0
-Z54 IC;i1=LDn^of8LjH@cKNm;3
-Z55 VJW3RDAN]`z2QmhBi`nGY50
+Z50 !s100 d;<dX7JTJURZ^56WR<DNN0
+Z51 IC;i1=LDn^of8LjH@cKNm;3
+Z52 VJW3RDAN]`z2QmhBi`nGY50
 R16
-Z56 w1737734481
-Z57 8fetch_tb.v
-Z58 Ffetch_tb.v
+Z53 w1737734481
+Z54 8fetch_tb.v
+Z55 Ffetch_tb.v
 L0 4
 R8
 r1
@@ -156,13 +156,13 @@ o-O0
 !s85 0
 !s101 -O0
 vinitial_ram
-Z59 !s100 1i;fNRH5dnYXU5]9W[5<z1
-Z60 ITSHO:1ODCj^V49a1=fI@Y1
-Z61 VnYhYnz79I6AE4ATinC>d03
+Z56 !s100 1i;fNRH5dnYXU5]9W[5<z1
+Z57 ITSHO:1ODCj^V49a1=fI@Y1
+Z58 VnYhYnz79I6AE4ATinC>d03
 R16
-Z62 w1737716270
-Z63 8initial_ram.v
-Z64 Finitial_ram.v
+Z59 w1737716270
+Z60 8initial_ram.v
+Z61 Finitial_ram.v
 L0 1
 R8
 r1
@@ -175,32 +175,32 @@ o-O0
 !s85 0
 !s101 -O0
 vmemory
-Z65 Il3N@k4o6o=N<9]?0o108T3
-Z66 V>GW1ee5_[n7lMH<XRSg8L2
-Z67 dd:\project\ic\cpu\DawnCPU
-Z68 w1737103775
-Z69 8d:\project\ic\cpu\DawnCPU\memory.v
-Z70 Fd:\project\ic\cpu\DawnCPU\memory.v
+Z62 Il3N@k4o6o=N<9]?0o108T3
+Z63 V>GW1ee5_[n7lMH<XRSg8L2
+R48
+Z64 w1737103775
+Z65 8d:\project\ic\cpu\DawnCPU\memory.v
+Z66 Fd:\project\ic\cpu\DawnCPU\memory.v
 L0 1
 R8
 r1
 31
 R10
-Z71 !s100 RmI<19ocY8>^8Oib@:DoF2
-Z72 !s108 1737103775.310000
-Z73 !s107 d:\project\ic\cpu\DawnCPU\memory.v|
-Z74 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\memory.v|
+Z67 !s100 RmI<19ocY8>^8Oib@:DoF2
+Z68 !s108 1737103775.310000
+Z69 !s107 d:\project\ic\cpu\DawnCPU\memory.v|
+Z70 !s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\memory.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmemory_access
-Z75 !s100 HEm87@USTdEfL4DODYGUE3
-Z76 IiA8<O9d`^GYJJ;>4k7hF]1
-Z77 Vca;YkBeY@]5:eg3^51dgi2
+Z71 !s100 HEm87@USTdEfL4DODYGUE3
+Z72 IiA8<O9d`^GYJJ;>4k7hF]1
+Z73 Vca;YkBeY@]5:eg3^51dgi2
 R16
-Z78 w1737761581
-Z79 8memory_access.v
-Z80 Fmemory_access.v
+Z74 w1737761581
+Z75 8memory_access.v
+Z76 Fmemory_access.v
 L0 2
 R8
 r1
@@ -213,13 +213,13 @@ o-O0
 !s85 0
 !s101 -O0
 vmemory_tb
-Z81 !s100 CGaW>jReN4K9BbK4e5m=e2
-Z82 I;;X78G>^ioBSRNT=;8i3Q2
-Z83 V7TaG]HTKIa:cj5HbbmFW63
+Z77 !s100 CGaW>jReN4K9BbK4e5m=e2
+Z78 I;;X78G>^ioBSRNT=;8i3Q2
+Z79 V7TaG]HTKIa:cj5HbbmFW63
 R16
-Z84 w1737446489
-Z85 8memory_tb.v
-Z86 Fmemory_tb.v
+Z80 w1737446489
+Z81 8memory_tb.v
+Z82 Fmemory_tb.v
 L0 4
 R8
 r1
@@ -232,24 +232,24 @@ o-O0
 !s85 0
 !s101 -O0
 vpc_update
-!i10b 1
-!s100 8AM=0;lM]9J8L;E6F9k>M1
-IKldGezFl;zZCMQ2FV3GXD1
-Z87 VYYjdbX[A;=ocDHMG:7eR:1
-R67
-Z88 w1737765710
-8d:\project\ic\cpu\DawnCPU\pc_update.v
-Fd:\project\ic\cpu\DawnCPU\pc_update.v
+Z83 IBZh37^^kXTcZ_kMIRXY<G2
+Z84 VYYjdbX[A;=ocDHMG:7eR:1
+R16
+Z85 w1737765710
+Z86 8pc_update.v
+Z87 Fpc_update.v
 L0 2
 R8
 r1
-!s85 0
 31
-!s108 1737765993.660000
-!s107 define.v|d:\project\ic\cpu\DawnCPU\pc_update.v|
-!s90 -nologo|-work|D:\project\ic\cpu\DawnCPU\work|d:\project\ic\cpu\DawnCPU\pc_update.v|
+R20
+R21
+R22
+o-O0
+!i10b 1
+Z88 !s100 eKjXgCKT>b;c]Xk]X5ZWL2
+!s85 0
 !s101 -O0
-R10
 vpc_update_module
 Z89 !s100 knCFBQU_:bo?QdZ5Qd2?I0
 Z90 I2j1=@k1kd]_CZKfdH1[BP3
@@ -329,7 +329,7 @@ o-O0
 vread_func
 Z113 I1CJG<;Dg=^3cIDhFhUY8G1
 Z114 VY]TNIScP>432IGCmndFGc2
-R67
+R48
 Z115 w1737463767
 Z116 8d:\project\ic\cpu\DawnCPU\read_func.v
 Z117 Fd:\project\ic\cpu\DawnCPU\read_func.v
@@ -443,7 +443,7 @@ o-O0
 vtop
 Z153 I;ck7<k4LegLM;@URkU;@i0
 Z154 Ve:gFW1CKLAXc^T:7k2HoD1
-R67
+R48
 Z155 w1737382245
 Z156 8d:\project\ic\cpu\DawnCPU\top.v
 Z157 Fd:\project\ic\cpu\DawnCPU\top.v
