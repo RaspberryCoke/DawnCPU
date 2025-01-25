@@ -16,6 +16,7 @@ module pc_update(
 );
 
 always@(posedge clk_i or negedge rst_n_i)begin 
+    $display($time,".pc_update.v running.icode:%h",icode_i);
     if(~rst_n_i)pc_o<=0;///////////////////////////
     else begin
         case(icode_i)

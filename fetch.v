@@ -11,6 +11,20 @@ module fetch(
     output wire       instr_valid_o,
     output wire       imem_error_o 
 );
+always@(PC_i)begin 
+    $display($time,".fetch.v running.PC_i:%h.icode:%h.",PC_i,icode_o);
+    if(icode_o==`IHALT)begin 
+        $display($time,".fetch.v IHALT.PC_i:%h.icode:%h.",PC_i,icode_o);
+        $display($time,".HALT.");
+        $display("");
+        $display("----------------.HALT.------------------");
+        $display("-----------.Succeed to HALT.-------------");
+        $display("-----------------------------------------");
+        $display("------------Congratulations!-------------");
+        $display("");
+        $stop;
+    end
+end
 
 reg[7:0] instr_mem[0:1023];//指令的填充  --  是否理应放在外面？
 
@@ -57,9 +71,15 @@ assign valC_o=need_valC?(need_regids?instr[79:16]:instr[71:8]):64'b0;
 assign valP_o=PC_i+1+8*need_valC+need_regids;
 
 
-
+integer i;
 
     initial begin
+        $display("fetch.v:instr_mem initial...");
+        for(i=0;i<1023;i=i+1)begin 
+            instr_mem[i]=0;
+        end  
+
+
         //手动填充指令
         //30 F8 08 00 00 00 00 00 00 00
         //由第一个字节的icode分析出后面有立即数，
@@ -187,7 +207,7 @@ assign valP_o=PC_i+1+8*need_valC+need_regids;
 
         //jmp=70 0x50=80
         instr_mem[66]=8'h70;
-        instr_mem[67]=8'h80;
+        instr_mem[67]=8'h50;
         instr_mem[68]=8'h00;
         instr_mem[69]=8'h00;
         instr_mem[70]=8'h00;
@@ -251,7 +271,7 @@ assign valP_o=PC_i+1+8*need_valC+need_regids;
         instr_mem[112]=8'h00;
         instr_mem[113]=8'h00;
 
-        
+
         instr_mem[114]=8'h10;
         instr_mem[115]=8'h10;
         instr_mem[116]=8'h10;

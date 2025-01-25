@@ -13,6 +13,9 @@ module writeback(
 
     output wire stat_o
 );
+always@(icode_i)begin 
+    $display($time,".writeback.v running.icode:%h.",icode_i);
+end
 
 assign valE_o=valE_i;
 assign valM_o=valE_i;

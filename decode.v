@@ -39,6 +39,7 @@ reg [3:0] dstM;
 
 
 always@(*)begin
+    $display($time,".decode.v running.icode:%h.",icode_i);
     case(icode_i)
         `IHALT:begin 
             srcA=4'hf;
@@ -99,14 +100,14 @@ always@(*)begin
 
         `ICALL:begin 
             srcA=4'hf;
-            srcB=4'hf;
+            srcB=4'h4;///////////////////////
             dstE=4'h4;
             dstM=4'hf;
         end
 
         `IRET:begin 
-            srcA=4'hf;
-            srcB=4'hf;
+            srcA=4'h4;
+            srcB=4'h4;////////////////////
             dstE=4'h4;
             dstM=4'hf;
         end

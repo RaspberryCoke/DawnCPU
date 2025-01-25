@@ -30,6 +30,7 @@ assign zf=cc[2];
 assign set_cc=icode_i==`IOPQ;
 
 always @(*) begin
+    $display($time,".execute.v running.icode:%h,ifun:%h",icode_i,ifun_i);
     case (icode_i)
         `ICMOVQ:begin 
             aluA=valA_i;

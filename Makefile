@@ -16,6 +16,7 @@ compile:
 	@vsim -c top_single_module2 -do "run -all; exit"
 
 
+
 sim:
 	@echo "Starting simulation with str= top_single_module2 ."
 	@vsim -c top_single_module2 -do "run -all; exit"

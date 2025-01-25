@@ -78,6 +78,12 @@ reg [7:0] drams[1023:0];
 assign valM_o=r_en?drams[mem_addr]:64'b0;
 assign dmem_error_o=(mem_addr<64'd1023);
 
+always@(posedge clk_i)begin 
+    if(w_en)begin 
+        $display($time,".memory_access.v: drams was written.icode:%h.",icode_i);
+        drams[mem_addr]<=mem_data;
+    end
+end
 
 integer i;
 
