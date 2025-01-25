@@ -1,7 +1,3 @@
-# Makefile
-
-# 设置TOP文件
-
 # 编译所有的 .v 文件
 VFILES := $(wildcard *.v)
 
@@ -12,12 +8,6 @@ all: compile
 compile:
 	@echo "Compiling files..."
 	vlog $(VFILES)
-	@echo "Starting simulation with str= top_single_module2 ."
-	@vsim -c top_single_module2 -do "run -all; exit"
-
-
-
-sim:
 	@echo "Starting simulation with str= top_single_module2 ."
 	@vsim -c top_single_module2 -do "run -all; exit"
 
@@ -33,16 +23,8 @@ sim:
 # 	@echo "Assigning value to str: ${str}"
 # 	@echo ${str}
 
-# 设置另一种仿真目标
-SIM:
-	@if [ "$(words $(MAKECMDGOALS))" -ne 1 ]; then \
-		echo "Error: You must specify exactly one parameter for the top module."; \
-		exit 1; \
-	fi
-	@echo "Running simulation with vsim $(firstword $(MAKECMDGOALS))..."
-	vsim $(firstword $(MAKECMDGOALS))
 
 # 清理命令
 clean:
 	@echo "Cleaning..."
-	# rm -rf work
+# rm -rf work

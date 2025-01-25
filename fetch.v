@@ -11,26 +11,13 @@ module fetch(
     output wire       instr_valid_o,
     output wire       imem_error_o 
 );
-always@(PC_i)begin 
-    $display($time,".fetch.v running.PC_i:%h.icode:%h.",PC_i,icode_o);
-    if(icode_o==`IHALT)begin 
-        $display($time,".fetch.v IHALT.PC_i:%h.icode:%h.",PC_i,icode_o);
-        $display($time,".HALT.");
-        $display("");
-        $display("----------------.HALT.------------------");
-        $display("-----------.Succeed to HALT.-------------");
-        $display("-----------------------------------------");
-        $display("------------Congratulations!-------------");
-        $display("");
-        $stop;
-    end
-end
 
-reg[7:0] instr_mem[0:1023];//指令的填充  --  是否理应放在外面？
+
+reg[7:0] instr_mem[0:1023];
 
 wire[79:0] instr;
-wire     need_regids;
-wire     need_valC;
+wire need_regids;
+wire need_valC;
 
 assign imem_error_o=(PC_i>1023);//检查越界  --  这个检查恐怕不完善
 
@@ -69,6 +56,22 @@ assign rB_o=need_regids?{instr[11:8]}:4'hf;
 assign valC_o=need_valC?(need_regids?instr[79:16]:instr[71:8]):64'b0;
 
 assign valP_o=PC_i+1+8*need_valC+need_regids;
+
+
+always@(*)begin 
+    $display($time,".fetch.v running.PC_i:%h.icode:%h.",PC_i,icode_o);
+    if(icode_o==`IHALT)begin 
+        $display($time,".fetch.v IHALT.PC_i:%h.icode:%h.",PC_i,icode_o);
+        $display($time,".HALT.");
+        $display("");
+        $display("----------------.HALT.------------------");
+        $display("-----------.Succeed to HALT.-------------");
+        $display("-----------------------------------------");
+        $display("------------Congratulations!-------------");
+        $display("");
+        $stop;
+    end
+end
 
 
 integer i;

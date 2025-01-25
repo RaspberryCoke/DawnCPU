@@ -11,8 +11,6 @@ module decode(
     input wire[63:0] valE_i,
     input wire[63:0] valM_i,
 
-    //input wire cnd_i,
-
     output wire[63:0] valA_o,
     output wire[63:0] valB_o
 );
@@ -30,7 +28,7 @@ end
 
 
 
-//这里千万不要赋初值为0，否则导致竞态。访问0号寄存器永远失败。
+//这里千万不要赋初值为0，否则导致竞态。访问0号寄存器失败。
 reg [3:0] srcA;
 reg [3:0] srcB;
 reg [3:0] dstE;
@@ -100,14 +98,14 @@ always@(*)begin
 
         `ICALL:begin 
             srcA=4'hf;
-            srcB=4'h4;///////////////////////
+            srcB=4'h4;
             dstE=4'h4;
             dstM=4'hf;
         end
 
         `IRET:begin 
             srcA=4'h4;
-            srcB=4'h4;////////////////////
+            srcB=4'h4;
             dstE=4'h4;
             dstM=4'hf;
         end

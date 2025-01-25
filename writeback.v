@@ -20,7 +20,7 @@ end
 assign valE_o=valE_i;
 assign valM_o=valE_i;
 
-assign stat_o=(instr_valid_i==1)||(imem_error_i==1)||(dmem_error_i==1);////////////////
+assign stat_o=(instr_valid_i==1)||(imem_error_i==1)||(dmem_error_i==1);//todo
 
 
 endmodule
