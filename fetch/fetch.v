@@ -1,6 +1,15 @@
 `include "define.v"
 module fetch(
-    input wire[63:0] PC_i,
+    input clk_i,//new
+    input rst_n_i,//new
+    input stall_i,//new
+    input bubble_i,//new
+
+    input wire[63:0] predPC_i,//new
+
+
+    input wire[63:0]M_valA_i,//new
+    input wire[63:0]W_valM_i,//new
 
     output wire [3:0] icode_o,
     output wire [3:0] ifun_o,
@@ -8,10 +17,47 @@ module fetch(
     output wire [3:0] rB_o,
     output wire [63:0] valC_o ,
     output wire [63:0] valP_o ,
-    output wire       instr_valid_o,
-    output wire       imem_error_o 
+    output wire instr_valid_o,
+    output wire imem_error_o 
 );
 
+reg[63:0] predPC;
+
+// module predictPC(
+//     input wire[63:0] valC_i,
+//     input wire[63:0] valP_i,
+//     output wire[63:0] valC_o,//tmp
+//     output wire[63:0] valP_o,//tmp
+//     output wire[63:0] predPC_o
+// );
+// module selectPC(
+//     input rst_n_i,
+
+//     input wire[63:0] predPC_i,
+//     input wire[63:0] valC_i,//tmp
+//     input wire[63:0] valP_i,//tmp
+//     input wire[3:0] icode_i,//tmp
+//     input wire[63:0] M_valA_i,
+//     input wire[63:0] W_valM_i,
+//     input wire[63:0] M_Cnd_i,
+//     output wire[63:0] f_pc_o
+// );
+
+wire[63:0] f_pc;//new
+wire[63:0] valC_i=valC_o;//tmp
+wire[63:0] valP_i=valP_o;//tmp
+
+selectPC selectPC_module(
+    .rst_n_i(rst_n_i),
+    .predPC_i(predPC_i),
+    .valC_i(valC_i),//tmp
+    .valP_i(valP_i),//tmp
+    .icode_i(icode_o),//tmp
+    .M_valA_i(M_valA_i),
+    .W_valM_i(W_valM_i),
+    .M_Cnd_i(M_Cnd_i),
+    .f_pc_o(f_pc)
+);
 
 reg[7:0] instr_mem[0:1023];
 
@@ -19,7 +65,7 @@ wire[79:0] instr;
 wire need_regids;
 wire need_valC;
 
-assign imem_error_o=(PC_i>1023);//检查越界  --  这个检查恐怕不完善
+assign imem_error_o=(f_pc>1023);//检查越界  --  这个检查恐怕不完善
 
 //对二维数组的访问，instr_mem[0]为地址最低的8bit。
 
@@ -27,10 +73,10 @@ assign imem_error_o=(PC_i>1023);//检查越界  --  这个检查恐怕不完善
 
 //注意：文件写入的时候，按照instr_mem[]从0到1023，所以不用颠倒顺序。
 
-assign instr={instr_mem[PC_i+9],instr_mem[PC_i+8],
-    instr_mem[PC_i+7],instr_mem[PC_i+6],instr_mem[PC_i+5],
-    instr_mem[PC_i+4],instr_mem[PC_i+3],instr_mem[PC_i+2],
-    instr_mem[PC_i+1],instr_mem[PC_i+0]};
+assign instr={instr_mem[f_pc+9],instr_mem[f_pc+8],
+    instr_mem[f_pc+7],instr_mem[f_pc+6],instr_mem[f_pc+5],
+    instr_mem[f_pc+4],instr_mem[f_pc+3],instr_mem[f_pc+2],
+    instr_mem[f_pc+1],instr_mem[f_pc+0]};
 
 //人类的惯性思维下，icode应该在低4bit。但实际上读入文件的时候，按照字节读入，
 //所以实际上icode就放在了高位。
@@ -55,13 +101,29 @@ assign rB_o=need_regids?{instr[11:8]}:4'hf;
 
 assign valC_o=need_valC?(need_regids?instr[79:16]:instr[71:8]):64'b0;
 
-assign valP_o=PC_i+1+8*need_valC+need_regids;
+assign valP_o=f_pc+1+8*need_valC+need_regids;
 
+// module predictPC(
+//     input wire[63:0] valC_i,
+//     input wire[63:0] valP_i,
+//     output wire[63:0] valC_o,//tmp
+//     output wire[63:0] valP_o,//tmp
+//     output wire[63:0] predPC_o
+// );
+wire[63:0] predPC_o;
+
+predictPC predictPC_module(
+    .valC_i(valC_i),
+    .valP_i(valP_i),
+    .valC_o(valC_o),//tmp
+    .valP_o(valP_o),//tmp
+    .predPC_o(predPC_o)
+);
 
 always@(*)begin 
-    $display($time,".fetch.v running.PC_i:%h.icode:%h.",PC_i,icode_o);
+    $display($time,".fetch.v running.f_pc:%h.icode:%h.",f_pc,icode_o);
     if(icode_o==`IHALT)begin 
-        $display($time,".fetch.v IHALT.PC_i:%h.icode:%h.",PC_i,icode_o);
+        $display($time,".fetch.v IHALT.f_pc:%h.icode:%h.",f_pc,icode_o);
         $display($time,".HALT.");
         $display("");
         $display("----------------.HALT.------------------");

@@ -1,5 +1,7 @@
 # 编译所有的 .v 文件
 VFILES := $(wildcard *.v)
+VFILES += $(wildcard fetch/*.v)          # 添加 fetch 文件夹下的所有 .v 文件
+VFILES := $(filter-out old_Single_cycle_CPU_files/*.v, $(VFILES))  # 排除 old 文件夹下的所有 .v 文件
 
 # 默认目标
 all: compile
@@ -8,8 +10,8 @@ all: compile
 compile:
 	@echo "Compiling files..."
 	vlog $(VFILES)
-	@echo "Starting simulation with str= top_single_module2 ."
-	@vsim -c top_single_module2 -do "run -all; exit"
+	@echo "Starting simulation with str= top_five_module ."
+	@vsim -c top_five_module -do "run -all; exit"
 
 
 # # 目标是 sim，依赖于传递给 make 的 str
