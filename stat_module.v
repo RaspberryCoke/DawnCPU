@@ -4,6 +4,8 @@ module stat(
     input wire hlt_i,
     input wire imem_error_i,
     input wire dmem_error_i,
+    input wire bubble_i,
+    input wire stall_i,
     output wire [2:0]  stat_o
 );
 /*
@@ -13,12 +15,17 @@ module stat(
 3:data mem error
 4:hlt
 5.reset
+6.bubble
+7.stall
 */
 assign stat_o=(rst_n_i==0)?3'd5:
                 (instr_valid_i==0)?3'd1:
                 (hlt_i==1)?3'd4:
                 (imem_error_i)?3'd2:
-                (dmem_error_i)?3'd3:3'd0;
+                (dmem_error_i)?3'd3:
+                (bubble_i)?3'd6:
+                (stall_i)?3'd7:
+                3'd0;
 
 endmodule
 

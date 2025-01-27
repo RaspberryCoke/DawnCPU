@@ -28,62 +28,85 @@ end
     fetch module
 */
 
-wire f_stall_i;
-wire f_bubble_i;
+wire F_stall_i;
+wire F_bubble_i;
 
-wire[63:0]M_valA_i;//new
-wire[63:0]W_valM_i;//new
+wire[63:0]M_valA_o;//new
+wire[63:0]W_valM_o;//new
 
-wire[3:0] icode_o;
-wire [3:0] ifun_o;
+wire[3:0] F_icode_o;
+wire [3:0] F_ifun_o;
 
-wire[3:0] rA_o;
-wire [3:0] rB_o;
+wire[3:0] F_rA_o;
+wire [3:0] F_rB_o;
 
-wire [63:0] valC_o ;
-wire [63:0] valP_o ;
-wire[2:0]stat_o;
+wire [63:0] F_valC_o ;
+wire [63:0] F_valP_o ;
+wire[2:0]F_stat_o;
 
 fetch fetch_module(
-    .clk_i(clk_i),//new
-    .rst_n_i(rst_n_i),//new
-    .stall_i(f_stall_i),//new
-    .bubble_i(f_bubble_i),//new
+    .clk_i(clk_i),
+    .rst_n_i(rst_n_i),
+    .stall_i(F_stall_i),
+    .bubble_i(F_bubble_i),
 
-    .M_valA_i(M_valA_i),//new
-    .W_valM_i(W_valM_i),//new
+    .M_valA_i(M_valA_o),//new
+    .W_valM_i(W_valM_o),//new
 
-    .icode_o(icode_o),
-    .ifun_o(ifun_o),
-    .rA_o(rA_o),
-    .rB_o(rB_o),
-    .valC_o(valC_o),
-    .valP_o(valP_o) ,
-    .stat_o(stat_o)
+    .icode_o(F_icode_o),
+    .ifun_o(F_ifun_o),
+    .rA_o(F_rA_o),
+    .rB_o(F_rB_o),
+    .valC_o(F_valC_o),
+    .valP_o(F_valP_o) ,
+    .stat_o(F_stat_o)
 );
 
 /*
     decode module
 */
-wire d_stall_i;
-wire d_bubble_i;
+wire D_stall_i;
+wire D_bubble_i;
+wire[3:0] D_icode_o;
+wire [3:0] D_ifun_o;
+wire [63:0] D_valC_o ;
+wire[2:0]D_stat_o;
+wire[63:0] D_valA_o;
+wire[63:0] D_valB_o;
+wire[3:0]D_dstE_o;
+wire[3:0]D_dstM_o;
+wire[3:0]D_srcA_o;
+wire[3:0]D_srcB_o;
 
-wire[63:0] valE_i;
-wire[63:0] valM_i;
-
-wire[63:0] valA_o;
-wire[63:0] valB_o;
+wire[63:0]W_valE_o;//new
 
 decode decode_module(
     .clk_i(clk_i),
     .rst_n_i(rst_n_i),
-    .rA_i(rA_o),
-    .rB_i(rB_o),
-    .icode_i(icode_o),
-    .valE_i(valE_i),
-    .valM_i(valM_i),
-    .valA_o(valA_o),//out
-    .valB_o(valB_o)//out
+    .stall_i(D_stall_i),
+    .bubble_i(D_bubble_i),
+
+    .rA_i(F_rA_o),
+    .rB_i(F_rB_o),
+    .icode_i(F_icode_o),
+    .ifun_i(F_ifun_o),
+    .valC_i(F_valC_o),
+    .valP_i(F_valP_o),
+    .stat_i(F_stat_o),
+    .W_valE_i(W_valE_o),
+    .W_valM_i(W_valM_o),
+
+    .icode_o(D_icode_o),
+    .ifun_o(D_ifun_o),
+    .stat_o(D_stat_o),
+    .valA_o(D_valA_o),
+    .valB_o(D_valB_o),
+    .valC_o(D_valC_o),
+    
+    .dstE_o(D_dstE_o),
+    .dstM_o(D_dstM_o),
+    .srcA_o(D_srcA_o),
+    .srcB_o(D_srcB_o)
 );
 
 
