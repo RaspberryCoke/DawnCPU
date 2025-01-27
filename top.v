@@ -102,7 +102,7 @@ decode decode_module(
     .valA_o(D_valA_o),
     .valB_o(D_valB_o),
     .valC_o(D_valC_o),
-    
+
     .dstE_o(D_dstE_o),
     .dstM_o(D_dstM_o),
     .srcA_o(D_srcA_o),
@@ -114,22 +114,43 @@ decode decode_module(
     execute module
 */
 
+wire E_stall_i;
+wire E_bubble_i;
 
-wire signed[63:0] valE_o;
-wire cnd_o;
+
+wire[3:0] E_icode_o;
+wire signed[63:0] E_valE_o;
+wire [63:0] E_valA_o ;
+wire[2:0]E_stat_o;
+wire[3:0]E_dstE_o;
+wire[3:0]E_dstM_o;
+wire E_cnd_o;
 
 execute execute_module(
     .clk_i(clk_i),
     .rst_n_i(rst_n_i),
-    .icode_i(icode_o),
-    .ifun_i(ifun_o),
+    .stall_i(E_stall_i),
+    .bubble_i(E_bubble_i),
 
-    .valA_i(valA_o),
-    .valB_i(valB_o),
-    .valC_i(valC_o),
+    .icode_i(D_icode_o),
+    .ifun_i(D_ifun_o),
+    .stat_i(D_stat_o),
 
-    .valE_o(valE_o),
-    .cnd_o(cnd_o)
+    .valA_i(D_valA_o),
+    .valB_i(D_valB_o),
+    .valC_i(D_valC_o),
+    .dstE_i(D_dstE_o),
+    .dstM_i(D_dstM_o),
+    .srcA_i(D_srcA_o),
+    .srcB_i(D_srcB_o),
+
+    .icode_o(E_icode_o),
+    .stat_o(E_stat_o),
+    .valE_o(E_valE_o),
+    .valA_o(E_valA_o),
+    .dstE_o(E_dstE_o),
+    .dstM_o(E_dstM_o),
+    .cnd_o(E_cnd_o)
 );
 
 

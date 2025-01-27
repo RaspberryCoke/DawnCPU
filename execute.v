@@ -2,17 +2,42 @@
 module execute(
     input wire clk_i,
     input wire rst_n_i,
+    input wire stall_i,
+    input wire bubble_i,
 
     input wire[3:0] icode_i,
     input wire [3:0] ifun_i,
+    input wire[2:0]stat_i,
 
     input wire signed[63:0] valA_i,
     input wire signed[63:0] valB_i,
     input wire signed[63:0] valC_i,
 
+    input wire[3:0] dstE_i,
+    input wire[3:0] dstM_i,
+    input wire[3:0] srcA_i,
+    input wire[3:0] srcB_i,
+
+    output wire[3:0] icode_o,
+    output wire[2:0]stat_o,
     output reg signed[63:0] valE_o,
+    output reg signed[63:0] valA_o,
+    output wire[3:0]dstE_o,
+    output wire[3:0]dstM_o,
     output wire cnd_o
 );
+
+reg[2:0]stat;
+reg[3:0]icode;
+reg[3:0]ifun;
+reg[63:0]valA;
+reg[63:0]valB;
+reg[63:0]valC;
+reg[3:0]dstE;
+reg[3:0]dstM;
+reg[3:0]srcA;
+reg[3:0]srcB;
+
 
 reg [63:0] aluA;
 reg[63:0] aluB;
@@ -28,6 +53,57 @@ assign sf=cc[1];
 assign zf=cc[2];
 
 assign set_cc=icode_i==`IOPQ;
+
+
+always@(posedge stall_i,bubble_i,clk_i or negedge rst_n_i)begin 
+    if(~rst_n_i)begin
+        stat<=`STAT_RESET;
+        icode<=0;
+        ifun<=0;
+        valA<=0;
+        valB<=0;
+        valC<=0;
+        srcA<=4'hf;
+        srcB<=4'hf;
+        dstE<=4'hf;
+        dstM<=4'hf;
+        aluA<=0;
+        aluB<=0;
+        alu_fun<=0;
+        new_cc<=3'b100;//注意这里！！！！！
+        cc<=3'b100;
+    end else if(stall_i)begin 
+        stat<=`STAT_STALL;
+    end else if(bubble_i)begin 
+        stat<=`STAT_BUBBLE;
+        icode<=0;
+        ifun<=0;
+        valA<=0;
+        valB<=0;
+        valC<=0;
+        srcA<=4'hf;
+        srcB<=4'hf;
+        dstE<=4'hf;
+        dstM<=4'hf;
+        aluA<=0;
+        aluB<=0;
+        alu_fun<=0;
+        new_cc<=3'b100;//注意这里！！！！！
+        cc<=3'b100;
+    end else begin 
+        stat<=`STAT_OK;
+        icode<=icode_i;
+        ifun<=ifun_i;
+        valA<=valA_i;
+        valB<=valB_i;
+        valC<=valC_i;
+        srcA<=srcA_i;
+        srcB<=srcB_i;
+        dstE<=dstE_i;
+        dstM<=dstM_i;
+    end
+end
+
 
 always @(*) begin
     $display($time,".execute.v running.icode:%h,ifun:%h",icode_i,ifun_i);
