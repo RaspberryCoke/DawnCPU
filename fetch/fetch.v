@@ -5,9 +5,6 @@ module fetch(
     input stall_i,//new
     input bubble_i,//new
 
-    input wire[63:0] predPC_i,//new
-
-
     input wire[63:0]M_valA_i,//new
     input wire[63:0]W_valM_i,//new
 
@@ -23,36 +20,12 @@ module fetch(
 
 reg[63:0] predPC;
 
-// module predictPC(
-//     input wire[63:0] valC_i,
-//     input wire[63:0] valP_i,
-//     output wire[63:0] valC_o,//tmp
-//     output wire[63:0] valP_o,//tmp
-//     output wire[63:0] predPC_o
-// );
-// module selectPC(
-//     input rst_n_i,
-
-//     input wire[63:0] predPC_i,
-//     input wire[63:0] valC_i,//tmp
-//     input wire[63:0] valP_i,//tmp
-//     input wire[3:0] icode_i,//tmp
-//     input wire[63:0] M_valA_i,
-//     input wire[63:0] W_valM_i,
-//     input wire[63:0] M_Cnd_i,
-//     output wire[63:0] f_pc_o
-// );
 
 wire[63:0] f_pc;//new
-wire[63:0] valC_i=valC_o;//tmp
-wire[63:0] valP_i=valP_o;//tmp
 
 selectPC selectPC_module(
     .rst_n_i(rst_n_i),
-    .predPC_i(predPC_i),
-    .valC_i(valC_i),//tmp
-    .valP_i(valP_i),//tmp
-    .icode_i(icode_o),//tmp
+    .predPC_i(predPC),
     .M_valA_i(M_valA_i),
     .W_valM_i(W_valM_i),
     .M_Cnd_i(M_Cnd_i),
@@ -84,7 +57,6 @@ assign instr={instr_mem[f_pc+9],instr_mem[f_pc+8],
 assign icode_o=instr[7:4];
 assign ifun_o=instr[3:0];
 
-
 assign instr_valid_o=(icode_o<4'hC);//检查指令是否出错
 
 //是否需要寄存器位，1B  
@@ -103,23 +75,24 @@ assign valC_o=need_valC?(need_regids?instr[79:16]:instr[71:8]):64'b0;
 
 assign valP_o=f_pc+1+8*need_valC+need_regids;
 
-// module predictPC(
-//     input wire[63:0] valC_i,
-//     input wire[63:0] valP_i,
-//     output wire[63:0] valC_o,//tmp
-//     output wire[63:0] valP_o,//tmp
-//     output wire[63:0] predPC_o
-// );
+
 wire[63:0] predPC_o;
+wire[63:0] valC_i=valC_o;//tmp
+wire[63:0] valP_i=valP_o;//tmp
 
 predictPC predictPC_module(
     .valC_i(valC_i),
     .valP_i(valP_i),
-    .valC_o(valC_o),//tmp
-    .valP_o(valP_o),//tmp
     .predPC_o(predPC_o)
 );
 
+always@(posedge clk_i or negedge rst_n_i)begin 
+    if(~rst_n_i)predPC<=64'b0;
+    else predPC<=predPC_o;
+end
+
+
+//触发条件：icode_o==`IHALT ,  f_pc改变
 always@(*)begin 
     $display($time,".fetch.v running.f_pc:%h.icode:%h.",f_pc,icode_o);
     if(icode_o==`IHALT)begin 

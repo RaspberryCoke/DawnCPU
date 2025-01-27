@@ -11,7 +11,7 @@ module selectPC(
     input wire[3:0] icode_i,//tmp
     input wire[63:0] M_valA_i,
     input wire[63:0] W_valM_i,
-    input wire[63:0] M_Cnd_i,
+    input wire M_Cnd_i,
     output wire[63:0] f_pc_o
 );
 
