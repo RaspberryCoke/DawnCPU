@@ -28,6 +28,12 @@ end
     fetch module
 */
 
+wire f_stall_i;
+wire f_bubble_i;
+
+wire[63:0]M_valA_i;//new
+wire[63:0]W_valM_i;//new
+
 wire[3:0] icode_o;
 wire [3:0] ifun_o;
 
@@ -36,25 +42,31 @@ wire [3:0] rB_o;
 
 wire [63:0] valC_o ;
 wire [63:0] valP_o ;
-wire instr_valid_o;
-wire imem_error_o ;
+wire[2:0]stat_o;
 
 fetch fetch_module(
-    .PC_i(PC_i),
+    .clk_i(clk_i),//new
+    .rst_n_i(rst_n_i),//new
+    .stall_i(f_stall_i),//new
+    .bubble_i(f_bubble_i),//new
+
+    .M_valA_i(M_valA_i),//new
+    .W_valM_i(W_valM_i),//new
+
     .icode_o(icode_o),
     .ifun_o(ifun_o),
     .rA_o(rA_o),
     .rB_o(rB_o),
     .valC_o(valC_o),
-    .valP_o(valP_o),
-    .instr_valid_o(instr_valid_o),
-    .imem_error_o(imem_error_o)
+    .valP_o(valP_o) ,
+    .stat_o(stat_o)
 );
 
 /*
     decode module
 */
-
+wire d_stall_i;
+wire d_bubble_i;
 
 wire[63:0] valE_i;
 wire[63:0] valM_i;
@@ -122,7 +134,7 @@ memory_access memory_module(
 */
 
 
-wire stat_o;
+
 
 writeback writeback_module(
     .icode_i(icode_o),

@@ -14,8 +14,7 @@ module fetch(
     output wire [3:0] rB_o,
     output wire [63:0] valC_o ,
     output wire [63:0] valP_o ,
-    output wire instr_valid_o,
-    output wire imem_error_o 
+    output wire[2:0]stat_o
 );
 
 reg[63:0] predPC;
@@ -46,10 +45,10 @@ assign imem_error_o=(f_pc>1023);//检查越界  --  这个检查恐怕不完善
 
 //注意：文件写入的时候，按照instr_mem[]从0到1023，所以不用颠倒顺序。
 
-assign instr={instr_mem[f_pc+9],instr_mem[f_pc+8],
+assign instr=imem_error_o==0?{instr_mem[f_pc+9],instr_mem[f_pc+8],
     instr_mem[f_pc+7],instr_mem[f_pc+6],instr_mem[f_pc+5],
     instr_mem[f_pc+4],instr_mem[f_pc+3],instr_mem[f_pc+2],
-    instr_mem[f_pc+1],instr_mem[f_pc+0]};
+    instr_mem[f_pc+1],instr_mem[f_pc+0]}:64'b0;
 
 //人类的惯性思维下，icode应该在低4bit。但实际上读入文件的时候，按照字节读入，
 //所以实际上icode就放在了高位。
@@ -61,7 +60,6 @@ assign instr_valid_o=(icode_o<4'hC);//检查指令是否出错
 
 //是否需要寄存器位，1B  
 assign need_regids=(icode_o==`ICMOVQ)||(icode_o==`IIRMOVQ)||(icode_o==`IRMMOVQ)||(icode_o==`IMRMOVQ)||(icode_o==`IOPQ)||(icode_o==`IPUSHQ)||(icode_o==`IPOPQ);
-
 //是否需要立即数
 assign need_valC=(icode_o==`IIRMOVQ)||(icode_o==`IRMMOVQ)||
         (icode_o==`IMRMOVQ)||(icode_o==`IJXX)||(icode_o==`ICALL);
@@ -72,18 +70,31 @@ assign rA_o=need_regids?{instr[15:12]}:4'hf;
 assign rB_o=need_regids?{instr[11:8]}:4'hf;
 
 assign valC_o=need_valC?(need_regids?instr[79:16]:instr[71:8]):64'b0;
-
 assign valP_o=f_pc+1+8*need_valC+need_regids;
 
 
 wire[63:0] predPC_o;
-wire[63:0] valC_i=valC_o;//tmp
-wire[63:0] valP_i=valP_o;//tmp
+wire[63:0] valC_i=valC_o;
+wire[63:0] valP_i=valP_o;
 
 predictPC predictPC_module(
     .valC_i(valC_i),
     .valP_i(valP_i),
     .predPC_o(predPC_o)
+);
+
+
+
+wire is_hlt;
+assign is_hlt=(icode_o==`IHALT);
+
+stat stat_module(
+    .rst_n_i(rst_n_i),
+    .instr_valid_i(instr_valid_o),
+    .hlt_i(is_hlt),
+    .imem_error_i(imem_error_o),
+    .dmem_error_i(64'b0),
+    .stat_o(stat_o)
 );
 
 always@(posedge clk_i or negedge rst_n_i)begin 
