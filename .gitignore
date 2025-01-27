@@ -13,6 +13,7 @@
 *.bsf
 
 # ignore simulation output of ModelSim
+work/
 wlf*
 *.wlf
 *.vstf
