@@ -54,11 +54,11 @@ assign sf=cc[1];
 assign zf=cc[2];
 
 
-assign set_cc=(icode_i==`IOPQ);
+
 assign valA_o=valA_i;//原封不动。注意：之前的代码可能有问题。
 
 
-always@(posedge stall_i,bubble_i,clk_i or negedge rst_n_i)begin 
+always@(posedge clk_i)begin 
     if(~rst_n_i)begin
         stat<=`STAT_RESET;
         icode<=0;
@@ -70,11 +70,11 @@ always@(posedge stall_i,bubble_i,clk_i or negedge rst_n_i)begin
         srcB<=4'hf;
         dstE<=4'hf;
         dstM<=4'hf;
-        aluA<=0;
-        aluB<=0;
-        alu_fun<=0;
-        new_cc<=3'b100;//注意这里！！！！！
-        cc<=3'b100;
+        // aluA<=0;
+        // aluB<=0;
+        // alu_fun<=0;
+        // new_cc<=3'b100;//注意这里！！！！！
+        // cc<=3'b100;
     end else if(stall_i)begin 
         stat<=`STAT_STALL;
     end else if(bubble_i)begin 
@@ -88,11 +88,11 @@ always@(posedge stall_i,bubble_i,clk_i or negedge rst_n_i)begin
         srcB<=4'hf;
         dstE<=4'hf;
         dstM<=4'hf;
-        aluA<=0;
-        aluB<=0;
-        alu_fun<=0;
-        new_cc<=3'b100;//注意这里！！！！！
-        cc<=3'b100;
+        // aluA<=0;
+        // aluB<=0;
+        // alu_fun<=0;
+        // new_cc<=3'b100;//注意这里！！！！！
+        // cc<=3'b100;
     end else begin 
         stat<=`STAT_OK;
         icode<=icode_i;
@@ -109,6 +109,14 @@ end
 
 
 always @(*) begin
+    if(~rst_n_i)begin 
+        aluA=64'H0;
+        aluB=64'H0;
+    end else if(bubble_i)begin 
+        aluA=64'H0;
+        aluB=64'H0;
+    end
+    else begin
     case (icode_i)
         `ICMOVQ:begin 
             aluA=valA_i;
@@ -146,22 +154,33 @@ always @(*) begin
             aluA=8;
             aluB=valB_i;
         end
-
         default:begin 
             aluA=0;
             aluB=0;
         end
     endcase
+    end
 end
 
 always@(*)begin
-    if(icode_i==`IOPQ)
+    if(~rst_n_i)begin 
+        alu_fun=4'H0;
+    end else if(bubble_i)begin 
+        alu_fun=4'H0;
+    end 
+    else if(icode_i==`IOPQ)
         alu_fun=ifun_i;
     else
         alu_fun=`ALUADD;
 end
 ///////////////////////////////////////
 always@(*)begin 
+    if(~rst_n_i)begin 
+        valE=4'H0;
+    end else if(bubble_i) begin 
+        valE=4'H0;
+    end 
+    else begin
     case(alu_fun)
         `ALUADD:begin 
             valE=aluA+aluB;
@@ -175,11 +194,16 @@ always@(*)begin
         `ALUXOR:begin 
             valE=aluA^aluB;
         end
-    endcase
+    endcase end
 end
 
 always@(*)begin 
     if(~rst_n_i)begin 
+        new_cc[2]=1;
+        new_cc[1]=0;
+        new_cc[0]=0;
+    end
+    else if(bubble_i)begin 
         new_cc[2]=1;
         new_cc[1]=0;
         new_cc[0]=0;
