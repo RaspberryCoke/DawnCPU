@@ -15,6 +15,8 @@ module decode(
     input wire[2:0] stat_i,
     input wire[63:0] W_valE_i,
     input wire[63:0] W_valM_i,
+    input wire[3:0] dstE_i,
+    input wire[3:0] dstM_i,
 
     output wire[3:0] icode_o,
     output wire[3:0] ifun_o,
@@ -92,8 +94,8 @@ always@(posedge stall_i,bubble_i,clk_i or negedge rst_n_i)begin
         ifun<=ifun_i;
         valC<=valC_i;
         valP<=valP_i;
-        regfile[dstE]<=W_valE_i;
-        regfile[dstM]<=W_valM_i;
+        regfile[dstE_i]<=W_valE_i;
+        regfile[dstM_i]<=W_valM_i;
     end
 end
 
@@ -194,7 +196,15 @@ always@(*)begin
 end
 
 
-assign valA_o=(srcA==4'hf)?64'b0:regfile[srcA];
+assign valA_o_r=(srcA==4'hf)?64'b0:regfile[srcA];
+
+selectA selectA_module(
+    .icode_i(icode_i),
+    .valA_i(valA_o_r),
+    .valP_i(valP_i),
+    .valA_o(valA_o)
+);
+
 assign valB_o=(srcB==4'hf)?64'b0:regfile[srcB];
 assign icode_o=icode;
 assign ifun_o=ifun;

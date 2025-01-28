@@ -80,6 +80,9 @@ wire[3:0]D_srcB_o;
 
 wire[63:0]W_valE_o;//new
 
+wire[3:0]M_dstE_o;//new
+wire[3:0]M_dstM_o;//new
+
 decode decode_module(
     .clk_i(clk_i),
     .rst_n_i(rst_n_i),
@@ -95,6 +98,8 @@ decode decode_module(
     .stat_i(F_stat_o),
     .W_valE_i(W_valE_o),
     .W_valM_i(W_valM_o),
+    .dstE_i(M_dstE_o),
+    .dstM_i(M_dstM_o),
 
     .icode_o(D_icode_o),
     .ifun_o(D_ifun_o),
@@ -150,6 +155,7 @@ execute execute_module(
     .valA_o(E_valA_o),
     .dstE_o(E_dstE_o),
     .dstM_o(E_dstM_o),
+
     .cnd_o(E_cnd_o)
 );
 
@@ -157,19 +163,39 @@ execute execute_module(
 /*
     memory module
 */
+wire[3:0] M_icode_o;
+wire M_stall_i;
+wire M_bubble_i;
+wire[2:0]M_stat_o;
+wire [63:0]M_valM_o;
+wire [63:0]M_valE_o;
 
-
-wire [63:0]valM_o;
-wire dmem_error_o;
 
 memory_access memory_module(
-.clk_i(clk_i),
-.icode_i(icode_o),
-.valA_i(valA_o),
-.valE_i(valE_o),
-.valP_i(valP_o),
-.valM_o(valM_o),
-.dmem_error_o(dmem_error_o)
+    .clk_i(clk_i),
+    .rst_n_i(rst_n_i),
+    .stall_i(M_stall_i),
+    .bubble_i(M_bubble_i),
+
+    .icode_i(E_icode_o),
+    .stat_i(E_stat_o),
+
+    .valA_i(E_valA_o),
+    .valE_i(E_valE_o),
+    .dstE_i(E_dstE_o),
+    .dstM_i(E_dstM_o),
+    .cnd_i(E_cnd_o),
+
+    
+    //有一条从cnd到fetch的虚线。没写
+    .icode_o(M_icode_o),
+    .stat_o(M_stat_o),
+    .valE_o(M_valE_o),
+    .valM_o(M_valM_o),
+    .dstE_o(M_dstE_o),
+    .dstM_o(M_dstM_o),
+    .M_valA_o(M_valA_o)
+
 );
 
 
@@ -177,36 +203,26 @@ memory_access memory_module(
     writeback module
 */
 
+wire W_stall_i;
+wire W_bubble_i;
+
 
 
 
 writeback writeback_module(
-    .icode_i(icode_o),
-    .valE_i(valE_o),
-    .valM_i(valM_o),
-    .instr_valid_i(instr_valid_o),
-    .imem_error_i(imem_error_o),
-    .dmem_error_i(dmem_error_o),
-    .valE_o(valE_i),
-    .valM_o(valM_i),
-    .stat_o(stat_o)
-);
-
-
-/*
-    pc_update module
-*/
-
-pc_update pc_update_module(
     .clk_i(clk_i),
     .rst_n_i(rst_n_i),
-    .instr_valid_i(instr_valid_o),
-    .cnd_i(cnd_o),
-    .icode_i(icode_o),
-    .valC_i(valC_o),
-    .valP_i(valP_o),
-    .valM_i(valM_o),
-    .pc_o(PC_i)
+    .stall_i(W_stall_i),
+    .bubble_i(W_bubble_i),
+
+    .icode_i(M_icode_o),
+    .valE_i(M_valE_o),
+    .valM_i(M_valM_o),
+    .dstE_i(M_dstE_o),
+    .dstM_i(M_dstM_o),
+
+    .valM_o(W_valM_o),
+    .valE_o(W_valE_o)
 );
 
 

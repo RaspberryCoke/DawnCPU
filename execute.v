@@ -20,8 +20,8 @@ module execute(
 
     output wire[3:0] icode_o,
     output wire[2:0]stat_o,
-    output reg signed[63:0] valE_o,
-    output reg signed[63:0] valA_o,
+    output wire signed[63:0] valE_o,
+    output wire signed[63:0] valA_o,
     output wire[3:0]dstE_o,
     output wire[3:0]dstM_o,
     output wire cnd_o
@@ -38,7 +38,8 @@ reg[3:0]dstM;
 reg[3:0]srcA;
 reg[3:0]srcB;
 
-
+reg[63:0]valE;
+assign valE_o=valE;
 reg [63:0] aluA;
 reg[63:0] aluB;
 reg [3:0] alu_fun;
@@ -52,7 +53,9 @@ assign of=cc[0];
 assign sf=cc[1];
 assign zf=cc[2];
 
-assign set_cc=icode_i==`IOPQ;
+
+assign set_cc=(icode_i==`IOPQ);
+assign valA_o=valA_i;//原封不动。注意：之前的代码可能有问题。
 
 
 always@(posedge stall_i,bubble_i,clk_i or negedge rst_n_i)begin 
@@ -106,7 +109,6 @@ end
 
 
 always @(*) begin
-    $display($time,".execute.v running.icode:%h,ifun:%h",icode_i,ifun_i);
     case (icode_i)
         `ICMOVQ:begin 
             aluA=valA_i;
@@ -162,16 +164,16 @@ end
 always@(*)begin 
     case(alu_fun)
         `ALUADD:begin 
-            valE_o=aluA+aluB;
+            valE=aluA+aluB;
         end
         `ALUSUB:begin 
-            valE_o=aluB-aluA;
+            valE=aluB-aluA;
         end
         `ALUAND:begin 
-            valE_o=aluA& aluB;
+            valE=aluA& aluB;
         end
         `ALUXOR:begin 
-            valE_o=aluA^aluB;
+            valE=aluA^aluB;
         end
     endcase
 end
@@ -202,7 +204,6 @@ always@(posedge clk_i)begin
     else if(set_cc)
         cc<=new_cc;
 end
-
 
 assign cnd_o=
     (ifun_i==`C_YES)|
