@@ -14,6 +14,7 @@ module fetch(
     output wire [3:0] rB_o,
     output wire [63:0] valC_o ,
     output wire [63:0] valP_o ,
+    output wire[63:0] predPC_o,//new
     output wire[2:0]stat_o
 );
 
@@ -73,11 +74,12 @@ assign valC_o=need_valC?(need_regids?instr[79:16]:instr[71:8]):64'b0;
 assign valP_o=f_pc+1+8*need_valC+need_regids;
 
 
-wire[63:0] predPC_o;
+
 wire[63:0] valC_i=valC_o;
 wire[63:0] valP_i=valP_o;
 
 predictPC predictPC_module(
+    .icode_i(icode_o),
     .valC_i(valC_i),
     .valP_i(valP_i),
     .predPC_o(predPC_o)
