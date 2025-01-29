@@ -2,200 +2,47 @@
 module execute(
     input wire clk_i,
     input wire rst_n_i,
-    input wire stall_i,
-    input wire bubble_i,
 
     input wire[3:0] icode_i,
     input wire [3:0] ifun_i,
-    input wire[2:0]stat_i,
+    input wire[3:0] E_dstE_i,
 
-    input wire signed[63:0] valA_i,
-    input wire signed[63:0] valB_i,
-    input wire signed[63:0] valC_i,
+    input wire signed[63:0]valA_i,
+    input wire signed[63:0]valB_i,
+    input wire signed[63:0]valC_i,
 
-    input wire[3:0] dstE_i,
-    input wire[3:0] dstM_i,
-    input wire[3:0] srcA_i,
-    input wire[3:0] srcB_i,
+    input wire[2:0]m_stat_i,
+    input wire[2:0]W_stat_i,
 
-    output wire[3:0] icode_o,
-    output wire[2:0]stat_o,
     output wire signed[63:0] valE_o,
-    output wire signed[63:0] valA_o,
     output wire[3:0]dstE_o,
-    output wire[3:0]dstM_o,
-    output wire cnd_o
+    output wire e_cnd_o
 );
-
-reg[2:0]stat;
-reg[3:0]icode;
-reg[3:0]ifun;
-reg[63:0]valA;
-reg[63:0]valB;
-reg[63:0]valC;
-reg[3:0]dstE;
-reg[3:0]dstM;
-reg[3:0]srcA;
-reg[3:0]srcB;
-
-reg[63:0]valE;
-assign valE_o=valE;
-reg [63:0] aluA;
-reg[63:0] aluB;
-reg [3:0] alu_fun;
+wire [63:0] aluA;
+wire[63:0] aluB;
+wire [3:0] alu_fun;
 reg[2:0]new_cc;
 reg[2:0]cc;
-wire set_cc;
-wire sf;
-wire of;
-wire zf;
+
+
 assign of=cc[0];
 assign sf=cc[1];
 assign zf=cc[2];
 
+assign aluA=(icode_i==`IRRMOVQ||icode_i==`IOPQ)?valA_i:
+            (icode_i==`IIRMOVQ||icode_i==`IRMMOVQ)?valC_i:
+            (icode_i==`ICALL||icode_i==`IPUSHQ)?-8:
+            (icode_i==`IRET||icode_i==`IPUSHQ)?8:0;
+assign aluB=(icode_i==`IRMMOVQ||icode_i==`IMRMOVQ||
+            icode_i==`IOPQ||icode_i==`ICALL||
+            icode_i==`IPUSHQ||icode_i==`IRET||
+            icode_i==`IPOPQ)?valB_i:
+            (icode_i==`IRRMOVQ||icode_i==`IIRMOVQ)?0:0;
+assign alu_fun=(icode_i==`IOPQ)?ifun_i:`ALUADD;
 
-
-assign valA_o=valA_i;//原封不动。注意：之前的代码可能有问题。
-
-
-always@(posedge clk_i)begin 
-    if(~rst_n_i)begin
-        stat<=`STAT_RESET;
-        icode<=0;
-        ifun<=0;
-        valA<=0;
-        valB<=0;
-        valC<=0;
-        srcA<=4'hf;
-        srcB<=4'hf;
-        dstE<=4'hf;
-        dstM<=4'hf;
-        // aluA<=0;
-        // aluB<=0;
-        // alu_fun<=0;
-        // new_cc<=3'b100;//注意这里！！！！！
-        // cc<=3'b100;
-    end else if(stall_i)begin 
-        stat<=`STAT_STALL;
-    end else if(bubble_i)begin 
-        stat<=`STAT_BUBBLE;
-        icode<=0;
-        ifun<=0;
-        valA<=0;
-        valB<=0;
-        valC<=0;
-        srcA<=4'hf;
-        srcB<=4'hf;
-        dstE<=4'hf;
-        dstM<=4'hf;
-        // aluA<=0;
-        // aluB<=0;
-        // alu_fun<=0;
-        // new_cc<=3'b100;//注意这里！！！！！
-        // cc<=3'b100;
-    end else begin 
-        stat<=`STAT_OK;
-        icode<=icode_i;
-        ifun<=ifun_i;
-        valA<=valA_i;
-        valB<=valB_i;
-        valC<=valC_i;
-        srcA<=srcA_i;
-        srcB<=srcB_i;
-        dstE<=dstE_i;
-        dstM<=dstM_i;
-    end
-end
-
-
-always @(*) begin
-    if(~rst_n_i)begin 
-        aluA=64'H0;
-        aluB=64'H0;
-    end else if(bubble_i)begin 
-        aluA=64'H0;
-        aluB=64'H0;
-    end
-    else begin
-    case (icode_i)
-        `ICMOVQ:begin 
-            aluA=valA_i;
-           aluB=0; 
-        end
-        `IIRMOVQ:begin 
-            aluA=valC_i;
-            aluB=0;
-        end
-        `IRMMOVQ:begin 
-            aluA=valC_i;
-            aluB=valB_i;
-        end
-        `IMRMOVQ:begin 
-            aluA=valC_i;
-            aluB=valB_i;
-        end
-        `IOPQ:begin 
-            aluA=valA_i;
-            aluB=valB_i;
-        end
-        `ICALL:begin 
-            aluA=-8;
-            aluB=valB_i;
-        end
-        `IRET:begin 
-            aluA=8;
-            aluB=valB_i;
-        end
-        `IPUSHQ:begin 
-            aluA=-8;
-            aluB=valB_i;
-        end
-        `IPOPQ:begin 
-            aluA=8;
-            aluB=valB_i;
-        end
-        default:begin 
-            aluA=0;
-            aluB=0;
-        end
-    endcase
-    end
-end
-
-always@(*)begin
-    if(~rst_n_i)begin 
-        alu_fun=4'H0;
-    end else if(bubble_i)begin 
-        alu_fun=4'H0;
-    end 
-    else if(icode_i==`IOPQ)
-        alu_fun=ifun_i;
-    else
-        alu_fun=`ALUADD;
-end
-///////////////////////////////////////
-always@(*)begin 
-    if(~rst_n_i)begin 
-        valE=4'H0;
-    end else if(bubble_i) begin 
-        valE=4'H0;
-    end 
-    else begin
-    case(alu_fun)
-        `ALUADD:begin 
-            valE=aluA+aluB;
-        end
-        `ALUSUB:begin 
-            valE=aluB-aluA;
-        end
-        `ALUAND:begin 
-            valE=aluA& aluB;
-        end
-        `ALUXOR:begin 
-            valE=aluA^aluB;
-        end
-    endcase end
-end
+assign valE_o=(alu_fun==`ALUSUB)?(aluB-aluA):
+              (alu_fun==`ALUAND)?(aluB & aluA):
+              (alu_fun==`ALUXOR)?(aluB ^ aluA):(aluB+aluA);
 
 always@(*)begin 
     if(~rst_n_i)begin 
@@ -203,20 +50,13 @@ always@(*)begin
         new_cc[1]=0;
         new_cc[0]=0;
     end
-    else if(bubble_i)begin 
-        new_cc[2]=1;
-        new_cc[1]=0;
-        new_cc[0]=0;
-    end
-    else if(alu_fun==`FADDL)begin 
+    else if(icode_i==`IOPQ)begin 
         new_cc[2]=(valE_o==0)?1:0;
         new_cc[1]=valE_o[63];
-        if(alu_fun==`ALUADD)begin 
-            new_cc[0]=(aluA[63]==aluB[63])&(aluA[63]!=valE_o[63]);
-        end
-        else if(alu_fun==`ALUSUB)begin 
-            new_cc[0]=(~aluA[63]==aluB[63])&(aluB[63]!=valE_o[63]);
-        end else new_cc[0]=0;
+        new_cc[0]=(alu_fun==`ALUADD)?
+                    (aluA[63]==aluB[63])&(aluA[63]!=valE_o[63]):
+                    (alu_fun==`ALUSUB)?
+                    (~aluA[63]==aluB[63])&(aluB[63]!=valE_o[63]):0;
     end
 end
 
@@ -229,13 +69,15 @@ always@(posedge clk_i)begin
         cc<=new_cc;
 end
 
-assign cnd_o=
-    (ifun_i==`C_YES)|
-    (ifun_i==`C_LE & ((sf^of)|zf))|
-    (ifun_i==`C_L &(sf^of))|
-    (ifun_i==`C_E & zf)|
-    (ifun_i==`C_NE & ~zf)|
-    (ifun_i==`C_GE & ~(sf ^ of))|
-    (ifun_i==`C_G & (~(sf ^ of)&~zf));
+assign e_cnd_o=
+    (ifun_i==`C_YES)||
+    (ifun_i==`C_LE && ((sf^of)||zf))||
+    (ifun_i==`C_L &&(sf^of))||
+    (ifun_i==`C_E && zf)||
+    (ifun_i==`C_NE && ~zf)||
+    (ifun_i==`C_GE && ~(sf ^ of))||
+    (ifun_i==`C_G && (~(sf ^ of)&&~zf));
+
+assign dstE_o=((icode_i==`IRRMOVQ)&&!e_cnd_o)?`RNONE:E_dstE_i;
 
 endmodule

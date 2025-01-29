@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module top_five_module();
+module top_pipeline_module();
 
 reg clk_i=1;
 reg rst_n_i=1;
