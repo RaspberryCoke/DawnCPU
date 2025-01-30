@@ -25,9 +25,9 @@ reg[2:0]new_cc;
 reg[2:0]cc;
 
 
-assign of=cc[0];
-assign sf=cc[1];
-assign zf=cc[2];
+wire of=cc[0];
+wire sf=cc[1];
+wire zf=cc[2];
 
 assign aluA=(icode_i==`IRRMOVQ||icode_i==`IOPQ)?valA_i:
             (icode_i==`IIRMOVQ||icode_i==`IRMMOVQ)?valC_i:
@@ -60,7 +60,7 @@ always@(*)begin
     end
 end
 
-assign set_cc=(icode_i==`IOPQ)?1:0;
+assign set_cc=(icode_i==`IOPQ);
 
 always@(posedge clk_i)begin 
     if(~rst_n_i)
