@@ -31,19 +31,45 @@ end
 wire F_stall_i;
 wire F_bubble_i;
 
-wire[63:0]M_valA_o;//new
-wire[63:0]W_valM_o;//new
 
-wire[3:0] F_icode_o;
-wire [3:0] F_ifun_o;
+wire [63:0] F_predPC_o;
+wire [63:0] f_predPC_o;
 
-wire[3:0] F_rA_o;
-wire [3:0] F_rB_o;
+F_pipe_reg f_reg(
+    .clk_i(clk_i),
+    .F_stall_i(F_stall_i),
+    .F_bubble_i(F_bubble_i),
+    .f_predPC_i(f_predPC_o),
+    .F_predPC_o(F_predPC_o)
+);
 
-wire [63:0] F_valC_o ;
-wire [63:0] F_valP_o ;
-wire[2:0]F_stat_o;
+wire           [   3: 0]  M_icode_o    ;
+wire           [   3: 0]  W_icode_o    ;
+wire           [  63: 0]  M_valA_o     ;
+wire           [  63: 0]  W_valM_o     ;
+wire           [  63: 0]  f_pc_o       ;
 
+select_pc select_pc_module  (
+    .F_predPC_i        (F_predPC_o),
+    .M_icode_i         (M_icode_o),
+    .W_icode_i         (W_icode_o),
+    .M_valA_i          (M_valA_o ),
+    .W_valM_i          (W_valM_o ),
+    .M_cnd_i           (M_cnd_o  ),
+    .f_pc_o            (f_pc_o   ) 
+);
+
+
+
+wire           [   3: 0]  F_icode_o    ;
+wire           [   3: 0]  F_ifun_o     ;
+
+wire           [   3: 0]  F_rA_o       ;
+wire           [   3: 0]  F_rB_o       ;
+
+wire           [  63: 0]  F_valC_o     ;
+wire           [  63: 0]  F_valP_o     ;
+wire           [   2: 0]  F_stat_o     ;
 fetch fetch_module(
     .clk_i(clk_i),
     .rst_n_i(rst_n_i),
@@ -59,6 +85,7 @@ fetch fetch_module(
     .rB_o(F_rB_o),
     .valC_o(F_valC_o),
     .valP_o(F_valP_o) ,
+    .predPC_o(F_predPC_o),
     .stat_o(F_stat_o)
 );
 
@@ -82,6 +109,31 @@ wire[63:0]W_valE_o;//new
 
 wire[3:0]M_dstE_o;//new
 wire[3:0]M_dstM_o;//new
+
+fetch_D_pipe_reg  fetchD_reg (
+    .clk_i                   ( clk_i                 ),
+    .D_stall_i               ( D_stall_i             ),
+    .D_bubble_i              ( D_bubble_i            ),
+    .wire[2:0] f_stat_i      (F_stat_o               ),
+    .wire[63:0] f_pc_i       ( f_pc_i     ),
+    .wire[3:0] f_icode_i     ( wire[3:0] f_icode_i   ),
+    .wire[3:0] f_ifun_i      ( wire[3:0] f_ifun_i    ),
+    .wire[3:0] f_rA_i        ( wire[3:0] f_rA_i      ),
+    .wire[3:0] f_rB_i        ( wire[3:0] f_rB_i      ),
+    .wire[63:0] f_valC_i     ( wire[63:0] f_valC_i   ),
+    .wire[63:0] f_valP_i     ( wire[63:0] f_valP_i   ),
+
+    .reg[2:0] D_stat_o       ( reg[2:0] D_stat_o     ),
+    .reg[63:0] D_pc_o        ( reg[63:0] D_pc_o      ),
+    .reg[3:0] D_icode_o      ( reg[3:0] D_icode_o    ),
+    .reg[3:0] D_ifun_o       ( reg[3:0] D_ifun_o     ),
+    .reg[3:0] D_rA_o         ( reg[3:0] D_rA_o       ),
+    .reg[3:0] D_rB_o         ( reg[3:0] D_rB_o       ),
+    .reg[63:0] D_valC_o      ( reg[63:0] D_valC_o    ),
+    .reg[63:0] D_valP_o      ( reg[63:0] D_valP_o    )
+);
+
+
 
 decode decode_module(
     .clk_i(clk_i),

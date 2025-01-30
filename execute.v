@@ -14,8 +14,8 @@ module execute(
     input wire[2:0]m_stat_i,
     input wire[2:0]W_stat_i,
 
-    output wire signed[63:0] valE_o,
-    output wire[3:0]dstE_o,
+    output wire signed[63:0] valE_o,//execute保存的结果
+    output wire[3:0]dstE_o,//用作cmov的转移
     output wire e_cnd_o
 );
 wire [63:0] aluA;

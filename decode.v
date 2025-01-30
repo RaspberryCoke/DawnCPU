@@ -8,7 +8,7 @@ module decode(
     input [3:0] D_rB_i,
     input [63:0] D_valP_i,
 
-    input wire[3:0] e_dstE_i,
+    input wire[3:0] e_dstE_i,//前递
     input wire[63:0] e_valE_i,
     input wire[3:0] M_dstM_i,
     input wire[63:0] m_valM_i,
@@ -17,7 +17,7 @@ module decode(
     input wire[3:0] W_dstM_i,
     input wire[63:0] W_valM_i,
     input wire[3:0] W_dstE_i,
-    input wire[63:0] W_valE_i,
+    input wire[63:0] W_valE_i,//
 
 
     output wire[63:0] d_valA_o,

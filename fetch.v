@@ -1,44 +1,24 @@
 `include "define.v"
 module fetch(
-    input clk_i,//new
-    input rst_n_i,//new
-    input stall_i,//new
-    input bubble_i,//new
+    input wire[63:0] PC_i,
 
-    input wire[63:0]M_valA_i,//new
-    input wire[63:0]W_valM_i,//new
-
-    output wire [3:0] icode_o,
-    output wire [3:0] ifun_o,
+    output wire[3:0] icode_o,
+    output wire[3:0] ifun_o,
     output wire[3:0] rA_o,
-    output wire [3:0] rB_o,
-    output wire [63:0] valC_o ,
-    output wire [63:0] valP_o ,
+    output wire[3:0] rB_o,
+    output wire[63:0] valC_o,
+    output wire[63:0] valP_o,
     output wire[63:0] predPC_o,//new
-    output wire[2:0]stat_o
+    output wire[2:0] stat_o     
 );
-
 reg[63:0] predPC;
-
-
-wire[63:0] f_pc;//new
-
-selectPC selectPC_module(
-    .rst_n_i(rst_n_i),
-    .predPC_i(predPC),
-    .M_valA_i(M_valA_i),
-    .W_valM_i(W_valM_i),
-    .M_Cnd_i(M_Cnd_i),
-    .f_pc_o(f_pc)
-);
-
 reg[7:0] instr_mem[0:1023];
 
 wire[79:0] instr;
 wire need_regids;
 wire need_valC;
 
-assign imem_error_o=(f_pc>1023);//检查越界  --  这个检查恐怕不完善
+assign imem_error=(PC_i>1023);//检查越界  --  这个检查恐怕不完善
 
 //对二维数组的访问，instr_mem[0]为地址最低的8bit。
 
@@ -46,10 +26,10 @@ assign imem_error_o=(f_pc>1023);//检查越界  --  这个检查恐怕不完善
 
 //注意：文件写入的时候，按照instr_mem[]从0到1023，所以不用颠倒顺序。
 
-assign instr=imem_error_o==0?{instr_mem[f_pc+9],instr_mem[f_pc+8],
-    instr_mem[f_pc+7],instr_mem[f_pc+6],instr_mem[f_pc+5],
-    instr_mem[f_pc+4],instr_mem[f_pc+3],instr_mem[f_pc+2],
-    instr_mem[f_pc+1],instr_mem[f_pc+0]}:64'b0;
+assign instr=imem_error==0?{instr_mem[PC_i+9],instr_mem[PC_i+8],
+    instr_mem[PC_i+7],instr_mem[PC_i+6],instr_mem[PC_i+5],
+    instr_mem[PC_i+4],instr_mem[PC_i+3],instr_mem[PC_i+2],
+    instr_mem[PC_i+1],instr_mem[PC_i+0]}:64'b0;
 
 //人类的惯性思维下，icode应该在低4bit。但实际上读入文件的时候，按照字节读入，
 //所以实际上icode就放在了高位。
@@ -57,10 +37,11 @@ assign instr=imem_error_o==0?{instr_mem[f_pc+9],instr_mem[f_pc+8],
 assign icode_o=instr[7:4];
 assign ifun_o=instr[3:0];
 
-assign instr_valid_o=(icode_o<4'hC);//检查指令是否出错
+assign instr_valid=(icode_o<4'hC);//检查指令是否出错
 
 //是否需要寄存器位，1B  
-assign need_regids=(icode_o==`ICMOVQ)||(icode_o==`IIRMOVQ)||(icode_o==`IRMMOVQ)||(icode_o==`IMRMOVQ)||(icode_o==`IOPQ)||(icode_o==`IPUSHQ)||(icode_o==`IPOPQ);
+assign need_regids=(icode_o==`ICMOVQ)||(icode_o==`IIRMOVQ)||(icode_o==`IRMMOVQ)||
+(icode_o==`IMRMOVQ)||(icode_o==`IOPQ)||(icode_o==`IPUSHQ)||(icode_o==`IPOPQ);
 //是否需要立即数
 assign need_valC=(icode_o==`IIRMOVQ)||(icode_o==`IRMMOVQ)||
         (icode_o==`IMRMOVQ)||(icode_o==`IJXX)||(icode_o==`ICALL);
@@ -71,45 +52,20 @@ assign rA_o=need_regids?{instr[15:12]}:4'hf;
 assign rB_o=need_regids?{instr[11:8]}:4'hf;
 
 assign valC_o=need_valC?(need_regids?instr[79:16]:instr[71:8]):64'b0;
-assign valP_o=f_pc+1+8*need_valC+need_regids;
+assign valP_o=PC_i+1+8*need_valC+need_regids;
+
+assign stat_o=imem_error?`SADR:
+                (!instr_valid)?`SINS:
+                (icode_o==`IHALT)?`SHLT:`SAOK;
+assign predPC_o=(icode_o==`IJXX||icode_o==`ICALL)?valC_o:valP_o;
 
 
 
-wire[63:0] valC_i=valC_o;
-wire[63:0] valP_i=valP_o;
-
-predictPC predictPC_module(
-    .icode_i(icode_o),
-    .valC_i(valC_i),
-    .valP_i(valP_i),
-    .predPC_o(predPC_o)
-);
-
-
-
-wire is_hlt;
-assign is_hlt=(icode_o==`IHALT);
-
-stat stat_module(
-    .rst_n_i(rst_n_i),
-    .instr_valid_i(instr_valid_o),
-    .hlt_i(is_hlt),
-    .imem_error_i(imem_error_o),
-    .dmem_error_i(64'b0),
-    .stat_o(stat_o)
-);
-
-always@(posedge clk_i or negedge rst_n_i)begin 
-    if(~rst_n_i)predPC<=64'b0;
-    else predPC<=predPC_o;
-end
-
-
-//触发条件：icode_o==`IHALT ,  f_pc改变
+//触发条件：icode_o==`IHALT ,  PC_i改变
 always@(*)begin 
-    $display($time,".fetch.v running.f_pc:%h.icode:%h.",f_pc,icode_o);
+    $display($time,".fetch.v running.PC_i:%h.icode:%h.",PC_i,icode_o);
     if(icode_o==`IHALT)begin 
-        $display($time,".fetch.v IHALT.f_pc:%h.icode:%h.",f_pc,icode_o);
+        $display($time,".fetch.v IHALT.PC_i:%h.icode:%h.",PC_i,icode_o);
         $display($time,".HALT.");
         $display("");
         $display("----------------.HALT.------------------");
