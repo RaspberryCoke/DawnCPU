@@ -124,14 +124,14 @@ fetch_D_pipe_reg  D_reg (
 
 wire[3:0] e_dstE_o;//前递
 wire[63:0] e_valE_o;
-wire[3:0] M_dstM_o;
+//wire[3:0] M_dstM_o;//已存在
 wire[63:0] m_valM_o;
-wire[3:0] M_dstE_o;
+//wire[3:0] M_dstE_o;//已存在
 wire[63:0] M_valE_o;
 wire[3:0] W_dstM_o;
-wire[63:0] W_valM_o;
+//wire[63:0] W_valM_o;//已存在
 wire[3:0] W_dstE_o;
-wire[63:0] W_valE_o;//
+//wire[63:0] W_valE_o;//已存在//
 
 wire decode_stall_i;
 wire decode_bubble_i;
