@@ -11,7 +11,10 @@ module fetch(
     output wire[63:0] predPC_o,//new
     output wire[2:0] stat_o     
 );
-reg[63:0] predPC;
+
+wire[63:0] predPC;
+
+//内置的内存
 reg[7:0] instr_mem[0:1023];
 
 wire[79:0] instr;

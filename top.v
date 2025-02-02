@@ -4,7 +4,6 @@ module top_pipeline_module();
 reg clk_i=1;
 reg rst_n_i=1;
 wire [63:0] PC_i;
-//PC(reg type)is in pc_update module.
 
 initial begin 
     #10;
@@ -18,7 +17,6 @@ initial begin
     rst_n_i = 0;
     #10 rst_n_i = 1;
     $monitor("Time=%0t | PC=%h | icode=%b | ifun=%b", $time, PC_i, icode_o, ifun_o);
-
     //end time
     #100 $finish;
 end
@@ -30,8 +28,6 @@ end
 
 wire F_stall_i;
 wire F_bubble_i;
-
-
 wire [63:0] F_predPC_o;
 wire [63:0] f_predPC_o;
 
@@ -43,50 +39,43 @@ F_pipe_reg f_reg(
     .F_predPC_o(F_predPC_o)
 );
 
-wire           [   3: 0]  M_icode_o    ;
-wire           [   3: 0]  W_icode_o    ;
-wire           [  63: 0]  M_valA_o     ;
-wire           [  63: 0]  W_valM_o     ;
-wire           [  63: 0]  f_pc_o       ;
+wire [3:0] M_icode_o;
+wire [3:0] W_icode_o;
+wire [63:0] M_valA_o;
+wire [63:0] W_valM_o;
+wire [63:0] f_pc_o;
+wire [2:0] M_cnd_o;
 
 select_pc select_pc_module  (
-    .F_predPC_i        (F_predPC_o),
-    .M_icode_i         (M_icode_o),
-    .W_icode_i         (W_icode_o),
-    .M_valA_i          (M_valA_o ),
-    .W_valM_i          (W_valM_o ),
-    .M_cnd_i           (M_cnd_o  ),
-    .f_pc_o            (f_pc_o   ) 
+    .F_predPC_i(F_predPC_o),
+    .M_icode_i(M_icode_o),
+    .W_icode_i(W_icode_o),
+    .M_valA_i(M_valA_o),
+    .W_valM_i(W_valM_),
+    .M_cnd_i(M_cnd_o),
+    .f_pc_o(f_pc_o)
 );
 
 
 
-wire           [   3: 0]  F_icode_o    ;
-wire           [   3: 0]  F_ifun_o     ;
+wire[3:0] f_icode_o;
+wire[3:0] f_ifun_o;
+wire[3:0] f_rA_o;
+wire[3:0] f_rB_o;
+wire[63:0] f_valC_o;
+wire[63:0] f_valP_o;
+wire[2:0] f_stat_o;
 
-wire           [   3: 0]  F_rA_o       ;
-wire           [   3: 0]  F_rB_o       ;
-
-wire           [  63: 0]  F_valC_o     ;
-wire           [  63: 0]  F_valP_o     ;
-wire           [   2: 0]  F_stat_o     ;
 fetch fetch_module(
-    .clk_i(clk_i),
-    .rst_n_i(rst_n_i),
-    .stall_i(F_stall_i),
-    .bubble_i(F_bubble_i),
-
-    .M_valA_i(M_valA_o),//new
-    .W_valM_i(W_valM_o),//new
-
-    .icode_o(F_icode_o),
-    .ifun_o(F_ifun_o),
-    .rA_o(F_rA_o),
-    .rB_o(F_rB_o),
-    .valC_o(F_valC_o),
-    .valP_o(F_valP_o) ,
-    .predPC_o(F_predPC_o),
-    .stat_o(F_stat_o)
+    .PC_i(f_pc_o),
+    .icode_o(f_icode_o),
+    .ifun_o(f_ifun_o),
+    .rA_o(f_rA_o),
+    .rB_o(f_rB_o),
+    .valC_o(f_valC_o),
+    .valP_o(f_valP_o) ,
+    .predPC_o(f_predPC_o),
+    .stat_o(f_stat_o)
 );
 
 /*
@@ -94,76 +83,98 @@ fetch fetch_module(
 */
 wire D_stall_i;
 wire D_bubble_i;
-wire[3:0] D_icode_o;
-wire [3:0] D_ifun_o;
-wire [63:0] D_valC_o ;
+wire[3:0]D_icode_o;
+wire[3:0]D_ifun_o;
+wire[63:0]D_valC_o;
+wire[63:0]D_valP_o;
+wire[63:0]D_pc_o;
 wire[2:0]D_stat_o;
-wire[63:0] D_valA_o;
-wire[63:0] D_valB_o;
-wire[3:0]D_dstE_o;
-wire[3:0]D_dstM_o;
-wire[3:0]D_srcA_o;
-wire[3:0]D_srcB_o;
+wire[3:0]D_rA_o;
+wire[3:0]D_rB_o;
 
 wire[63:0]W_valE_o;//new
 
 wire[3:0]M_dstE_o;//new
 wire[3:0]M_dstM_o;//new
 
-fetch_D_pipe_reg  fetchD_reg (
-    .clk_i                   ( clk_i                 ),
-    .D_stall_i               ( D_stall_i             ),
-    .D_bubble_i              ( D_bubble_i            ),
-    .wire[2:0] f_stat_i      (F_stat_o               ),
-    .wire[63:0] f_pc_i       ( f_pc_i     ),
-    .wire[3:0] f_icode_i     ( wire[3:0] f_icode_i   ),
-    .wire[3:0] f_ifun_i      ( wire[3:0] f_ifun_i    ),
-    .wire[3:0] f_rA_i        ( wire[3:0] f_rA_i      ),
-    .wire[3:0] f_rB_i        ( wire[3:0] f_rB_i      ),
-    .wire[63:0] f_valC_i     ( wire[63:0] f_valC_i   ),
-    .wire[63:0] f_valP_i     ( wire[63:0] f_valP_i   ),
+fetch_D_pipe_reg  D_reg (
+    .clk_i(clk_i),
+    .D_stall_i(D_stall_i),
+    .D_bubble_i(D_bubble_i),
 
-    .reg[2:0] D_stat_o       ( reg[2:0] D_stat_o     ),
-    .reg[63:0] D_pc_o        ( reg[63:0] D_pc_o      ),
-    .reg[3:0] D_icode_o      ( reg[3:0] D_icode_o    ),
-    .reg[3:0] D_ifun_o       ( reg[3:0] D_ifun_o     ),
-    .reg[3:0] D_rA_o         ( reg[3:0] D_rA_o       ),
-    .reg[3:0] D_rB_o         ( reg[3:0] D_rB_o       ),
-    .reg[63:0] D_valC_o      ( reg[63:0] D_valC_o    ),
-    .reg[63:0] D_valP_o      ( reg[63:0] D_valP_o    )
+    .f_stat_i(f_stat_o),
+    .f_pc_i(f_pc_o),
+    .f_icode_i(f_icode_o),
+    .f_ifun_i(f_ifun_o),
+    .f_rA_i(f_rA_o),
+    .f_rB_i(f_rB_o),
+    .f_valC_i(f_valC_o),
+    .f_valP_i(f_valP_o),
+
+    .D_stat_o(D_stat_o),
+    .D_pc_o(D_pc_o),
+    .D_icode_o(D_icode_o),
+    .D_ifun_o(D_ifun_o),
+    .D_rA_o(D_rA_o),
+    .D_rB_o(D_rB_o),
+    .D_valC_o(D_valC_o),
+    .D_valP_o(D_valP_o)
 );
 
 
+wire[3:0] e_dstE_o;//前递
+wire[63:0] e_valE_o;
+wire[3:0] M_dstM_o;
+wire[63:0] m_valM_o;
+wire[3:0] M_dstE_o;
+wire[63:0] M_valE_o;
+wire[3:0] W_dstM_o;
+wire[63:0] W_valM_o;
+wire[3:0] W_dstE_o;
+wire[63:0] W_valE_o;//
+
+wire decode_stall_i;
+wire decode_bubble_i;
+
+wire[63:0] d_valA_o;
+wire[63:0] d_valB_o;
+wire[3:0] d_dstE_o;
+wire[3:0] d_dstM_o;
+wire[3:0] d_srcA_o;
+wire[3:0] d_srcB_o;
+wire[2:0] d_stat_o;
 
 decode decode_module(
     .clk_i(clk_i),
-    .rst_n_i(rst_n_i),
-    .stall_i(D_stall_i),
-    .bubble_i(D_bubble_i),
+    //.rst_n_i(rst_n_i),
+    .decode_stall_i(decode_stall_i),
+    .decode_bubble_i(decode_bubble_i),
 
-    .rA_i(F_rA_o),
-    .rB_i(F_rB_o),
-    .icode_i(F_icode_o),
-    .ifun_i(F_ifun_o),
-    .valC_i(F_valC_o),
-    .valP_i(F_valP_o),
-    .stat_i(F_stat_o),
-    .W_valE_i(W_valE_o),
+    .D_icode_i(D_icode_o),
+    .D_rA_i(D_rA_o),
+    .D_rB_i(D_rB_o),
+    .D_valP_i(D_valP_o),
+    .D_stat_i(D_stat_o),
+
+    .e_dstE_i(e_dstE_o),//前递
+    .e_valE_i(e_valE_o),
+    .M_dstM_i(M_dstM_o),
+    .m_valM_i(m_valM_o),
+    .M_dstE_i(M_dstE_o),
+    .M_valE_i(M_valE_o),
+    .W_dstM_i(W_dstM_o),
     .W_valM_i(W_valM_o),
-    .dstE_i(M_dstE_o),
-    .dstM_i(M_dstM_o),
-
-    .icode_o(D_icode_o),
-    .ifun_o(D_ifun_o),
-    .stat_o(D_stat_o),
-    .valA_o(D_valA_o),
-    .valB_o(D_valB_o),
-    .valC_o(D_valC_o),
-
-    .dstE_o(D_dstE_o),
-    .dstM_o(D_dstM_o),
-    .srcA_o(D_srcA_o),
-    .srcB_o(D_srcB_o)
+    .W_dstE_i(W_dstE_o),
+    .W_valE_i(W_valE_o),//
+    
+    
+    .d_valA_o(d_valA_o),
+    .d_valB_o(d_valB_o),
+    .d_dstE_o(d_dstE_o),
+    .d_dstM_o(d_dstM_o),
+    .d_srcA_o(d_srcA_o),
+    .d_srcB_o(d_srcB_o),
+    .d_stat_o(d_stat_o)//这个是可能会变的
 );
 
 

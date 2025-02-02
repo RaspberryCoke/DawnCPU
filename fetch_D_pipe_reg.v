@@ -6,7 +6,7 @@ module fetch_D_pipe_reg(
     input wire D_bubble_i,
 
     input wire[2:0] f_stat_i,
-    input wire[63:0] f_pc_i,
+    input wire[63:0] f_pc_i,//
     input wire[3:0] f_icode_i,
     input wire[3:0] f_ifun_i,
     input wire[3:0] f_rA_i,

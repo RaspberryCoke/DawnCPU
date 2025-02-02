@@ -2,11 +2,14 @@
 
 module decode(
     input wire clk_i,
+    input wire decode_stall_i,
+    input wire decode_bubble_i,
 
     input [3:0] D_icode_i,
     input [3:0] D_rA_i,
     input [3:0] D_rB_i,
     input [63:0] D_valP_i,
+    input [2:0] D_stat_i,
 
     input wire[3:0] e_dstE_i,//前递
     input wire[63:0] e_valE_i,
@@ -25,7 +28,8 @@ module decode(
     output wire[3:0] d_dstE_o,
     output wire[3:0] d_dstM_o,
     output wire[3:0] d_srcA_o,
-    output wire[3:0] d_srcB_o
+    output wire[3:0] d_srcB_o,
+    output wire[2:0] d_stat_o
 );
 wire[63:0]d_rvalA;
 wire[63:0]d_rvalB;
@@ -45,4 +49,10 @@ assign d_rvalB=(d_srcB_o==`RNONE)?64'b0:regfile[d_srcB_o];
 
 assign d_valA_o=d_rvalA;
 assign d_valB_o=d_rvalB;
+
+always@(posedge clk_i)begin 
+
+
+end
+
 endmodule
