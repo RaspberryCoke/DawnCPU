@@ -5,6 +5,7 @@ module execute(
 
     input wire[3:0] icode_i,
     input wire [3:0] ifun_i,
+    input wire[2:0] stat_i,
     input wire[3:0] E_dstE_i,
 
     input wire signed[63:0]valA_i,
@@ -16,7 +17,8 @@ module execute(
 
     output wire signed[63:0] valE_o,//execute保存的结果
     output wire[3:0]dstE_o,//用作cmov的转移
-    output wire e_cnd_o
+    output wire e_cnd_o,
+    output wire stat_o
 );
 wire [63:0] aluA;
 wire[63:0] aluB;

@@ -181,58 +181,126 @@ decode decode_module(
 /*
     execute module
 */
-
+// decode_E_pipe_reg Inputs
 wire E_stall_i;
 wire E_bubble_i;
-
-
-wire[3:0] E_icode_o;
-wire signed[63:0] E_valE_o;
-wire [63:0] E_valA_o ;
+// decode_E_pipe_reg Outputs
 wire[2:0]E_stat_o;
+wire[63:0]E_pc_o;
+wire[3:0]E_icode_o;
+wire[3:0]E_ifun_o;
+wire[63:0]E_valA_o;
+wire[63:0]E_valB_o;
+wire[63:0]E_valC_o;
 wire[3:0]E_dstE_o;
 wire[3:0]E_dstM_o;
-wire E_cnd_o;
+wire[3:0]E_srcA_o;
+wire[3:0]E_srcB_o;
+
+decode_E_pipe_reg  E_reg (
+    .clk_i(clk_i),
+    .E_stall_i(E_stall_i),
+    .E_bubble_i(E_bubble_i),
+
+    .d_stat_i(d_stat_o),
+    .d_pc_i(D_pc_o),
+    .d_icode_i(D_icode_o),
+    .d_ifun_i(D_ifun_o),
+    .d_valC_i(D_valC_o),
+    .d_valA_i(d_valA_o),
+    .d_valB_i(d_valB_o),
+    .d_dstE_i(d_dstE_o),
+    .d_dstM_i(d_dstM_o),
+    .d_srcA_i(d_srcA_o),
+    .d_srcB_i(d_srcB_o),
+
+    .E_stat_o(E_stat_o),
+    .E_pc_o(E_pc_o),
+    .E_icode_o(E_icode_o),
+    .E_ifun_o(E_ifun_o),
+    .E_valA_o(E_valA_o),
+    .E_valB_o(E_valB_o),
+    .E_valC_o(E_valC_o),
+    .E_dstE_o(E_dstE_o),
+    .E_dstM_o(E_dstM_o),
+    .E_srcA_o(E_srcA_o),
+    .E_srcB_o(E_srcB_o)
+);
+
+wire[2:0]m_stat_o;
+wire[2:0]W_stat_o;
+wire[2:0]e_stat_o;
+
+wire e_cnd_o;
 
 execute execute_module(
     .clk_i(clk_i),
     .rst_n_i(rst_n_i),
-    .stall_i(E_stall_i),
-    .bubble_i(E_bubble_i),
 
-    .icode_i(D_icode_o),
-    .ifun_i(D_ifun_o),
-    .stat_i(D_stat_o),
+    .icode_i(E_icode_o),
+    .ifun_i(E_ifun_o),
+    .stat_i(E_stat_o),
+    .E_dstE_i(E_dstE_o),
 
-    .valA_i(D_valA_o),
-    .valB_i(D_valB_o),
-    .valC_i(D_valC_o),
-    .dstE_i(D_dstE_o),
-    .dstM_i(D_dstM_o),
-    .srcA_i(D_srcA_o),
-    .srcB_i(D_srcB_o),
+    .valA_i(E_valA_o),
+    .valB_i(E_valB_o),
+    .valC_i(E_valC_o),
 
-    .icode_o(E_icode_o),
-    .stat_o(E_stat_o),
-    .valE_o(E_valE_o),
-    .valA_o(E_valA_o),
-    .dstE_o(E_dstE_o),
-    .dstM_o(E_dstM_o),
+    .m_stat_i(m_stat_o),
+    .W_stat_i(W_stat_o),
 
-    .cnd_o(E_cnd_o)
+    .valE_o(e_valE_o),
+    .dstE_o(e_dstE_o),
+    .e_cnd_o(e_cnd_o),
+    .stat_o(e_stat_o)
 );
 
 
 /*
     memory module
 */
-wire[3:0] M_icode_o;
 wire M_stall_i;
 wire M_bubble_i;
-wire[2:0]M_stat_o;
-wire [63:0]M_valM_o;
-wire [63:0]M_valE_o;
+wire[2:0] M_stat_o;
+wire[63:0] M_pc_o;
+//wire[3:0] M_icode_o;//已定义
+wire[3:0] M_ifun_o;
+//wire M_cnd_o;//已定义
+//wire[63:0]M_valE_o;//已定义
+//wire[63:0]M_valA_o;//已定义
+//wire[3:0]M_dstE_o;//已定义
+//wire[3:0]M_dstM_o;//已定义
 
+execute_M_pipe_reg M_reg(
+    .clk_i(clk_i),
+    .M_stall_i(M_stall_i),
+    .M_bubble_i(M_bubble_i),
+
+    .e_stat_i(e_stat_o),
+    .e_pc_i(E_pc_o),
+    .e_icode_i(E_icode_o),
+    .e_ifun_i(E_ifun_o),
+    .e_cnd_i(e_cnd_o),
+    .e_valE_i(e_valE_o),
+    .e_valA_i(E_valA_o),
+    .e_dstE_i(e_dstE_o),
+    .e_dstM_i(E_dstM_o),
+
+    .M_stat_o(M_stat_o),
+    .M_pc_o(M_pc_o),//?
+    .M_icode_o(M_icode_o),
+    .M_ifun_o(M_ifun_o),
+    .M_cnd_o(M_cnd_o),
+    .M_valE_o(M_valE_o),
+    .M_valA_o(M_valA_o),
+    .M_dstE_o(M_dstE_o),
+    .M_dstM_o(M_dstM_o)
+);
+wire[3:0]m_icode_o;
+wire[63:0]m_valE_o;
+wire[63:0]m_dstE_o;
+wire[63:0]m_dstM_o;
+wire[63:0]m_valA_o;
 
 memory_access memory_module(
     .clk_i(clk_i),
@@ -240,27 +308,23 @@ memory_access memory_module(
     .stall_i(M_stall_i),
     .bubble_i(M_bubble_i),
 
-    .icode_i(E_icode_o),
-    .stat_i(E_stat_o),
+    .icode_i(M_icode_o),
+    .stat_i(M_stat_o),
 
-    .valA_i(E_valA_o),
-    .valE_i(E_valE_o),
-    .dstE_i(E_dstE_o),
-    .dstM_i(E_dstM_o),
-    .cnd_i(E_cnd_o),
+    .valA_i(M_valA_o),
+    .valE_i(M_valE_o),
+    .dstE_i(M_dstE_o),
+    .dstM_i(M_dstM_o),
+    .cnd_i(M_cnd_o),
 
-    
-    //有一条从cnd到fetch的虚线。没写
-    .icode_o(M_icode_o),
-    .stat_o(M_stat_o),
-    .valE_o(M_valE_o),
-    .valM_o(M_valM_o),
-    .dstE_o(M_dstE_o),
-    .dstM_o(M_dstM_o),
-    .M_valA_o(M_valA_o)
-
+    .icode_o(m_icode_o),
+    .stat_o(m_stat_o),
+    .valE_o(m_valE_o),
+    .valM_o(m_valM_o),
+    .dstE_o(m_dstE_o),
+    .dstM_o(m_dstM_o),
+    .M_valA_o(m_valA_o)
 );
-
 
 /*
     writeback module
@@ -268,9 +332,6 @@ memory_access memory_module(
 
 wire W_stall_i;
 wire W_bubble_i;
-
-
-
 
 writeback writeback_module(
     .clk_i(clk_i),
@@ -280,12 +341,17 @@ writeback writeback_module(
 
     .icode_i(M_icode_o),
     .valE_i(M_valE_o),
-    .valM_i(M_valM_o),
+    .valM_i(m_valM_o),
     .dstE_i(M_dstE_o),
     .dstM_i(M_dstM_o),
+    .stat_i(m_stat_o),
 
     .valM_o(W_valM_o),
-    .valE_o(W_valE_o)
+    .valE_o(W_valE_o),
+    .dstE_o(W_dstE_o),
+    .dstM_o(W_dstM_o),
+    .icode_o(W_icode_o),
+    .stat_o(W_stat_o)
 );
 
 
