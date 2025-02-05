@@ -9,7 +9,7 @@ module select_pc(
     output reg[63:0] f_pc_o
 );
 always@(*)begin 
-    if(M_icode_i==`IJXX && !M_cnd_i)
+    if(M_icode_i==`IJXX && ~M_cnd_i)
         f_pc_o=M_valA_i;
     else if(W_icode_i==`IRET)
         f_pc_o=W_valM_i;

@@ -10,8 +10,8 @@ all: compile
 compile:
 	@echo "Compiling files..."
 	vlog $(VFILES)
-	@echo "Starting simulation with str= top_five_module ."
-	@vsim -c top_five_module -do "run -all; exit"
+	@echo "Starting simulation with str= test_fetch ."
+	@vsim -c test_fetch -do "run -all; exit"
 
 
 # # 目标是 sim，依赖于传递给 make 的 str

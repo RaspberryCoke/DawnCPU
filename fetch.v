@@ -60,7 +60,8 @@ assign valP_o=PC_i+1+8*need_valC+need_regids;
 assign stat_o=imem_error?`SADR:
                 (!instr_valid)?`SINS:
                 (icode_o==`IHALT)?`SHLT:`SAOK;
-assign predPC_o=(icode_o==`IJXX||icode_o==`ICALL)?valC_o:valP_o;
+
+assign predPC_o=(icode_o==`IJXX||icode_o==`ICALL)?valC_o:valP_o;//语句实现了predictPC的功能。预测全部跳转。
 
 
 
