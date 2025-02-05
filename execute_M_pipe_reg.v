@@ -1,6 +1,7 @@
 `include "define.v"
 module execute_M_pipe_reg(
     input wire clk_i,
+    input wire rst_n_i,
     input wire M_stall_i,
     input wire M_bubble_i,
 
@@ -26,7 +27,18 @@ module execute_M_pipe_reg(
 );
 
 always@(posedge clk_i)begin
-    if(M_bubble_i)begin 
+    if(~rst_n_i)begin 
+        M_stat_o<=3'b0;//
+        M_pc_o<=64'b0;
+        M_icode_o<=`INOP;
+        M_ifun_o<=4'b0;
+        M_cnd_o<=1'b0;
+        M_valE_o<=64'b0;
+        M_valA_o<=64'b0;
+        M_dstE_o<=`RNONE;
+        M_dstM_o<=`RNONE;
+    end
+    else if(M_bubble_i)begin 
         M_stat_o<=e_stat_i;//?
         M_pc_o<=64'b0;
         M_icode_o<=`INOP;

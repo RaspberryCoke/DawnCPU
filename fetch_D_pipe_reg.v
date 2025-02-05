@@ -1,6 +1,7 @@
 `include"define.v"
 module fetch_D_pipe_reg(
     input wire clk_i,
+    input wire rst_n_i,
 
     input wire D_stall_i,
     input wire D_bubble_i,
@@ -25,7 +26,17 @@ module fetch_D_pipe_reg(
 );
 
 always@(posedge clk_i)begin 
-    if(D_bubble_i)begin 
+    if(~rst_n_i)begin 
+        D_stat_o<=3'b0;
+        D_pc_o<=64'b0;
+        D_icode_o<=`INOP;//
+        D_ifun_o<=4'b0;
+        D_rA_o<=4'hf;
+        D_rB_o<=4'hf;
+        D_valC_o<=64'b0;
+        D_valP_o<=64'b0;
+    end
+    else if(D_bubble_i)begin 
         D_stat_o<=`STAT_BUBBLE;
         D_pc_o<=64'b0;
         D_icode_o<=`INOP;//

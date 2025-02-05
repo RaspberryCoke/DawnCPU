@@ -30,12 +30,12 @@ reg[3:0]dstM;
 
 always@(posedge clk_i)begin 
     if(~rst_n_i)begin
-        stat<=`STAT_RESET;
+        stat<=3'b0;
         icode<=0;
         valE<=0;
         valM<=0;
-        dstE<=0;
-        dstM<=0;
+        dstE<=`RNONE;
+        dstM<=`RNONE;
     end else if(stall_i)begin 
         stat<=`STAT_STALL;
     end else if(bubble_i)begin 
@@ -43,8 +43,8 @@ always@(posedge clk_i)begin
         icode<=0;
         valE<=0;
         valM<=0;
-        dstE<=0;
-        dstM<=0;
+        dstE<=`RNONE;
+        dstM<=`RNONE;
     end else begin 
         stat<=`STAT_OK;
         icode<=icode_i;

@@ -1,6 +1,7 @@
 `include "define.v"
 module decode_E_pipe_reg(
     input wire clk_i,
+    input wire rst_n_i,
     input wire E_stall_i,
     input wire E_bubble_i,
 
@@ -30,7 +31,20 @@ module decode_E_pipe_reg(
 
 );
 always@(clk_i)begin 
-    if(E_bubble_i)begin
+    if(~rst_n_i)begin 
+        E_stat_o<=3'b0;
+        E_pc_o<=64'b0;
+        E_icode_o<=`INOP;
+        E_ifun_o<=4'b0;
+        E_valA_o<=64'b0;
+        E_valB_o<=64'b0;
+        E_valC_o<=64'b0;
+        E_dstE_o<=`RNONE;
+        E_dstM_o<=`RNONE;
+        E_srcA_o<=`RNONE;
+        E_srcB_o<=`RNONE;
+    end
+    else if(E_bubble_i)begin
         E_stat_o<=d_stat_i;
         E_pc_o<=64'b0;
         E_icode_o<=`INOP;
