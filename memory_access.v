@@ -45,7 +45,7 @@ integer i;
 always@(posedge stall_i,bubble_i,clk_i or negedge rst_n_i)begin 
     if(~rst_n_i)begin
         stat<=3'b0;
-        icode<=0;
+        icode<=`INOP;
 
         valA<=0;
         valE<=0;
@@ -62,7 +62,7 @@ always@(posedge stall_i,bubble_i,clk_i or negedge rst_n_i)begin
         stat<=`STAT_STALL;
     end else if(bubble_i)begin 
         stat<=`STAT_BUBBLE;
-        icode<=0;
+        icode<=`INOP;
         valA<=0;
         valE<=0;
         dstE<=`RNONE;

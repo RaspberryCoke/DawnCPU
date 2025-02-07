@@ -16,10 +16,10 @@ module controller(
 
     output wire F_stall_o,
     output wire D_bubble_o,
-    output wire D_stall_o  ,
-    output wire E_bubble_o  ,
-    output wire set_cc_o  ,
-    output wire M_bubble_o  ,
+    output wire D_stall_o,
+    output wire E_bubble_o,
+
+    output wire M_bubble_o,
     output wire W_stall_o  
 );
 
@@ -44,5 +44,6 @@ assign M_bubble_o=((m_stat_i==`SADR || m_stat_i==`SINS || m_stat_i==`SHLT) |
                     (W_stat_i==`SADR || W_stat_i==`SINS || W_stat_i==`SHLT));
 
 assign W_stall_o=(W_stat_i==`SADR || W_stat_i==`SINS || W_stat_i == `SHLT);
+
 
 endmodule

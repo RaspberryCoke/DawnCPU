@@ -10,14 +10,14 @@ module writeback(
     input wire [63:0] valM_i,
     input wire [3:0] dstE_i,
     input wire [3:0] dstM_i,
-    output wire [3:0] stat_i,
+    input wire [2:0] stat_i,
 
     output wire [63:0] valM_o,
     output wire [63:0] valE_o,
     output wire [3:0] dstE_o,
     output wire [3:0] dstM_o,
     output wire [3:0] icode_o,
-    output wire [3:0] stat_o
+    output wire [2:0] stat_o
 );
 reg[2:0]stat;
 reg[3:0]icode;
@@ -30,23 +30,21 @@ reg[3:0]dstM;
 
 always@(posedge clk_i)begin 
     if(~rst_n_i)begin
-        stat<=3'b0;
-        icode<=0;
+        stat<=`SAOK;
+        icode<=`INOP;
         valE<=0;
         valM<=0;
         dstE<=`RNONE;
         dstM<=`RNONE;
-    end else if(stall_i)begin 
-        stat<=`STAT_STALL;
     end else if(bubble_i)begin 
-        stat<=`STAT_BUBBLE;
-        icode<=0;
+        stat<=`SAOK;
+        icode<=`INOP;
         valE<=0;
         valM<=0;
         dstE<=`RNONE;
         dstM<=`RNONE;
-    end else begin 
-        stat<=`STAT_OK;
+    end else if(~stall_i) begin 
+        stat<=stat_i;
         icode<=icode_i;
         valE<=valE_i;
         valM<=valM_i;
@@ -60,6 +58,6 @@ assign valM_o=valM;//与之前有不同，需要之前的检查正确性！
 assign dstE_o=dstE_i;
 assign dstM_o=dstM_i;
 assign icode_o=icode_i;
-assign stat_o=stat_i;
+assign stat_o=stat_i;//
 
 endmodule

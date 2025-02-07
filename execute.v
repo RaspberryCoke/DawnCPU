@@ -22,19 +22,7 @@ module execute(
     output wire e_cnd_o,
     output wire[2:0] stat_o
 );
-// //触发条件：icode_o==`IHALT ,  PC_i改变
-// always@(*)begin 
-//     if(icode_i==`INOP)begin 
-//         $display($time,".execute.v INOP.icode:%h.",icode_i);
-//         $display($time,".INOP.");
-//         $display("");
-//         $display("----------------.INOP.------------------");
-//         $display("-----------.wrong to INOP.-------------");
-//         $display("-----------------------------------------");
-//         $display("");
-//         $stop;
-//     end
-// end
+
 
 wire [63:0] aluA;
 wire[63:0] aluB;
@@ -78,7 +66,7 @@ always@(*)begin
     end
 end
 
-assign set_cc=(icode_i==`IOPQ);
+assign set_cc=(icode_i==`IOPQ)&&(m_stat_i==`SAOK)&&(W_stat_i==`SAOK);
 
 always@(posedge clk_i)begin 
     if(~rst_n_i)

@@ -30,11 +30,17 @@
 `define     RRSP            4'H4
 `define     RNONE           4'HF
 
+// //Status Codes
+// `define     SAOK            3'H1
+// `define     SHLT            3'H2
+// `define     SADR            3'H3
+// `define     SINS            3'H4
+
 //Status Codes
-`define     SAOK            3'H1
-`define     SHLT            3'H2
-`define     SADR            3'H3
-`define     SINS            3'H4
+`define     SAOK            2'H0
+`define     SHLT            2'H1
+`define     SADR            2'H2
+`define     SINS            2'H3
 
 //
 `define     ALUADD          4'H0
