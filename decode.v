@@ -25,8 +25,8 @@ module decode(
     input wire[63:0] W_valE_i,//
 
 
-    output wire[63:0] d_valA_o,
-    output wire[63:0] d_valB_o,
+    output wire[63:0] d_valA_o,//综合考虑之后输出的值。fwdA_valA_o
+    output wire[63:0] d_valB_o,//综合考虑之后输出的值。fwdA_valB_o
     output wire[3:0] d_dstE_o,
     output wire[3:0] d_dstM_o,
     output wire[3:0] d_srcA_o,
@@ -68,7 +68,7 @@ assign fwdA_valB_o=(d_srcB_o==e_dstE_i)?e_valE_i:
 assign d_valA_o=fwdA_valA_o;
 assign d_valB_o=fwdA_valB_o;
 
-assign d_stat_o=3'b0;
+assign d_stat_o=D_stat_i;
 
 integer i;
 always@(posedge clk_i)begin 
@@ -76,7 +76,7 @@ always@(posedge clk_i)begin
         for(i=0;i<14;i=i+1)begin 
             regfile[i]<=64'b0;
         end
-    end else begin 
+    end else if(!decode_stall_i) begin 
         if(W_dstE_i!=`RNONE)begin 
             regfile[W_dstE_i]=W_valE_i;
         end
@@ -84,7 +84,6 @@ always@(posedge clk_i)begin
             regfile[W_dstM_i]=W_valM_i;
         end
     end
-
 end
 
 endmodule

@@ -1,5 +1,6 @@
+`include"define.v"
 `timescale 1ns/1ps
-module test_fetch();
+module test_decode();
 
 reg clk_i;
 reg rst_n_i;
@@ -7,15 +8,18 @@ reg rst_n_i;
 initial begin 
     clk_i=0;
     rst_n_i=0;
-    $display("reg=%d",f_reg.predPC);
+    $display("f_reg.predPC=%d",f_reg.predPC);
     #1 clk_i=1;
     #1 rst_n_i=1;
-    $display("reg=%d",f_reg.predPC);
+    $display("f_reg.predPC=%d",f_reg.predPC);
     #8 $display("----------begin--------");
     forever begin
-        #10 clk_i=~clk_i;
-        $monitor("Time=%0t|F_predPC_o=%4d|f_reg=%4d|f_pc_o=%4d|icode=%h|ifun=%h|rA=%h|rB=%h.",
-        $time, F_predPC_o,f_reg.predPC,f_pc_o,f_icode_o, f_ifun_o,f_rA_o, f_rB_o);
+        
+        
+        $monitor("Time=%0t\nFetch:\nF_predPC_o=%4d|f_reg=%4d|f_pc_o=%4d|f_icode_o=%h|f_ifun_o=%h|f_rA_o=%h|f_rB_o=%h.\nDecode:\nD_icode_o=%4d|D_ifun_o=%4d|D_valC_o=%4d|D_valP_o=%4d|D_pc_o=%4d|D_stat_o=%4d|D_rA_o=%4d|D_rB_o=%4d|",
+        $time, F_predPC_o,f_reg.predPC,f_pc_o,f_icode_o, f_ifun_o,f_rA_o, f_rB_o,D_icode_o,D_ifun_o,D_valC_o,D_valP_o,D_pc_o,D_stat_o,D_rA_o,D_rB_o);
+        #5 clk_i=~clk_i;
+        #5 clk_i=~clk_i;
     end
 end
 
@@ -105,7 +109,8 @@ wire[3:0]D_rB_o;
 
 
 fetch_D_pipe_reg  D_reg (
-    .clk_i(clk_i),
+    .clk_i(clk_i),//有确切值
+    .rst_n_i(rst_n_i),
     .D_stall_i(D_stall_i),
     .D_bubble_i(D_bubble_i),
 
@@ -125,27 +130,27 @@ fetch_D_pipe_reg  D_reg (
     .D_rA_o(D_rA_o),
     .D_rB_o(D_rB_o),
     .D_valC_o(D_valC_o),
-    .D_valP_o(D_valP_o)
+    .D_valP_o(D_valP_o)//
 );
 
 
 wire[3:0] e_dstE_o;//前递
-assign e_dstE_o=4'b0;
+assign e_dstE_o=`RNONE;
 wire[63:0] e_valE_o;
 assign e_valE_o=64'b0;
 wire[3:0] M_dstM_o;
-assign M_dstM_o=4'b0;
+assign M_dstM_o=`RNONE;
 wire[63:0] m_valM_o;
 assign m_valM_o=64'b0;
 wire[3:0] M_dstE_o;
-assign M_dstE_o=4'b0;
+assign M_dstE_o=`RNONE;
 wire[63:0] M_valE_o;
 assign M_valE_o=64'b0;
 wire[3:0] W_dstM_o;
-assign W_dstM_o=4'b0;
+assign W_dstM_o=`RNONE;
 //wire[63:0] W_valM_o;//已存在
 wire[3:0] W_dstE_o;
-assign W_dstE_o=4'b0;
+assign W_dstE_o=`RNONE;
 wire[63:0] W_valE_o;
 assign W_valE_o=64'b0;
 wire decode_stall_i;
