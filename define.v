@@ -1,3 +1,6 @@
+// //memory size
+// `define     DRAM_SIZE      1024
+
 //Operation codes
 `define     IHALT           4'H0 
 `define     INOP            4'H1
@@ -66,12 +69,3 @@
 // write or read
 `define     ENABLE          1'b1
 `define     DISABLE         1'b0
-// stat
-`define     STAT_OK         3'd0
-`define     STAT_INSTR_ERR  3'd1
-`define     STAT_IMEM_ERR   3'd2
-`define     STAT_DMEM_ERR   3'd3
-`define     STAT_HLT        3'd4
-`define     STAT_RESET      3'd5
-`define     STAT_BUBBLE     3'd6
-`define     STAT_STALL      3'd7  

@@ -16,7 +16,7 @@ module  memory_access(
 
 //有一条从cnd到fetch的虚线。没写
     output wire[3:0]icode_o,
-    output wire[3:0]stat_o,
+    output wire[2:0]stat_o,
     output wire [63:0] valM_o,
     output wire [63:0] valE_o,
     output wire[3:0]dstE_o,
@@ -40,11 +40,13 @@ reg[63:0]valM;
 
 reg [7:0] drams[1023:0];
 
+reg dmem_error;
+
 integer i;
 
-always@(posedge stall_i,bubble_i,clk_i or negedge rst_n_i)begin 
+always@(posedge clk_i)begin 
     if(~rst_n_i)begin
-        stat<=3'b0;
+        stat<=`SAOK;
         icode<=`INOP;
 
         valA<=0;
@@ -55,13 +57,12 @@ always@(posedge stall_i,bubble_i,clk_i or negedge rst_n_i)begin
 
         r_en<=0;
         w_en<=0;
+        dmem_error<=0;
         for(i=0;i<1024;i=i+1)begin 
-            drams[i]=8'b0;
+            drams[i]=8'H10;
         end
-    end else if(stall_i)begin 
-        stat<=`STAT_STALL;
-    end else if(bubble_i)begin 
-        stat<=`STAT_BUBBLE;
+    end else if(bubble_i)begin //BUBBLE时，继承的状态是什么
+        stat<=`SAOK;
         icode<=`INOP;
         valA<=0;
         valE<=0;
@@ -69,56 +70,86 @@ always@(posedge stall_i,bubble_i,clk_i or negedge rst_n_i)begin
         dstM<=`RNONE;
         r_en<=0;
         w_en<=0;
-
-    end else begin 
-        stat<=`STAT_OK;
-
+        dmem_error<=0;
+    end else  if(~stall_i)begin 
+        dmem_error<=0;
+        stat<=stat_i;
+        icode<=icode_i;
+        valA<=valA_i;
+        valE<=valE_i;
+        dstE<=dstE_i;
+        dstM<=dstM_i;
         case(icode_i)
             `IRMMOVQ:begin 
                 r_en<=1'b0;w_en<=1'b1;
-                drams[valE_i]<=valA_i;
+                if(valE>=1023)begin 
+                    dmem_error<=1;
+                end else begin
+                    drams[valE]<=valA;
+                    end
                 end
             `IMRMOVQ:begin 
                 r_en<=1'b1;w_en<=1'b0;
-                valM<=drams[valE_i];   
+                if(valE>=1023)begin 
+                    dmem_error<=1;
+                end else begin
+                    valM<=drams[valE]; 
+                    end
                 end
             `IHALT,`INOP,`IIRMOVQ,`IOPQ,`IJXX,`IRRMOVQ:begin 
                 r_en<=1'b0;w_en<=1'b0;
                 end
             `IPUSHQ:begin 
                 r_en<=1'b0;w_en<=1'b1;
-                drams[valE_i]<=valA_i;
+                if(valE>=1023)begin 
+                    dmem_error<=1;
+                end else begin
+                    drams[valE]<=valA; 
+                    end
                 end
             `IPOPQ:begin 
                 r_en<=1'b1;w_en<=1'b0;
-                valM<=drams[valA_i];
+                if(valA>=1023)begin 
+                    dmem_error<=1;
+                end else begin
+                    valM<=drams[valA];
+                    end
                 end
             `ICALL:begin 
                 r_en<=1'b0;w_en<=1'b1;
-                drams[valE_i]<=valA_i;//change from valP_i to valA_i
+                if(valE>=1023)begin 
+                    dmem_error<=1;
+                end else begin
+                    drams[valE]<=valA; //change from valP_i to valA_i
+                    end
                 end
             `IRET:begin 
                 r_en<=1'b1;w_en<=1'b0;
-                valM<=drams[valA_i];
+                if(valA>=1023)begin 
+                    dmem_error<=1;
+                end else begin
+                    valM<=drams[valA];
+                    end
                 end
             default:begin 
                 r_en<=1'b0;w_en<=1'b0;
                 end
         endcase
-        icode<=icode_i;
-        valA<=valA_i;
-        valE<=valE_i;
-        dstE<=dstE_i;
-        dstM<=dstM_i;
+
     end
 end
 
 
 
-assign icode_o=icode_i;
-//assign dmem_error_o=(mem_addr<64'd1023);//  TODO ->STAT
-//assign stat_o=(dmem_error_o==1)?`STAT_DMEM_ERR:`STAT_OK;
-assign stat_o=stat_i;
+assign icode_o=icode;
+assign dmem_error_o=dmem_error;
+
+assign stat_o=(stat==`SINS)?`SINS://
+                (stat==`SADR)?`SADR:
+                (stat==`SHLT)?`SHLT:
+                dmem_error_o?`SADR:`SAOK;
+
+
 assign valE_o=valE;
 assign valM_o=valM;
 assign dstE_o=dstE;

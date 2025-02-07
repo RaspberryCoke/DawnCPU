@@ -18,14 +18,17 @@ initial begin
     forever begin
         
         
-        $display("\n\nTime=%0t\nFetch:\nf_icode_o=%4h|f_ifun_o=%4h|f_rA_o=%4h|f_rB_o=%4h\nF_predPC_o=%4d|f_reg=%4d|f_pc_o=%4d\n",
-            $time, f_icode_o, f_ifun_o,f_rA_o, f_rB_o,F_predPC_o,f_reg.predPC,f_pc_o);
-        $display("Decode:\nD_icode_o=%4d|D_ifun_o=%4d|D_rA_o=%4d|D_rB_o=%4d\nD_valC_o=%4d|D_valP_o=%4d|D_pc_o=%4d|D_stat_o=%4d",
-            D_icode_o,D_ifun_o,D_rA_o,D_rB_o,D_valC_o,D_valP_o,D_pc_o,D_stat_o);
+        $display("\n\nTime=%0t\nFetch:\t\tF_stall_i=%1d|F_bubble_i=%1d\nf_icode_o=%4h|f_ifun_o=%4h|f_rA_o=%4h|f_rB_o=%4h\nF_predPC_o=%4d|f_reg=%4d|f_pc_o=%4d\n",
+            $time, F_stall_i,F_bubble_i,f_icode_o, f_ifun_o,f_rA_o, f_rB_o,F_predPC_o,f_reg.predPC,f_pc_o);
+        $display("Decode:\t\tD_stall_i=%1d|D_bubble_i=%1d\nD_stat_o=%4d\nD_icode_o=%4d|D_ifun_o=%4d|D_rA_o=%4d|D_rB_o=%4d\nD_valC_o=%4d|D_valP_o=%4d|D_pc_o=%4d",
+            D_stall_i,D_bubble_i,D_stat_o,D_icode_o,D_ifun_o,D_rA_o,D_rB_o,D_valC_o,D_valP_o,D_pc_o);
         $display("d_valA_o=%4d|d_valB_o=%4d|d_dstE_o=%4d|d_dstM_o=%4d|d_srcA_o=%4d|d_srcB_o=%4d\n",d_valA_o,d_valB_o,d_dstE_o,d_dstM_o,d_srcA_o,d_srcB_o);
-        $display("Execute:\nE_icode_o=%4d|E_ifun_o=%4d|E_stat_o=%4d|E_dstE_o=%4d|E_valA_o=%4d|E_valB_o=%4d|E_valC_o=%4d|m_stat_o=%4d|W_stat_o=%4d\ne_valE_o=%4d|e_dstE_o=%4d|e_cnd_o=%4d|e_stat_o=%4d\n",
-            E_icode_o,E_ifun_o,E_stat_o,E_dstE_o,E_valA_o,E_valB_o,E_valC_o,m_stat_o,W_stat_o, e_valE_o,e_dstE_o,e_cnd_o,e_stat_o);
-        
+        $display("Execute:\t\tE_stall_i=%1d|E_bubble_i=%1d\nE_stat_o=%4d\ne_stat_o=%4d\nE_icode_o=%4d|E_ifun_o=%4d|E_dstE_o=%4d|E_valA_o=%4d|E_valB_o=%4d|E_valC_o=%4d\ne_valE_o=%4d|e_dstE_o=%4d|e_cnd_o=%4d\n",
+            E_stall_i,E_bubble_i,E_stat_o ,e_stat_o,E_icode_o,E_ifun_o,,E_dstE_o,E_valA_o,E_valB_o,E_valC_o,e_valE_o,e_dstE_o,e_cnd_o);
+        $display("Memory:\t\tM_stall_i=%1d|M_bubble_i=%1d\nM_stat_o=%1d\nm_stat_o=%1d\nM_icode_o=%4d|m_valM_o=%4d|M_valE_o=%4d\nM_dstE_o=%4d|M_dstM_o=%4d|M_valA_o=%4d|M_pc_o=%4d\n",
+                    M_stall_i,M_bubble_i,M_stat_o,m_stat_o,M_icode_o,m_valM_o,M_valE_o,M_dstE_o,M_dstM_o,M_valA_o,M_pc_o);
+        $display("WriteBack:\t\tW_stall_i=%1d|W_bubble_i=%1d\nW_stat_o=%1d\nW_icode_o=%4d|W_valM_o=%4d|W_valE_o=%4d|W_dstE_o=%4d|W_dstM_o=%4d\n",
+        W_stall_i,W_bubble_i,W_stat_o,W_icode_o,W_valM_o,W_valE_o,W_dstE_o,W_dstM_o);
         #5 clk_i=~clk_i;
         #5 clk_i=~clk_i;
     end
@@ -39,8 +42,7 @@ wire F_stall_i;
 wire F_bubble_i;
 wire [63:0] F_predPC_o;//初始化为0
 wire [63:0] f_predPC_o;//初始化为0
-assign F_stall_i=0;
-assign F_bubble_i=0;
+
 
 F_pipe_reg f_reg(
     .clk_i(clk_i),
@@ -58,11 +60,7 @@ wire [63:0] W_valM_o;
 wire [63:0] f_pc_o;//输出，为最后的PC值。
 wire M_cnd_o;
 
-assign M_icode_o=4'b0;
-assign W_icode_o=4'b0;
-assign M_valA_o=64'b0;
-assign W_valM_o=64'b0;
-assign M_cnd_o=0;
+
 
 //时序逻辑，f_pc_o=F_predPC_o
 select_pc select_pc_module  (
@@ -103,9 +101,7 @@ fetch fetch_module(
     decode module
 */
 wire D_stall_i;
-assign D_stall_i=0;
 wire D_bubble_i;
-assign D_bubble_i=0;
 wire[3:0]D_icode_o;
 wire[3:0]D_ifun_o;
 wire[63:0]D_valC_o;
@@ -143,28 +139,18 @@ fetch_D_pipe_reg  D_reg (
 
 
 wire[3:0] e_dstE_o;//前递
-assign e_dstE_o=`RNONE;
 wire[63:0] e_valE_o;
-assign e_valE_o=64'b0;
 wire[3:0] M_dstM_o;
-assign M_dstM_o=`RNONE;
 wire[63:0] m_valM_o;
-assign m_valM_o=64'b0;
 wire[3:0] M_dstE_o;
-assign M_dstE_o=`RNONE;
 wire[63:0] M_valE_o;
-assign M_valE_o=64'b0;
 wire[3:0] W_dstM_o;
-assign W_dstM_o=`RNONE;
 //wire[63:0] W_valM_o;//已存在
 wire[3:0] W_dstE_o;
-assign W_dstE_o=`RNONE;
 wire[63:0] W_valE_o;
-assign W_valE_o=64'b0;
 wire decode_stall_i;
-assign decode_stall_i=0;
 wire decode_bubble_i;
-assign decode_bubble_i=0;
+
 
 wire[63:0] d_valA_o;
 wire[63:0] d_valB_o;
@@ -212,9 +198,7 @@ decode decode_module(
 */
 // decode_E_pipe_reg Inputs
 wire E_stall_i;
-assign E_stall_i=0;
 wire E_bubble_i;
-assign E_bubble_i=0;
 // decode_E_pipe_reg Outputs
 wire[2:0]E_stat_o;
 wire[63:0]E_pc_o;
@@ -317,8 +301,8 @@ execute_M_pipe_reg  M_reg (
 
     .e_stat_i(E_stat_o),
     .e_pc_i(E_pc_o),
-    .e_icode_i(E_icode),
-    .e_ifun_i(E_ifun),
+    .e_icode_i(E_icode_o),
+    .e_ifun_i(E_ifun_o),
     .e_cnd_i(e_cnd_o),
     .e_valE_i(e_valE_o),
     .e_valA_i(E_valA_o),
@@ -356,7 +340,7 @@ memory_access memory_module(
     .icode_o(M_icode_o),
     .stat_o(m_stat_o),
     .valM_o(m_valM_o),
-    .valE_o(M_valE_o),
+    .valE_o(M_valE_o),//
     .dstE_o(M_dstE_o),
     .dstM_o(M_dstM_o),
     .M_valA_o(M_valA_o)
@@ -393,7 +377,7 @@ controller controller_module(
     .d_srcB_i(d_srcB_o),
     .E_icode_i(E_icode_o),
     .E_dstM_i(E_dstM_o),
-    .e_cnd_i(e_cnd_o),
+    .e_Cnd_i(e_cnd_o),
     .M_icode_i(M_icode_o),
     .m_stat_i(m_stat_o),
     .W_stat_i(W_stat_o),

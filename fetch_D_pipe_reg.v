@@ -27,7 +27,7 @@ module fetch_D_pipe_reg(
 
 always@(posedge clk_i)begin 
     if(~rst_n_i)begin 
-        D_stat_o<=3'b0;
+        D_stat_o<=`SAOK;
         D_pc_o<=64'b0;
         D_icode_o<=`INOP;//
         D_ifun_o<=4'b0;
@@ -37,7 +37,7 @@ always@(posedge clk_i)begin
         D_valP_o<=64'b0;
     end
     else if(D_bubble_i)begin 
-        D_stat_o<=`STAT_BUBBLE;
+        D_stat_o<=`SAOK;
         D_pc_o<=64'b0;
         D_icode_o<=`INOP;//
         D_ifun_o<=4'b0;
