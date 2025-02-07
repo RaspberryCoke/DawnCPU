@@ -74,7 +74,7 @@ integer i;
 always@(posedge clk_i)begin 
     if(~rst_n_i)begin 
         for(i=0;i<14;i=i+1)begin 
-            regfile[i]<=64'b0;
+            regfile[i]<=64'b0;//注意这里的初始化赋值，和之前的单周期不一样。
         end
     end else if(!decode_stall_i) begin 
         if(W_dstE_i!=`RNONE)begin 

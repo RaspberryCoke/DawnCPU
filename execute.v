@@ -2,6 +2,8 @@
 module execute(
     input wire clk_i,
     input wire rst_n_i,
+    input wire execute_stall_i,
+    input wire execute_bubble_i,
 
     input wire[3:0] icode_i,
     input wire [3:0] ifun_i,
@@ -18,7 +20,7 @@ module execute(
     output wire signed[63:0] valE_o,//execute保存的结果
     output wire[3:0]dstE_o,//用作cmov的转移
     output wire e_cnd_o,
-    output wire stat_o
+    output wire[2:0] stat_o
 );
 wire [63:0] aluA;
 wire[63:0] aluB;
@@ -52,7 +54,7 @@ always@(*)begin
         new_cc[1]=0;
         new_cc[0]=0;
     end
-    else if(icode_i==`IOPQ)begin 
+    else if((~execute_stall_i) && (icode_i==`IOPQ))begin 
         new_cc[2]=(valE_o==0)?1:0;
         new_cc[1]=valE_o[63];
         new_cc[0]=(alu_fun==`ALUADD)?
@@ -67,7 +69,7 @@ assign set_cc=(icode_i==`IOPQ);
 always@(posedge clk_i)begin 
     if(~rst_n_i)
         cc<=3'b100;
-    else if(set_cc)
+    else if( (~execute_stall_i) && set_cc)
         cc<=new_cc;
 end
 
@@ -81,5 +83,6 @@ assign e_cnd_o=
     (ifun_i==`C_G && (~(sf ^ of)&&~zf));
 
 assign dstE_o=((icode_i==`IRRMOVQ)&&!e_cnd_o)?`RNONE:E_dstE_i;
+assign stat_o=stat_i;
 
 endmodule
