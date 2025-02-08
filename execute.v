@@ -52,7 +52,7 @@ assign valE_o=(alu_fun==`ALUSUB)?(aluB-aluA):
 
 always@(*)begin 
     if(~rst_n_i)begin 
-        new_cc[2]=1;
+        new_cc[2]=0;/////////////////
         new_cc[1]=0;
         new_cc[0]=0;
     end
@@ -70,19 +70,19 @@ assign set_cc=(icode_i==`IOPQ)&&(m_stat_i==`SAOK)&&(W_stat_i==`SAOK);
 
 always@(posedge clk_i)begin 
     if(~rst_n_i)
-        cc<=3'b100;
+        cc<=3'b000;//////////////////
     else if( (~execute_stall_i) && set_cc)
         cc<=new_cc;
 end
 
-assign e_cnd_o=
-    (ifun_i==`C_YES)||
+assign e_cnd_o=(icode_i==`IRRMOVQ ||icode_i==`IOPQ)&&
+    ((ifun_i==`C_YES)||
     (ifun_i==`C_LE && ((sf^of)||zf))||
     (ifun_i==`C_L &&(sf^of))||
     (ifun_i==`C_E && zf)||
     (ifun_i==`C_NE && ~zf)||
     (ifun_i==`C_GE && ~(sf ^ of))||
-    (ifun_i==`C_G && (~(sf ^ of)&&~zf));
+    (ifun_i==`C_G && (~(sf ^ of)&&~zf)));
 
 assign dstE_o=((icode_i==`IRRMOVQ)&&!e_cnd_o)?`RNONE:E_dstE_i;
 assign stat_o=stat_i;

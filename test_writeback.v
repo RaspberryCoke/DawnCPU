@@ -35,12 +35,12 @@ initial begin
 
 
 
-        $display("Memory:\t\tM_stall_i=%1d|M_bubble_i=%1d\nM_stat_o=%1d\nm_stat_o=%1d\nM_icode_o=%4d|m_valM_o=%4d|M_valE_o=%4d\nM_dstE_o=%4d|M_dstM_o=%4d|M_valA_o=%4d|M_pc_o=%4d\n",
-                    M_stall_i,M_bubble_i,M_stat_o,m_stat_o,M_icode_o,m_valM_o,M_valE_o,M_dstE_o,M_dstM_o,M_valA_o,M_pc_o);
+        $display("Memory:\t\tM_bubble_i=%1d\nM_stat_o=%1d\nm_stat_o=%1d\nM_icode_o=%4d|m_valM_o=%4d|M_valE_o=%4d\nM_dstE_o=%4d|M_dstM_o=%4d|M_valA_o=%4d|M_pc_o=%4d\n",
+                    M_bubble_i,M_stat_o,m_stat_o,M_icode_o,m_valM_o,M_valE_o,M_dstE_o,M_dstM_o,M_valA_o,M_pc_o);
 
 
-        $display("WriteBack:\t\tW_stall_i=%1d|W_bubble_i=%1d\nW_stat_o=%1d\nW_icode_o=%4d|W_valM_o=%4d|W_valE_o=%4d|W_dstE_o=%4d|W_dstM_o=%4d\n",
-        W_stall_i,W_bubble_i,W_stat_o,W_icode_o,W_valM_o,W_valE_o,W_dstE_o,W_dstM_o);
+        $display("WriteBack:\t\tW_stall_i=%1d\nW_stat_o=%1d\nW_icode_o=%4d|W_valM_o=%4d|W_valE_o=%4d|W_dstE_o=%4d|W_dstM_o=%4d\n",
+        W_stall_i,W_stat_o,W_icode_o,W_valM_o,W_valE_o,W_dstE_o,W_dstM_o);
 
         $display("controller:\nD_icode_o=%4d|d_srcA_o=%4d|d_srcB_o=%4d\nE_icode_o=%4d|E_dstM_o=%4d|e_cnd_o=%4d\nM_icode_o=%4d|m_stat_o=%1d|W_stat_o=%4d\n"
         ,D_icode_o,d_srcA_o,d_srcB_o,E_icode_o,E_dstM_o,e_cnd_o,M_icode_o,m_stat_o,W_stat_o);
