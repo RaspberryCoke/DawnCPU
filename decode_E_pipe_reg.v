@@ -30,7 +30,7 @@ module decode_E_pipe_reg(
     output reg[3:0]E_srcB_o
 
 );
-always@(clk_i)begin 
+always@(posedge clk_i)begin 
     if(~rst_n_i)begin 
         E_stat_o<=3'b0;
         E_pc_o<=64'b0;

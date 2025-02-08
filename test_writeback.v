@@ -17,9 +17,8 @@ initial begin
     #5 $display("----------begin--------");
     forever begin
         
-        
-        $display("\n\nTime=%0t\nFetch:\t\tF_stall_i=%1d|F_bubble_i=%1d\nf_icode_o=%4h|f_ifun_o=%4h|f_rA_o=%4h|f_rB_o=%4h\nF_predPC_o=%4d|f_reg=%4d|f_pc_o=%4d\n",
-            $time, F_stall_i,F_bubble_i,f_icode_o, f_ifun_o,f_rA_o, f_rB_o,F_predPC_o,f_reg.predPC,f_pc_o);
+        $display("\n\nTime=%0t\nFetch:\t\tF_stall_i=%1d\nf_icode_o=%4h|f_ifun_o=%4h|f_rA_o=%4h|f_rB_o=%4h\nF_predPC_o=%4d|f_reg=%4d|f_pc_o=%4d\n",
+            $time, F_stall_i,f_icode_o, f_ifun_o,f_rA_o, f_rB_o,F_predPC_o,f_reg.predPC,f_pc_o);
 
 
         $display("Decode:\t\tD_stall_i=%1d|D_bubble_i=%1d\nD_stat_o=%4d\nD_icode_o=%4d|D_ifun_o=%4d|D_rA_o=%4d|D_rB_o=%4d\nD_valC_o=%4d|D_valP_o=%4d|D_pc_o=%4d",
@@ -30,8 +29,8 @@ initial begin
 
 
 
-        $display("Execute:\t\tE_stall_i=%1d|E_bubble_i=%1d\nE_stat_o=%4d\ne_stat_o=%4d\nE_icode_o=%4d|E_ifun_o=%4d|E_dstE_o=%4d|E_valA_o=%4d|E_valB_o=%4d|E_valC_o=%4d\ne_valE_o=%4d|e_dstE_o=%4d|e_cnd_o=%4d\n",
-            E_stall_i,E_bubble_i,E_stat_o ,e_stat_o,E_icode_o,E_ifun_o,E_dstE_o,E_valA_o,E_valB_o,E_valC_o,e_valE_o,e_dstE_o,e_cnd_o);
+        $display("Execute:\t\tE_bubble_i=%1d\nE_stat_o=%4d\ne_stat_o=%4d\nE_icode_o=%4d|E_ifun_o=%4d|E_dstE_o=%4d|E_valA_o=%4d|E_valB_o=%4d|E_valC_o=%4d\ne_valE_o=%4d|e_dstE_o=%4d|e_cnd_o=%4d\n",
+            E_bubble_i,E_stat_o ,e_stat_o,E_icode_o,E_ifun_o,E_dstE_o,E_valA_o,E_valB_o,E_valC_o,e_valE_o,e_dstE_o,e_cnd_o);
 
 
 
@@ -55,7 +54,7 @@ initial begin
 end
 
 initial begin
-    #200 $finish;
+    #300 $finish;
 end
 
 wire F_stall_i;
