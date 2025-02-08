@@ -28,7 +28,7 @@ module execute_M_pipe_reg(
 
 always@(posedge clk_i)begin
     if(~rst_n_i)begin 
-        M_stat_o<=3'b0;//
+        M_stat_o<=2'b0;//
         M_pc_o<=64'b0;
         M_icode_o<=`INOP;
         M_ifun_o<=4'b0;
@@ -39,7 +39,7 @@ always@(posedge clk_i)begin
         M_dstM_o<=`RNONE;
     end
     else if(M_bubble_i)begin 
-        M_stat_o<=e_stat_i;//?
+        M_stat_o<=`SAOK;//?
         M_pc_o<=64'b0;
         M_icode_o<=`INOP;
         M_ifun_o<=4'b0;

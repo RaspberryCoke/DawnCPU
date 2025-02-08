@@ -31,10 +31,9 @@ assign D_stall_o=(E_icode_i==`IMRMOVQ || E_icode_i == `IPOPQ) &&
                     (E_dstM_i==d_srcA_i ||E_dstM_i==d_srcB_i);
 
 assign D_bubble_o=((E_icode_i==`IJXX)&&(~e_Cnd_i)) ||
-                    (~((E_icode_i==`IMRMOVQ || E_icode_i==`IPOPQ)&&
-                    (E_dstM_i==d_srcA_i || E_dstM_i ==d_srcB_i) &&
-                    (D_icode_i==`IRET || E_icode_i==`IRET || M_icode_i==`IRET)
-                    ));
+                    ((~((E_icode_i==`IMRMOVQ || E_icode_i==`IPOPQ)&&/////////////
+                    (E_dstM_i==d_srcA_i || E_dstM_i ==d_srcB_i)) &&
+                    (D_icode_i==`IRET || E_icode_i==`IRET || M_icode_i==`IRET)));
             
 assign E_bubble_o=(((E_icode_i==`IJXX)&& (~e_Cnd_i)) ||
                     ((E_icode_i==`IMRMOVQ || E_icode_i==`IPOPQ)&&

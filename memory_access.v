@@ -51,7 +51,7 @@ always@(posedge clk_i)begin
 
         valA<=0;
         valE<=0;
-
+        valM<=0;
         dstE<=`RNONE;
         dstM<=`RNONE;
 
@@ -66,6 +66,7 @@ always@(posedge clk_i)begin
         icode<=`INOP;
         valA<=0;
         valE<=0;
+        valM<=0;
         dstE<=`RNONE;
         dstM<=`RNONE;
         r_en<=0;
