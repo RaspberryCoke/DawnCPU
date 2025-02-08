@@ -5,6 +5,8 @@ module test_writeback();
 reg clk_i;
 reg rst_n_i;
 
+integer reg_i;
+
 initial begin 
     #1 clk_i=0;
     #1 rst_n_i=0;
@@ -17,27 +19,20 @@ initial begin
     #5 $display("----------begin--------");
     forever begin
         
-        $display("\n\nTime=%0t\nFetch:\t\tF_stall_i=%1d\nf_icode_o=%4h|f_ifun_o=%4h|f_rA_o=%4h|f_rB_o=%4h\nF_predPC_o=%4d|f_reg=%4d|f_pc_o=%4d\n",
-            $time, F_stall_i,f_icode_o, f_ifun_o,f_rA_o, f_rB_o,F_predPC_o,f_reg.predPC,f_pc_o);
-
+        $display("\n\nTime=%0t\nFetch:\t\tF_stall_i=%1d\nf_icode_o=%4h|f_ifun_o=%4h|f_rA_o=%4h|f_rB_o=%4h\nF_predPC_o=%4d|f_reg=%4d|f_pc_o=%4d\nf_valC_o=%4d|f_valP_o=%4d\n",
+            $time, F_stall_i,f_icode_o, f_ifun_o,f_rA_o, f_rB_o,F_predPC_o,f_reg.predPC,f_pc_o,f_valC_o,f_valP_o);
 
         $display("Decode:\t\tD_stall_i=%1d|D_bubble_i=%1d\nD_stat_o=%4d\nD_icode_o=%4d|D_ifun_o=%4d|D_rA_o=%4d|D_rB_o=%4d\nD_valC_o=%4d|D_valP_o=%4d|D_pc_o=%4d",
             D_stall_i,D_bubble_i,D_stat_o,D_icode_o,D_ifun_o,D_rA_o,D_rB_o,D_valC_o,D_valP_o,D_pc_o);
 
-
         $display("d_valA_o=%4d|d_valB_o=%4d|d_dstE_o=%4d|d_dstM_o=%4d|d_srcA_o=%4d|d_srcB_o=%4d\n",d_valA_o,d_valB_o,d_dstE_o,d_dstM_o,d_srcA_o,d_srcB_o);
+        $display("FORWARDING:\nW_dstM_o=%4d|W_valM_o=%4d|W_dstE_o=%4d|W_valE_o=%4d\n",W_dstM_o,W_valM_o,W_dstE_o,W_valE_o);
 
-
-
-        $display("Execute:\t\tE_bubble_i=%1d\nE_stat_o=%4d\ne_stat_o=%4d\nE_icode_o=%4d|E_ifun_o=%4d|E_dstE_o=%4d|E_valA_o=%4d|E_valB_o=%4d|E_valC_o=%4d\ne_valE_o=%4d|e_dstE_o=%4d|e_cnd_o=%4d\n",
-            E_bubble_i,E_stat_o ,e_stat_o,E_icode_o,E_ifun_o,E_dstE_o,E_valA_o,E_valB_o,E_valC_o,e_valE_o,e_dstE_o,e_cnd_o);
-
-
-
+        $display("Execute:\t\tE_bubble_i=%1d\nE_stat_o=%4d|e_stat_o=%4d|cc_debug_o=%4d\nE_icode_o=%4d|E_ifun_o=%4d|E_dstE_o=%4d|E_valA_o=%4d|E_valB_o=%4d|E_valC_o=%4d\ne_valE_o=%4d|e_dstE_o=%4d|e_cnd_o=%4d\n",
+            E_bubble_i,E_stat_o ,e_stat_o,cc_debug_o,E_icode_o,E_ifun_o,E_dstE_o,E_valA_o,E_valB_o,E_valC_o,e_valE_o,e_dstE_o,e_cnd_o);
 
         $display("Memory:\t\tM_bubble_i=%1d\nM_stat_o=%1d\nm_stat_o=%1d\nM_icode_o=%4d|m_valM_o=%4d|M_valE_o=%4d\nM_dstE_o=%4d|M_dstM_o=%4d|M_valA_o=%4d|M_pc_o=%4d\n",
                     M_bubble_i,M_stat_o,m_stat_o,M_icode_o,m_valM_o,M_valE_o,M_dstE_o,M_dstM_o,M_valA_o,M_pc_o);
-
 
         $display("WriteBack:\t\tW_stall_i=%1d\nW_stat_o=%1d\nW_icode_o=%4d|W_valM_o=%4d|W_valE_o=%4d|W_dstE_o=%4d|W_dstM_o=%4d\n",
         W_stall_i,W_stat_o,W_icode_o,W_valM_o,W_valE_o,W_dstE_o,W_dstM_o);
@@ -45,8 +40,9 @@ initial begin
         $display("controller:\nD_icode_o=%4d|d_srcA_o=%4d|d_srcB_o=%4d\nE_icode_o=%4d|E_dstM_o=%4d|e_cnd_o=%4d\nM_icode_o=%4d|m_stat_o=%1d|W_stat_o=%4d\n"
         ,D_icode_o,d_srcA_o,d_srcB_o,E_icode_o,E_dstM_o,e_cnd_o,M_icode_o,m_stat_o,W_stat_o);
 
-        
-        
+        for(reg_i=0;reg_i<16;reg_i=reg_i+1)begin
+            $display("r%d--%d",reg_i,decode_module.regfile[reg_i]);
+        end
 
         #5 clk_i=~clk_i;
         #5 clk_i=~clk_i;
@@ -54,7 +50,7 @@ initial begin
 end
 
 initial begin
-    #300 $finish;
+    #600 $finish;
 end
 
 wire F_stall_i;
@@ -198,7 +194,7 @@ decode decode_module(
     .m_valM_i(m_valM_o),
     .M_dstE_i(M_dstE_o),
     .M_valE_i(M_valE_o),
-    .W_dstM_i(W_dstM_o),
+    .W_dstM_i(W_dstM_o),//
     .W_valM_i(W_valM_o),
     .W_dstE_i(W_dstE_o),
     .W_valE_i(W_valE_o),//
@@ -269,6 +265,7 @@ wire[2:0]W_stat_o;
 wire[2:0]e_stat_o;
 
 wire e_cnd_o;
+wire [2:0]cc_debug_o;
 
 execute execute_module(
     .clk_i(clk_i),
@@ -291,7 +288,8 @@ execute execute_module(
     .valE_o(e_valE_o),
     .dstE_o(e_dstE_o),
     .e_cnd_o(e_cnd_o),
-    .stat_o(e_stat_o)
+    .stat_o(e_stat_o),
+    .cc_debug(cc_debug_o)
 );
 
 

@@ -20,7 +20,8 @@ module execute(
     output wire signed[63:0] valE_o,//execute保存的结果
     output wire[3:0]dstE_o,//用作cmov的转移
     output wire e_cnd_o,
-    output wire[2:0] stat_o
+    output wire[2:0] stat_o,
+    output wire [2:0]cc_debug
 );
 
 
@@ -52,7 +53,7 @@ assign valE_o=(alu_fun==`ALUSUB)?(aluB-aluA):
 
 always@(*)begin 
     if(~rst_n_i)begin 
-        new_cc[2]=0;/////////////////
+        new_cc[2]=1;/////////////////
         new_cc[1]=0;
         new_cc[0]=0;
     end
@@ -70,12 +71,15 @@ assign set_cc=(icode_i==`IOPQ)&&(m_stat_i==`SAOK)&&(W_stat_i==`SAOK);
 
 always@(posedge clk_i)begin 
     if(~rst_n_i)
-        cc<=3'b000;//////////////////
+        cc<=3'b100;//////////////////
     else if( (~execute_stall_i) && set_cc)
+    begin 
         cc<=new_cc;
+        $display("cc is set to %4d.",cc);
+    end
 end
 
-assign e_cnd_o=(icode_i==`IRRMOVQ ||icode_i==`IOPQ)&&
+assign e_cnd_o=//(icode_i==`IRRMOVQ ||icode_i==`IOPQ )&&
     ((ifun_i==`C_YES)||
     (ifun_i==`C_LE && ((sf^of)||zf))||
     (ifun_i==`C_L &&(sf^of))||
@@ -86,5 +90,5 @@ assign e_cnd_o=(icode_i==`IRRMOVQ ||icode_i==`IOPQ)&&
 
 assign dstE_o=((icode_i==`IRRMOVQ)&&!e_cnd_o)?`RNONE:E_dstE_i;
 assign stat_o=stat_i;
-
+assign cc_debug=cc;
 endmodule

@@ -34,6 +34,7 @@ always@(posedge clk_i)begin
         D_rA_o<=`RNONE;
         D_rB_o<=`RNONE;
         D_valC_o<=64'b0;
+        $display("------------------rst----D_valC_o<=64'b0;------------------");
         D_valP_o<=64'b0;
     end
     else if(D_bubble_i)begin 
@@ -44,6 +45,7 @@ always@(posedge clk_i)begin
         D_rA_o<=`RNONE;
         D_rB_o<=`RNONE;
         D_valC_o<=64'b0;
+        $display("------------D---bubble-------D_valC_o<=64'b0;------------------");
         D_valP_o<=64'b0;
     end
     else if(~D_stall_i)begin 
@@ -53,6 +55,7 @@ always@(posedge clk_i)begin
         D_ifun_o<=f_ifun_i;
         D_rA_o<=f_rA_i;
         D_rB_o<=f_rB_i;
+        $display("----------------------D_valC_o<=f_valC_i;------------------");
         D_valC_o<=f_valC_i;
         D_valP_o<=f_valP_i;
     end

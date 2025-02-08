@@ -8,25 +8,7 @@ all: compile
 
 # 编译命令
 compile:
-	@echo "Compiling files..."
-	vlog $(VFILES)
-	@echo "Starting simulation with str= test_writeback ."
-	@vsim -c test_writeback -do "run -all; exit"
-
-
-# # 目标是 sim，依赖于传递给 make 的 str
-# sim: $(str)
-# 	@echo "Starting simulation with str=${str}"
-# 	@vsim -c ${str} -do "run -all; exit"
-# #; exit"
-
-# # 通过 make 命令传递 str 的值
-# $(str):
-# 	@echo "Assigning value to str: ${str}"
-# 	@echo ${str}
-
-
-# 清理命令
-clean:
-	@echo "Cleaning..."
-# rm -rf work
+	@echo "Compiling files..." > runtime_log.txt
+	vlog $(VFILES) >> runtime_log.txt 2>&1  # 将编译过程输出追加到 runtime_log.txt
+	@echo "Starting simulation with str= test_writeback ." >> runtime_log.txt
+	@vsim -c test_writeback -do "run -all; exit" >> runtime_log.txt 2>&1  # 将模拟输出追加到 runtime_log.txt

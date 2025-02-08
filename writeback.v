@@ -60,4 +60,22 @@ assign dstM_o=dstM_i;
 assign icode_o=icode_i;
 assign stat_o=stat_i;//
 
+
+//触发条件：icode_o==`IHALT ,  PC_i改变
+always@(*)begin 
+    //$display($time,".fetch.v running.PC_i:%h.icode:%h.",PC_i,icode_o);
+    if(icode==`IHALT)begin 
+        $display($time,".fetch.v IHALT.icode:%h.",icode);
+        $display($time,".HALT.");
+        $display("");
+        $display("----------------.HALT.------------------");
+        $display("-----------.Succeed to HALT.-------------");
+        $display("-----------------------------------------");
+        $display("------------Congratulations!-------------");
+        $display("");
+        $stop;
+    end
+end
+
+
 endmodule

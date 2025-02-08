@@ -64,24 +64,6 @@ assign stat_o=imem_error?`SADR:
 assign predPC_o=(icode_o==`IJXX||icode_o==`ICALL)?valC_o:valP_o;//语句实现了predictPC的功能。预测全部跳转。
 
 
-
-//触发条件：icode_o==`IHALT ,  PC_i改变
-always@(*)begin 
-    //$display($time,".fetch.v running.PC_i:%h.icode:%h.",PC_i,icode_o);
-    if(icode_o==`IHALT)begin 
-        $display($time,".fetch.v IHALT.PC_i:%h.icode:%h.",PC_i,icode_o);
-        $display($time,".HALT.");
-        $display("");
-        $display("----------------.HALT.------------------");
-        $display("-----------.Succeed to HALT.-------------");
-        $display("-----------------------------------------");
-        $display("------------Congratulations!-------------");
-        $display("");
-        $stop;
-    end
-end
-
-
 integer i;
 
 initial begin
@@ -248,7 +230,9 @@ initial begin
     instr_mem[110]=8'h00;
     instr_mem[111]=8'h00;
     instr_mem[112]=8'h00;
-    instr_mem[113]=8'h00;
+
+
+    instr_mem[113]=8'h10;/////////////////////NOP
     // andq %r14(=4) %rbx(=3)        %rbx=0
     // 62 E3
     instr_mem[114]=8'h62;
@@ -264,7 +248,8 @@ initial begin
     instr_mem[122]=8'h00;
     instr_mem[123]=8'h00;
     instr_mem[124]=8'h00;
-    instr_mem[125]=8'h00;
+
+    instr_mem[125]=8'h10;/////////////////NOP
 
 
 
@@ -291,7 +276,8 @@ initial begin
     instr_mem[138]=8'h00;
     instr_mem[139]=8'h00;
     instr_mem[140]=8'h00;
-    instr_mem[141]=8'h00;
+
+    instr_mem[141]=8'h10;//////////////
 
 
 
