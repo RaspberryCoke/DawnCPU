@@ -164,8 +164,7 @@ wire[3:0] W_dstM_o;
 //wire[63:0] W_valM_o;//已存在
 wire[3:0] W_dstE_o;
 wire[63:0] W_valE_o;
-wire decode_stall_i;
-wire decode_bubble_i;
+
 
 
 wire[63:0] d_valA_o;
@@ -179,8 +178,8 @@ wire[2:0] d_stat_o;
 decode decode_module(
     .clk_i(clk_i),
     .rst_n_i(rst_n_i),
-    .decode_stall_i(decode_stall_i),
-    .decode_bubble_i(decode_bubble_i),
+    .decode_stall_i(D_stall_i),
+    .decode_bubble_i(D_bubble_i),
 
     .D_icode_i(D_icode_o),
     .D_rA_i(D_rA_o),

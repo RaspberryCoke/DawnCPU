@@ -55,10 +55,10 @@ end
 
 assign valE_o=valE;
 assign valM_o=valM;//与之前有不同，需要之前的检查正确性！
-assign dstE_o=dstE_i;
-assign dstM_o=dstM_i;
-assign icode_o=icode_i;
-assign stat_o=stat_i;//
+assign dstE_o=dstE;
+assign dstM_o=dstM;
+assign icode_o=icode;
+assign stat_o=stat;//
 
 
 //触发条件：icode_o==`IHALT ,  PC_i改变

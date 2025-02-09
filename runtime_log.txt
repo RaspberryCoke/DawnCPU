@@ -235,7 +235,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=   3|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   2|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -250,7 +250,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=   2|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   3|d_srcA_o=  15|d_srcB_o=  15
@@ -289,7 +289,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=   4|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   1|W_valE_o=   2
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   2|W_valE_o=   2
 # 
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -304,7 +304,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   3|W_valM_o=   0|W_valE_o=   2|W_dstE_o=   1|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   2|W_dstE_o=   2|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   3|d_srcA_o=  15|d_srcB_o=  15
@@ -343,7 +343,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=   8|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   3|W_valE_o=   1
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   1|W_valE_o=   1
 # 
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -358,7 +358,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   3|W_valM_o=   0|W_valE_o=   1|W_dstE_o=   3|W_dstM_o=  15
+# W_icode_o=   3|W_valM_o=   0|W_valE_o=   1|W_dstE_o=   1|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   3|d_srcA_o=  15|d_srcB_o=  15
@@ -367,7 +367,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # 
 # r          0--                   0
 # r          1--                   0
-# r          2--                   0
+# r          2--                   2
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
@@ -388,7 +388,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # Fetch:		F_stall_i=0
 # f_icode_o=   3|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   e
 # F_predPC_o=  60|f_reg=  60|f_pc_o=  60
-# f_valC_o=  33|f_valP_o=  70
+# f_valC_o=   4|f_valP_o=  70
 # 
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
@@ -397,7 +397,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=   9|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   4|W_valE_o=   3
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   3|W_valE_o=   3
 # 
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -412,7 +412,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   3|W_valM_o=   0|W_valE_o=   3|W_dstE_o=   4|W_dstM_o=  15
+# W_icode_o=   3|W_valM_o=   0|W_valE_o=   3|W_dstE_o=   3|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   3|d_srcA_o=  15|d_srcB_o=  15
@@ -420,8 +420,8 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_icode_o=   3|m_stat_o=0|W_stat_o=   0
 # 
 # r          0--                   0
-# r          1--                   0
-# r          2--                   0
+# r          1--                   1
+# r          2--                   2
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
@@ -447,11 +447,11 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
 # D_icode_o=   3|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  14
-# D_valC_o=  33|D_valP_o=  70|D_pc_o=  60
+# D_valC_o=   4|D_valP_o=  70|D_pc_o=  60
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  14|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   8|W_valE_o= 144
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   4|W_valE_o= 144
 # 
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -466,7 +466,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   3|W_valM_o=   0|W_valE_o= 144|W_dstE_o=   8|W_dstM_o=  15
+# W_icode_o=   3|W_valM_o=   0|W_valE_o= 144|W_dstE_o=   4|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   3|d_srcA_o=  15|d_srcB_o=  15
@@ -474,9 +474,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_icode_o=   3|m_stat_o=0|W_stat_o=   0
 # 
 # r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
@@ -502,15 +502,15 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # D_stat_o=   0
 # D_icode_o=   2|D_ifun_o=   0|D_rA_o=   8|D_rB_o=  10
 # D_valC_o=   0|D_valP_o=  72|D_pc_o=  70
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  10|d_dstM_o=  15|d_srcA_o=   8|d_srcB_o=  15
+# d_valA_o=   8|d_valB_o=   0|d_dstE_o=  10|d_dstM_o=  15|d_srcA_o=   8|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   9|W_valE_o=   8
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   8|W_valE_o=   8
 # 
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   3|E_ifun_o=   0|E_dstE_o=  14|E_valA_o=   0|E_valB_o=   0|E_valC_o=  33
-# e_valE_o=  33|e_dstE_o=  14|e_cnd_o=   1
+# E_icode_o=   3|E_ifun_o=   0|E_dstE_o=  14|E_valA_o=   0|E_valB_o=   0|E_valC_o=   4
+# e_valE_o=   4|e_dstE_o=  14|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
@@ -520,7 +520,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   3|W_valM_o=   0|W_valE_o=   8|W_dstE_o=   9|W_dstM_o=  15
+# W_icode_o=   3|W_valM_o=   0|W_valE_o=   8|W_dstE_o=   8|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   2|d_srcA_o=   8|d_srcB_o=  15
@@ -528,10 +528,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_icode_o=   3|m_stat_o=0|W_stat_o=   0
 # 
 # r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -556,25 +556,25 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # D_stat_o=   0
 # D_icode_o=   2|D_ifun_o=   0|D_rA_o=   1|D_rB_o=  11
 # D_valC_o=   0|D_valP_o=  74|D_pc_o=  72
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  11|d_dstM_o=  15|d_srcA_o=   1|d_srcB_o=  15
+# d_valA_o=   1|d_valB_o=   0|d_dstE_o=  11|d_dstM_o=  15|d_srcA_o=   1|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  14|W_valE_o=  33
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   9|W_valE_o=  33
 # 
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   2|E_ifun_o=   0|E_dstE_o=  10|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  10|e_cnd_o=   1
+# E_icode_o=   2|E_ifun_o=   0|E_dstE_o=  10|E_valA_o=   8|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   8|e_dstE_o=  10|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   3|m_valM_o=   0|M_valE_o=  33
+# M_icode_o=   3|m_valM_o=   0|M_valE_o=   4
 # M_dstE_o=  14|M_dstM_o=  15|M_valA_o=   0|M_pc_o=  60
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   3|W_valM_o=   0|W_valE_o=  33|W_dstE_o=  14|W_dstM_o=  15
+# W_icode_o=   3|W_valM_o=   0|W_valE_o=  33|W_dstE_o=   9|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   2|d_srcA_o=   1|d_srcB_o=  15
@@ -582,14 +582,14 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_icode_o=   3|m_stat_o=0|W_stat_o=   0
 # 
 # r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
+# r          8--                   8
 # r          9--                   0
 # r         10--                   0
 # r         11--                   0
@@ -610,25 +610,25 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # D_stat_o=   0
 # D_icode_o=   2|D_ifun_o=   0|D_rA_o=   2|D_rB_o=  12
 # D_valC_o=   0|D_valP_o=  76|D_pc_o=  74
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  12|d_dstM_o=  15|d_srcA_o=   2|d_srcB_o=  15
+# d_valA_o=   2|d_valB_o=   0|d_dstE_o=  12|d_dstM_o=  15|d_srcA_o=   2|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  10|W_valE_o=  33
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  14|W_valE_o=   4
 # 
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   2|E_ifun_o=   0|E_dstE_o=  11|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  11|e_cnd_o=   1
+# E_icode_o=   2|E_ifun_o=   0|E_dstE_o=  11|E_valA_o=   1|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   1|e_dstE_o=  11|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   2|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  10|M_dstM_o=  15|M_valA_o=   0|M_pc_o=  70
+# M_icode_o=   2|m_valM_o=   0|M_valE_o=   8
+# M_dstE_o=  10|M_dstM_o=  15|M_valA_o=   8|M_pc_o=  70
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   3|W_valM_o=   0|W_valE_o=  33|W_dstE_o=  10|W_dstM_o=  15
+# W_icode_o=   3|W_valM_o=   0|W_valE_o=   4|W_dstE_o=  14|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   2|d_srcA_o=   2|d_srcB_o=  15
@@ -636,15 +636,15 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_icode_o=   2|m_stat_o=0|W_stat_o=   0
 # 
 # r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
 # r         11--                   0
 # r         12--                   0
@@ -664,25 +664,25 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # D_stat_o=   0
 # D_icode_o=   2|D_ifun_o=   0|D_rA_o=   3|D_rB_o=  13
 # D_valC_o=   0|D_valP_o=  78|D_pc_o=  76
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  13|d_dstM_o=  15|d_srcA_o=   3|d_srcB_o=  15
+# d_valA_o=   3|d_valB_o=   0|d_dstE_o=  13|d_dstM_o=  15|d_srcA_o=   3|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  11|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  10|W_valE_o=   8
 # 
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   2|E_ifun_o=   0|E_dstE_o=  12|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  12|e_cnd_o=   1
+# E_icode_o=   2|E_ifun_o=   0|E_dstE_o=  12|E_valA_o=   2|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   2|e_dstE_o=  12|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   2|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  11|M_dstM_o=  15|M_valA_o=   0|M_pc_o=  72
+# M_icode_o=   2|m_valM_o=   0|M_valE_o=   1
+# M_dstE_o=  11|M_dstM_o=  15|M_valA_o=   1|M_pc_o=  72
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   2|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  11|W_dstM_o=  15
+# W_icode_o=   3|W_valM_o=   0|W_valE_o=   8|W_dstE_o=  10|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   2|d_srcA_o=   3|d_srcB_o=  15
@@ -690,20 +690,20 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_icode_o=   2|m_stat_o=0|W_stat_o=   0
 # 
 # r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
 # r         11--                   0
 # r         12--                   0
 # r         13--                   0
-# r         14--                   x
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
@@ -718,25 +718,25 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # D_stat_o=   0
 # D_icode_o=   6|D_ifun_o=   0|D_rA_o=   8|D_rB_o=  10
 # D_valC_o=   0|D_valP_o=  80|D_pc_o=  78
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  10|d_dstM_o=  15|d_srcA_o=   8|d_srcB_o=  10
+# d_valA_o=   8|d_valB_o=   8|d_dstE_o=  10|d_dstM_o=  15|d_srcA_o=   8|d_srcB_o=  10
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  12|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  11|W_valE_o=   1
 # 
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   2|E_ifun_o=   0|E_dstE_o=  13|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  13|e_cnd_o=   1
+# E_icode_o=   2|E_ifun_o=   0|E_dstE_o=  13|E_valA_o=   3|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   3|e_dstE_o=  13|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   2|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  12|M_dstM_o=  15|M_valA_o=   0|M_pc_o=  74
+# M_icode_o=   2|m_valM_o=   0|M_valE_o=   2
+# M_dstE_o=  12|M_dstM_o=  15|M_valA_o=   2|M_pc_o=  74
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   2|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  12|W_dstM_o=  15
+# W_icode_o=   2|W_valM_o=   0|W_valE_o=   1|W_dstE_o=  11|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   6|d_srcA_o=   8|d_srcB_o=  10
@@ -744,20 +744,20 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_icode_o=   2|m_stat_o=0|W_stat_o=   0
 # 
 # r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   8
 # r         11--                   0
 # r         12--                   0
 # r         13--                   0
-# r         14--                   x
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
@@ -772,25 +772,25 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # D_stat_o=   0
 # D_icode_o=   6|D_ifun_o=   1|D_rA_o=   8|D_rB_o=  10
 # D_valC_o=   0|D_valP_o=  82|D_pc_o=  80
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  10|d_dstM_o=  15|d_srcA_o=   8|d_srcB_o=  10
+# d_valA_o=   8|d_valB_o=  16|d_dstE_o=  10|d_dstM_o=  15|d_srcA_o=   8|d_srcB_o=  10
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  13|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  12|W_valE_o=   2
 # 
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   6|E_ifun_o=   0|E_dstE_o=  10|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  10|e_cnd_o=   1
+# E_icode_o=   6|E_ifun_o=   0|E_dstE_o=  10|E_valA_o=   8|E_valB_o=   8|E_valC_o=   0
+# e_valE_o=  16|e_dstE_o=  10|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   2|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  13|M_dstM_o=  15|M_valA_o=   0|M_pc_o=  76
+# M_icode_o=   2|m_valM_o=   0|M_valE_o=   3
+# M_dstE_o=  13|M_dstM_o=  15|M_valA_o=   3|M_pc_o=  76
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   2|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  13|W_dstM_o=  15
+# W_icode_o=   2|W_valM_o=   0|W_valE_o=   2|W_dstE_o=  12|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   6|d_srcA_o=   8|d_srcB_o=  10
@@ -798,20 +798,20 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_icode_o=   2|m_stat_o=0|W_stat_o=   0
 # 
 # r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   8
+# r         11--                   1
 # r         12--                   0
 # r         13--                   0
-# r         14--                   x
+# r         14--                   4
 # r         15--                   x
 # cc is set to    4.
 # ----------------------D_valC_o<=f_valC_i;------------------
@@ -830,49 +830,1186 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=  91|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  10|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  13|W_valE_o=   3
 # 
 # Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_icode_o=   6|E_ifun_o=   1|E_dstE_o=  10|E_valA_o=   8|E_valB_o=  16|E_valC_o=   0
+# e_valE_o=   8|e_dstE_o=  10|e_cnd_o=   0
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   6|m_valM_o=   0|M_valE_o=  16
+# M_dstE_o=  10|M_dstM_o=  15|M_valA_o=   8|M_pc_o=  78
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   2|W_valM_o=   0|W_valE_o=   3|W_dstE_o=  13|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   7|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   6|E_dstM_o=  15|e_cnd_o=   0
+# M_icode_o=   6|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   8
+# r         11--                   1
+# r         12--                   2
+# r         13--                   0
+# r         14--                   4
+# r         15--                   x
+# cc is set to    0.
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=160000
+# Fetch:		F_stall_i=0
+# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 769|f_reg= 769|f_pc_o= 769
+# f_valC_o=   0|f_valP_o= 770
+# 
+# Decode:		D_stall_i=0|D_bubble_i=1
+# D_stat_o=   0
+# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o= 769|D_pc_o= 768
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  10|W_valE_o=  16
+# 
+# Execute:		E_bubble_i=1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_icode_o=   7|E_ifun_o=   1|E_dstE_o=  15|E_valA_o=  91|E_valB_o=   0|E_valC_o= 768
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   0
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   6|m_valM_o=   0|M_valE_o=   8
+# M_dstE_o=  10|M_dstM_o=  15|M_valA_o=   8|M_pc_o=  80
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   2|W_valM_o=   0|W_valE_o=  16|W_dstE_o=  10|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   7|E_dstM_o=  15|e_cnd_o=   0
+# M_icode_o=   6|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   8
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ------------D---bubble-------D_valC_o<=64'b0;------------------
+# 
+# 
+# Time=170000
+# Fetch:		F_stall_i=0
+# f_icode_o=   6|f_ifun_o=   1|f_rA_o=   8|f_rB_o=   a
+# F_predPC_o= 770|f_reg= 770|f_pc_o=  91
+# f_valC_o=   0|f_valP_o=  93
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o=   0|D_pc_o=   0
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  10|W_valE_o=   8
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   7|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=  91|M_pc_o=  82
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   6|W_valM_o=   0|W_valE_o=   8|W_dstE_o=  10|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   7|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                  16
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=180000
+# Fetch:		F_stall_i=0
+# f_icode_o=   7|f_ifun_o=   4|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o=  93|f_reg=  93|f_pc_o=  93
+# f_valC_o= 768|f_valP_o= 102
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   6|D_ifun_o=   1|D_rA_o=   8|D_rB_o=  10
+# D_valC_o=   0|D_valP_o=  93|D_pc_o=  91
+# d_valA_o=   8|d_valB_o=   8|d_dstE_o=  10|d_dstM_o=  15|d_srcA_o=   8|d_srcB_o=  10
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   6|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   6|d_srcA_o=   8|d_srcB_o=  10
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   8
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=190000
+# Fetch:		F_stall_i=0
+# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 768|f_reg= 768|f_pc_o= 768
+# f_valC_o=   0|f_valP_o= 769
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   7|D_ifun_o=   4|D_rA_o=  15|D_rB_o=  15
+# D_valC_o= 768|D_valP_o= 102|D_pc_o=  93
+# d_valA_o= 102|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_icode_o=   6|E_ifun_o=   1|E_dstE_o=  10|E_valA_o=   8|E_valB_o=   8|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  10|e_cnd_o=   0
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   7|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   7|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   6|E_dstM_o=  15|e_cnd_o=   0
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   8
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# cc is set to    0.
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=200000
+# Fetch:		F_stall_i=0
+# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 769|f_reg= 769|f_pc_o= 769
+# f_valC_o=   0|f_valP_o= 770
+# 
+# Decode:		D_stall_i=0|D_bubble_i=1
+# D_stat_o=   0
+# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o= 769|D_pc_o= 768
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=1
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   6|E_ifun_o=   1|E_dstE_o=  10|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  10|e_cnd_o=   1
+# E_icode_o=   7|E_ifun_o=   4|E_dstE_o=  15|E_valA_o= 102|E_valB_o=   0|E_valC_o= 768
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   0
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
 # M_icode_o=   6|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  10|M_dstM_o=  15|M_valA_o=   0|M_pc_o=  78
+# M_dstE_o=  10|M_dstM_o=  15|M_valA_o=   8|M_pc_o=  91
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   2|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  10|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   7|E_dstM_o=  15|e_cnd_o=   0
+# M_icode_o=   6|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   8
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ------------D---bubble-------D_valC_o<=64'b0;------------------
+# 
+# 
+# Time=210000
+# Fetch:		F_stall_i=0
+# f_icode_o=   6|f_ifun_o=   3|f_rA_o=   c|f_rB_o=   2
+# F_predPC_o= 770|f_reg= 770|f_pc_o= 102
+# f_valC_o=   0|f_valP_o= 104
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o=   0|D_pc_o=   0
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  10|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   7|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o= 102|M_pc_o=  93
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  10|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   7|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   8
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=220000
+# Fetch:		F_stall_i=0
+# f_icode_o=   7|f_ifun_o=   4|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 104|f_reg= 104|f_pc_o= 104
+# f_valC_o= 768|f_valP_o= 113
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   6|D_ifun_o=   3|D_rA_o=  12|D_rB_o=   2
+# D_valC_o=   0|D_valP_o= 104|D_pc_o= 102
+# d_valA_o=   2|d_valB_o=   2|d_dstE_o=   2|d_dstM_o=  15|d_srcA_o=  12|d_srcB_o=   2
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   6|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   6|d_srcA_o=  12|d_srcB_o=   2
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=230000
+# Fetch:		F_stall_i=0
+# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 768|f_reg= 768|f_pc_o= 768
+# f_valC_o=   0|f_valP_o= 769
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   7|D_ifun_o=   4|D_rA_o=  15|D_rB_o=  15
+# D_valC_o= 768|D_valP_o= 113|D_pc_o= 104
+# d_valA_o= 113|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   6|E_ifun_o=   3|E_dstE_o=   2|E_valA_o=   2|E_valB_o=   2|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=   2|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   7|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   7|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   6|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   6|m_stat_o=0|W_stat_o=   0
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
 # r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # cc is set to    4.
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=160000
+# Time=240000
+# Fetch:		F_stall_i=0
+# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 769|f_reg= 769|f_pc_o= 769
+# f_valC_o=   0|f_valP_o= 770
+# 
+# Decode:		D_stall_i=0|D_bubble_i=1
+# D_stat_o=   0
+# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o= 769|D_pc_o= 768
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   7|E_ifun_o=   4|E_dstE_o=  15|E_valA_o= 113|E_valB_o=   0|E_valC_o= 768
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   0
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   6|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=   2|M_dstM_o=  15|M_valA_o=   2|M_pc_o= 102
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   7|E_dstM_o=  15|e_cnd_o=   0
+# M_icode_o=   6|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ------------D---bubble-------D_valC_o<=64'b0;------------------
+# 
+# 
+# Time=250000
+# Fetch:		F_stall_i=0
+# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 770|f_reg= 770|f_pc_o= 113
+# f_valC_o=   0|f_valP_o= 114
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o=   0|D_pc_o=   0
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   2|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   7|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o= 113|M_pc_o= 104
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=   2|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   7|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   2
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=260000
+# Fetch:		F_stall_i=0
+# f_icode_o=   6|f_ifun_o=   2|f_rA_o=   e|f_rB_o=   3
+# F_predPC_o= 114|f_reg= 114|f_pc_o= 114
+# f_valC_o=   0|f_valP_o= 116
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o= 114|D_pc_o= 113
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   6|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=270000
+# Fetch:		F_stall_i=0
+# f_icode_o=   7|f_ifun_o=   4|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 116|f_reg= 116|f_pc_o= 116
+# f_valC_o= 768|f_valP_o= 125
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   6|D_ifun_o=   2|D_rA_o=  14|D_rB_o=   3
+# D_valC_o=   0|D_valP_o= 116|D_pc_o= 114
+# d_valA_o=   4|d_valB_o=   3|d_dstE_o=   3|d_dstM_o=  15|d_srcA_o=  14|d_srcB_o=   3
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   7|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   6|d_srcA_o=  14|d_srcB_o=   3
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=280000
+# Fetch:		F_stall_i=0
+# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 768|f_reg= 768|f_pc_o= 768
+# f_valC_o=   0|f_valP_o= 769
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   7|D_ifun_o=   4|D_rA_o=  15|D_rB_o=  15
+# D_valC_o= 768|D_valP_o= 125|D_pc_o= 116
+# d_valA_o= 125|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   6|E_ifun_o=   2|E_dstE_o=   3|E_valA_o=   4|E_valB_o=   3|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=   3|e_cnd_o=   0
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 113
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   7|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   6|E_dstM_o=  15|e_cnd_o=   0
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# cc is set to    4.
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=290000
+# Fetch:		F_stall_i=0
+# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 769|f_reg= 769|f_pc_o= 769
+# f_valC_o=   0|f_valP_o= 770
+# 
+# Decode:		D_stall_i=0|D_bubble_i=1
+# D_stat_o=   0
+# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o= 769|D_pc_o= 768
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   7|E_ifun_o=   4|E_dstE_o=  15|E_valA_o= 125|E_valB_o=   0|E_valC_o= 768
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   0
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   6|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=   3|M_dstM_o=  15|M_valA_o=   4|M_pc_o= 114
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   7|E_dstM_o=  15|e_cnd_o=   0
+# M_icode_o=   6|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ------------D---bubble-------D_valC_o<=64'b0;------------------
+# 
+# 
+# Time=300000
+# Fetch:		F_stall_i=0
+# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 770|f_reg= 770|f_pc_o= 125
+# f_valC_o=   0|f_valP_o= 126
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o=   0|D_pc_o=   0
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   3|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   7|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o= 125|M_pc_o= 116
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=   3|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   7|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   3
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=310000
+# Fetch:		F_stall_i=0
+# f_icode_o=   a|f_ifun_o=   0|f_rA_o=   c|f_rB_o=   f
+# F_predPC_o= 126|f_reg= 126|f_pc_o= 126
+# f_valC_o=   0|f_valP_o= 128
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o= 126|D_pc_o= 125
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   6|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   0
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=320000
+# Fetch:		F_stall_i=0
+# f_icode_o=   b|f_ifun_o=   0|f_rA_o=   0|f_rB_o=   f
+# F_predPC_o= 128|f_reg= 128|f_pc_o= 128
+# f_valC_o=   0|f_valP_o= 130
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=  10|D_ifun_o=   0|D_rA_o=  12|D_rB_o=  15
+# D_valC_o=   0|D_valP_o= 128|D_pc_o= 126
+# d_valA_o=   2|d_valB_o= 144|d_dstE_o=   4|d_dstM_o=  15|d_srcA_o=  12|d_srcB_o=   4
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   7|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=  10|d_srcA_o=  12|d_srcB_o=   4
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   0
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=330000
+# Fetch:		F_stall_i=0
+# f_icode_o=   6|f_ifun_o=   3|f_rA_o=   c|f_rB_o=   0
+# F_predPC_o= 130|f_reg= 130|f_pc_o= 130
+# f_valC_o=   0|f_valP_o= 132
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=  11|D_ifun_o=   0|D_rA_o=   0|D_rB_o=  15
+# D_valC_o=   0|D_valP_o= 130|D_pc_o= 128
+# d_valA_o= 136|d_valB_o=   0|d_dstE_o=   4|d_dstM_o=   0|d_srcA_o=   4|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=  10|E_ifun_o=   0|E_dstE_o=   4|E_valA_o=   2|E_valB_o= 144|E_valC_o=   0
+# e_valE_o= 136|e_dstE_o=   4|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 125
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=  11|d_srcA_o=   4|d_srcB_o=  15
+# E_icode_o=  10|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   0
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=340000
+# Fetch:		F_stall_i=1
+# f_icode_o=   7|f_ifun_o=   4|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 132|f_reg= 132|f_pc_o= 132
+# f_valC_o= 768|f_valP_o= 141
+# 
+# Decode:		D_stall_i=1|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   6|D_ifun_o=   3|D_rA_o=  12|D_rB_o=   0
+# D_valC_o=   0|D_valP_o= 132|D_pc_o= 130
+# d_valA_o=   2|d_valB_o=   0|d_dstE_o=   0|d_dstM_o=  15|d_srcA_o=  12|d_srcB_o=   0
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=  11|E_ifun_o=   0|E_dstE_o=   4|E_valA_o= 136|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=   4|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=  10|m_valM_o=   0|M_valE_o= 136
+# M_dstE_o=   4|M_dstM_o=  15|M_valA_o=   2|M_pc_o= 126
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   6|d_srcA_o=  12|d_srcB_o=   0
+# E_icode_o=  11|E_dstM_o=   0|e_cnd_o=   1
+# M_icode_o=  10|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   0
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# 
+# 
+# Time=350000
+# Fetch:		F_stall_i=0
+# f_icode_o=   7|f_ifun_o=   4|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 132|f_reg= 132|f_pc_o= 132
+# f_valC_o= 768|f_valP_o= 141
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   6|D_ifun_o=   3|D_rA_o=  12|D_rB_o=   0
+# D_valC_o=   0|D_valP_o= 132|D_pc_o= 130
+# d_valA_o=   2|d_valB_o=   0|d_dstE_o=   0|d_dstM_o=  15|d_srcA_o=  12|d_srcB_o=   0
+# 
+# FORWARDING:
+# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   4|W_valE_o= 136
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=  11|m_valM_o=   0|M_valE_o=   0
+# M_dstE_o=   4|M_dstM_o=   0|M_valA_o= 136|M_pc_o= 128
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   1|W_valM_o=   0|W_valE_o= 136|W_dstE_o=   4|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   6|d_srcA_o=  12|d_srcB_o=   0
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=  11|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   0
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=360000
+# Fetch:		F_stall_i=0
+# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 768|f_reg= 768|f_pc_o= 768
+# f_valC_o=   0|f_valP_o= 769
+# 
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   7|D_ifun_o=   4|D_rA_o=  15|D_rB_o=  15
+# D_valC_o= 768|D_valP_o= 141|D_pc_o= 132
+# d_valA_o= 141|d_valB_o=  16|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# W_dstM_o=   0|W_valM_o=   0|W_dstE_o=   4|W_valE_o=   0
+# 
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   6|E_ifun_o=   3|E_dstE_o=   0|E_valA_o=   2|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   2|e_dstE_o=   0|e_cnd_o=   1
+# 
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
+# 
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=  10|W_valM_o=   0|W_valE_o=   0|W_dstE_o=   4|W_dstM_o=   0
+# 
+# controller:
+# D_icode_o=   7|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   6|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   0
+# r          4--                 136
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# cc is set to    4.
+# ----------------------D_valC_o<=f_valC_i;------------------
+# 
+# 
+# Time=370000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 769|f_reg= 769|f_pc_o= 769
@@ -885,22 +2022,22 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  10|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   7|E_ifun_o=   1|E_dstE_o=  15|E_valA_o=  91|E_valB_o=   0|E_valC_o= 768
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_icode_o=   7|E_ifun_o=   4|E_dstE_o=  15|E_valA_o= 141|E_valB_o=  16|E_valC_o= 768
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   6|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  10|M_dstM_o=  15|M_valA_o=   0|M_pc_o=  80
+# M_icode_o=   6|m_valM_o=  16|M_valE_o=   2
+# M_dstE_o=   0|M_dstM_o=  15|M_valA_o=   2|M_pc_o= 130
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   6|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  10|W_dstM_o=  15
+# W_icode_o=  11|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
@@ -908,25 +2045,25 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_icode_o=   6|m_stat_o=0|W_stat_o=   0
 # 
 # r          0--                   0
-# r          1--                   0
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=170000
+# Time=380000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 770|f_reg= 770|f_pc_o= 770
@@ -939,22 +2076,22 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=   0|W_valE_o=   2
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   7|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=  91|M_pc_o=  82
+# M_icode_o=   7|m_valM_o=  16|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o= 141|M_pc_o= 132
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   6|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   2|W_dstE_o=   0|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
@@ -962,25 +2099,25 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_icode_o=   7|m_stat_o=0|W_stat_o=   0
 # 
 # r          0--                   0
-# r          1--                   0
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=180000
+# Time=390000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 771|f_reg= 771|f_pc_o= 771
@@ -993,48 +2130,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 768
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   7|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   6|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=190000
+# Time=400000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 772|f_reg= 772|f_pc_o= 772
@@ -1047,48 +2184,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 769
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   7|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=200000
+# Time=410000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 773|f_reg= 773|f_pc_o= 773
@@ -1101,48 +2238,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 770
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=210000
+# Time=420000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 774|f_reg= 774|f_pc_o= 774
@@ -1155,48 +2292,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 771
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=220000
+# Time=430000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 775|f_reg= 775|f_pc_o= 775
@@ -1209,48 +2346,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 772
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=230000
+# Time=440000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 776|f_reg= 776|f_pc_o= 776
@@ -1263,48 +2400,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 773
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=240000
+# Time=450000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 777|f_reg= 777|f_pc_o= 777
@@ -1317,48 +2454,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 774
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=250000
+# Time=460000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 778|f_reg= 778|f_pc_o= 778
@@ -1371,48 +2508,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 775
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=260000
+# Time=470000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 779|f_reg= 779|f_pc_o= 779
@@ -1425,48 +2562,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 776
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=270000
+# Time=480000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 780|f_reg= 780|f_pc_o= 780
@@ -1479,48 +2616,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 777
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=280000
+# Time=490000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 781|f_reg= 781|f_pc_o= 781
@@ -1533,48 +2670,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 778
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=290000
+# Time=500000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 782|f_reg= 782|f_pc_o= 782
@@ -1587,48 +2724,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 779
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=300000
+# Time=510000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 783|f_reg= 783|f_pc_o= 783
@@ -1641,48 +2778,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 780
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=310000
+# Time=520000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 784|f_reg= 784|f_pc_o= 784
@@ -1695,48 +2832,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 781
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=320000
+# Time=530000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 785|f_reg= 785|f_pc_o= 785
@@ -1749,48 +2886,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 782
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=330000
+# Time=540000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 786|f_reg= 786|f_pc_o= 786
@@ -1803,48 +2940,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 783
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=340000
+# Time=550000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 787|f_reg= 787|f_pc_o= 787
@@ -1857,48 +2994,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 784
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=350000
+# Time=560000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 788|f_reg= 788|f_pc_o= 788
@@ -1911,48 +3048,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 785
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=360000
+# Time=570000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 789|f_reg= 789|f_pc_o= 789
@@ -1965,48 +3102,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 786
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=370000
+# Time=580000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 790|f_reg= 790|f_pc_o= 790
@@ -2019,48 +3156,48 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 787
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # 
 # 
-# Time=380000
+# Time=590000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
 # F_predPC_o= 791|f_reg= 791|f_pc_o= 791
@@ -2073,1177 +3210,43 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
+# W_dstM_o=  15|W_valM_o=  16|W_dstE_o=  15|W_valE_o=   0
 # 
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=   1|m_valM_o=  16|M_valE_o=   0
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 788
 # 
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=  16|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   0
+# r          0--                   2
+# r          1--                   1
 # r          2--                   0
 # r          3--                   0
 # r          4--                   0
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
-# r          8--                   0
-# r          9--                   0
+# r          8--                   8
+# r          9--                  33
 # r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=390000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 792|f_reg= 792|f_pc_o= 792
-# f_valC_o=   0|f_valP_o= 793
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 792|D_pc_o= 791
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 789
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=400000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 793|f_reg= 793|f_pc_o= 793
-# f_valC_o=   0|f_valP_o= 794
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 793|D_pc_o= 792
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 790
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=410000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 794|f_reg= 794|f_pc_o= 794
-# f_valC_o=   0|f_valP_o= 795
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 794|D_pc_o= 793
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 791
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=420000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 795|f_reg= 795|f_pc_o= 795
-# f_valC_o=   0|f_valP_o= 796
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 795|D_pc_o= 794
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 792
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=430000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 796|f_reg= 796|f_pc_o= 796
-# f_valC_o=   0|f_valP_o= 797
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 796|D_pc_o= 795
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 793
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=440000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 797|f_reg= 797|f_pc_o= 797
-# f_valC_o=   0|f_valP_o= 798
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 797|D_pc_o= 796
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 794
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=450000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 798|f_reg= 798|f_pc_o= 798
-# f_valC_o=   0|f_valP_o= 799
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 798|D_pc_o= 797
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 795
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=460000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 799|f_reg= 799|f_pc_o= 799
-# f_valC_o=   0|f_valP_o= 800
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 799|D_pc_o= 798
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 796
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=470000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 800|f_reg= 800|f_pc_o= 800
-# f_valC_o=   0|f_valP_o= 801
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 800|D_pc_o= 799
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 797
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=480000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 801|f_reg= 801|f_pc_o= 801
-# f_valC_o=   0|f_valP_o= 802
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 801|D_pc_o= 800
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 798
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=490000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 802|f_reg= 802|f_pc_o= 802
-# f_valC_o=   0|f_valP_o= 803
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 802|D_pc_o= 801
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 799
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=500000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 803|f_reg= 803|f_pc_o= 803
-# f_valC_o=   0|f_valP_o= 804
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 803|D_pc_o= 802
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 800
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=510000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 804|f_reg= 804|f_pc_o= 804
-# f_valC_o=   0|f_valP_o= 805
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 804|D_pc_o= 803
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 801
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=520000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 805|f_reg= 805|f_pc_o= 805
-# f_valC_o=   0|f_valP_o= 806
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 805|D_pc_o= 804
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 802
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=530000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 806|f_reg= 806|f_pc_o= 806
-# f_valC_o=   0|f_valP_o= 807
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 806|D_pc_o= 805
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 803
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=540000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 807|f_reg= 807|f_pc_o= 807
-# f_valC_o=   0|f_valP_o= 808
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 807|D_pc_o= 806
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 804
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=550000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 808|f_reg= 808|f_pc_o= 808
-# f_valC_o=   0|f_valP_o= 809
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 808|D_pc_o= 807
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 805
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=560000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 809|f_reg= 809|f_pc_o= 809
-# f_valC_o=   0|f_valP_o= 810
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 809|D_pc_o= 808
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 806
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=570000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 810|f_reg= 810|f_pc_o= 810
-# f_valC_o=   0|f_valP_o= 811
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 810|D_pc_o= 809
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 807
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=580000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 811|f_reg= 811|f_pc_o= 811
-# f_valC_o=   0|f_valP_o= 812
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 811|D_pc_o= 810
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 808
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# 
-# 
-# Time=590000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 812|f_reg= 812|f_pc_o= 812
-# f_valC_o=   0|f_valP_o= 813
-# 
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 812|D_pc_o= 811
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   0|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 809
-# 
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
-# r          0--                   0
-# r          1--                   0
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   0
-# r          9--                   0
-# r         10--                   0
-# r         11--                   0
-# r         12--                   0
-# r         13--                   0
-# r         14--                   x
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
 # ** Note: $finish    : test_writeback.v(53)

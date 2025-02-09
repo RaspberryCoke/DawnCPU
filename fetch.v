@@ -154,7 +154,7 @@ initial begin
     // 30 fe 21 00 00 00 00 00 00 00
     instr_mem[60]=8'H30;
     instr_mem[61]=8'HFE;
-    instr_mem[62]=8'H21;
+    instr_mem[62]=8'H04;
     instr_mem[63]=8'H00;
     instr_mem[64]=8'H00;
     instr_mem[65]=8'H00;
