@@ -51,7 +51,7 @@ initial begin
 end
 
 initial begin
-    #600 $finish;
+    #1000 $finish;
 end
 
 wire F_stall_i;

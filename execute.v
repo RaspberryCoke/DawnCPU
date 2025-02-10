@@ -56,6 +56,9 @@ always@(*)begin
         new_cc[2]=1;/////////////////
         new_cc[1]=0;
         new_cc[0]=0;
+    end else if(icode_i==`IHALT)begin 
+        $display("halt...");
+        $stop;
     end
     else if((~execute_stall_i) && (icode_i==`IOPQ))begin 
         new_cc[2]=(valE_o==0)?1:0;

@@ -65,7 +65,7 @@ assign stat_o=stat;//
 always@(*)begin 
     //$display($time,".fetch.v running.PC_i:%h.icode:%h.",PC_i,icode_o);
     if(icode==`IHALT)begin 
-        $display($time,".fetch.v IHALT.icode:%h.",icode);
+        $display($time,".writeback.v IHALT.icode:%h.",icode);
         $display($time,".HALT.");
         $display("");
         $display("----------------.HALT.------------------");

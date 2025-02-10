@@ -3670,5 +3670,436 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         15--                   x
 # cc is set to    4.
 # ----------------------D_valC_o<=f_valC_i;------------------
-# ** Note: $finish    : test_writeback.v(54)
-#    Time: 600 ns  Iteration: 0  Instance: /test_writeback
+# IRET
+# 
+# 
+# Time=600000
+# Fetch:		F_stall_i=0
+# f_icode_o=   9|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 298|f_reg= 298|f_pc_o= 298
+# f_valC_o=   0|f_valP_o= 299
+# 
+# IOPQ
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   6|D_ifun_o=   3|D_rA_o=   0|D_rB_o=   0
+# D_valC_o=   0|D_valP_o= 298|D_pc_o= 296
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=   0|d_dstM_o=  15|d_srcA_o=   0|d_srcB_o=   0
+# 
+# FORWARDING:
+# e_dst_i=   0|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=   0|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=   0
+#                    0
+# IOPQ
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   6|E_ifun_o=   3|E_dstE_o=   0|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=   0|e_cnd_o=   1
+# 
+# IOPQ
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   6|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=   0|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 292
+# Memory 144: 16 | 136:221.
+# 
+# IOPQ
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   6|W_valM_o=   3|W_valE_o=   0|W_dstE_o=   0|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   6|d_srcA_o=   0|d_srcB_o=   0
+# E_icode_o=   6|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   6|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   0
+# r          4--                 136
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# cc is set to    4.
+# ----------------------D_valC_o<=f_valC_i;------------------
+# IJXX
+# 
+# 
+# Time=610000
+# Fetch:		F_stall_i=1
+# f_icode_o=   7|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 299|f_reg= 299|f_pc_o= 299
+# f_valC_o= 768|f_valP_o= 308
+# 
+# IRET
+# Decode:		D_stall_i=0|D_bubble_i=1
+# D_stat_o=   0
+# D_icode_o=   9|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o= 299|D_pc_o= 298
+# d_valA_o= 136|d_valB_o= 136|d_dstE_o=   4|d_dstM_o=  15|d_srcA_o=   4|d_srcB_o=   4
+# 
+# FORWARDING:
+# e_dst_i=   0|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=   0|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=   0
+#                    0
+# IOPQ
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   6|E_ifun_o=   3|E_dstE_o=   0|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=   0|e_cnd_o=   1
+# 
+# IOPQ
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   6|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=   0|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 294
+# Memory 144: 16 | 136:221.
+# 
+# IOPQ
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   6|W_valM_o=   3|W_valE_o=   0|W_dstE_o=   0|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   9|d_srcA_o=   4|d_srcB_o=   4
+# E_icode_o=   6|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   6|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   0
+# r          4--                 136
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# cc is set to    4.
+# ------------D---bubble-------D_valC_o<=64'b0;------------------
+# IJXX
+# 
+# 
+# Time=620000
+# Fetch:		F_stall_i=1
+# f_icode_o=   7|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 299|f_reg= 299|f_pc_o= 299
+# f_valC_o= 768|f_valP_o= 308
+# 
+# INOP
+# Decode:		D_stall_i=0|D_bubble_i=1
+# D_stat_o=   0
+# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o=   0|D_pc_o=   0
+# d_valA_o=   3|d_valB_o=   3|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# e_dst_i=   4|e_vale_i= 144|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=   0|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=   0
+#                    0
+# IRET
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   9|E_ifun_o=   0|E_dstE_o=   4|E_valA_o= 136|E_valB_o= 136|E_valC_o=   0
+# e_valE_o= 144|e_dstE_o=   4|e_cnd_o=   1
+# 
+# IOPQ
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   6|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=   0|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 296
+# Memory 144: 16 | 136:221.
+# 
+# IOPQ
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   6|W_valM_o=   3|W_valE_o=   0|W_dstE_o=   0|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   9|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   6|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   0
+# r          4--                 136
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ------------D---bubble-------D_valC_o<=64'b0;------------------
+# IJXX
+# 
+# 
+# Time=630000
+# Fetch:		F_stall_i=1
+# f_icode_o=   7|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 299|f_reg= 299|f_pc_o= 299
+# f_valC_o= 768|f_valP_o= 308
+# 
+# INOP
+# Decode:		D_stall_i=0|D_bubble_i=1
+# D_stat_o=   0
+# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o=   0|D_pc_o=   0
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i= 221|M_dstE_i=   4|M_valE_i= 144
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=   0
+#                    0
+# INOP
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   3|E_valB_o=   3|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# IRET
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   9|m_valM_o= 221|M_valE_o= 144
+# M_dstE_o=   4|M_dstM_o=  15|M_valA_o= 136|M_pc_o= 298
+# Memory 144: 16 | 136:221.
+# 
+# IOPQ
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   6|W_valM_o=   3|W_valE_o=   0|W_dstE_o=   0|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   9|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   0
+# r          4--                 136
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ------------D---bubble-------D_valC_o<=64'b0;------------------
+# IJXX
+# 
+# 
+# Time=640000
+# Fetch:		F_stall_i=0
+# f_icode_o=   7|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 299|f_reg= 299|f_pc_o= 221
+# f_valC_o= 256|f_valP_o= 230
+# 
+# INOP
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o=   0|D_pc_o=   0
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i= 221|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o= 221|W_valE_o=   4
+#                  144
+# INOP
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# INOP
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o= 221|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   3|M_pc_o=   0
+# Memory 144: 16 | 136:221.
+# 
+# IRET
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   9|W_valM_o= 221|W_valE_o= 144|W_dstE_o=   4|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   0
+# r          4--                 136
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# IHALT
+# 
+# 
+# Time=650000
+# Fetch:		F_stall_i=0
+# f_icode_o=   0|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 256|f_reg= 256|f_pc_o= 256
+# f_valC_o=   0|f_valP_o= 257
+# 
+# IJXX
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   7|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o= 256|D_valP_o= 230|D_pc_o= 221
+# d_valA_o= 230|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i= 221|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o= 221|W_valE_o=  15
+#                    0
+# INOP
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# INOP
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o= 221|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
+# Memory 144: 16 | 136:221.
+# 
+# INOP
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   1|W_valM_o= 221|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   7|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   0
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# IHALT
+# 
+# 
+# Time=660000
+# Fetch:		F_stall_i=0
+# f_icode_o=   0|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 257|f_reg= 257|f_pc_o= 257
+# f_valC_o=   0|f_valP_o= 258
+# 
+# IHALT
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   1
+# D_icode_o=   0|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o=   0|D_valP_o= 257|D_pc_o= 256
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# 
+# FORWARDING:
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i= 221|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o= 221|W_valE_o=  15
+#                    0
+# IJXX
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   7|E_ifun_o=   0|E_dstE_o=  15|E_valA_o= 230|E_valB_o=   0|E_valC_o= 256
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# INOP
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o= 221|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
+# Memory 144: 16 | 136:221.
+# 
+# INOP
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   1|W_valM_o= 221|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   0|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   7|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   0
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# halt...
+# Break in Module execute at execute.v line 61
+# Stopped at execute.v line 61 
+#  exit 
