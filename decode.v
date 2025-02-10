@@ -79,10 +79,10 @@ always@(posedge clk_i)begin
         end
     end else if(!decode_stall_i) begin 
         if(W_dstE_i!=`RNONE)begin 
-            regfile[W_dstE_i]=W_valE_i;
+            regfile[W_dstE_i]<=W_valE_i;
         end 
         if(W_dstM_i!=`RNONE)begin 
-            regfile[W_dstM_i]=W_valM_i;
+            regfile[W_dstM_i]<=W_valM_i;
         end
     end
 end
