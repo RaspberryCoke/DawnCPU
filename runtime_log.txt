@@ -75,8 +75,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -135,8 +136,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=   2|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -195,8 +197,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=   1|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=   2|e_vale_i=   2|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # IIRMOVQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -255,8 +258,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=   3|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=   1|e_vale_i=   1|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=   2|M_valE_i=   2
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # IIRMOVQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -315,8 +319,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=   4|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   2|W_valE_o=   2
-# 
+# e_dst_i=   3|e_vale_i=   3|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=   1|M_valE_i=   1
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=   2
+#                    2
 # IIRMOVQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -331,10 +336,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=   1|M_dstM_o=  15|M_valA_o=   0|M_pc_o=  10
 # Memory 144: 16 | 136: 16.
 # 
-# INOP
+# IIRMOVQ
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   2|W_dstE_o=   2|W_dstM_o=  15
+# W_icode_o=   3|W_valM_o=   0|W_valE_o=   2|W_dstE_o=   2|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   3|d_srcA_o=  15|d_srcB_o=  15
@@ -375,8 +380,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=   8|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   1|W_valE_o=   1
-# 
+# e_dst_i=   4|e_vale_i= 144|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=   3|M_valE_i=   3
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=   1
+#                    1
 # IIRMOVQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -435,8 +441,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=   9|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   3|W_valE_o=   3
-# 
+# e_dst_i=   8|e_vale_i=   8|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=   4|M_valE_i= 144
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=   3
+#                    3
 # IIRMOVQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -495,8 +502,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  14|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   4|W_valE_o= 144
-# 
+# e_dst_i=   9|e_vale_i=  33|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=   8|M_valE_i=   8
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=   4
+#                  144
 # IIRMOVQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -555,8 +563,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   8|d_valB_o=   0|d_dstE_o=  10|d_dstM_o=  15|d_srcA_o=   8|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   8|W_valE_o=   8
-# 
+# e_dst_i=  14|e_vale_i=   4|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=   9|M_valE_i=  33
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=   8
+#                    8
 # IIRMOVQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -615,8 +624,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   1|d_valB_o=   0|d_dstE_o=  11|d_dstM_o=  15|d_srcA_o=   1|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   9|W_valE_o=  33
-# 
+# e_dst_i=  10|e_vale_i=   8|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  14|M_valE_i=   4
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=   9
+#                   33
 # ICMOVQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -675,8 +685,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   2|d_valB_o=   0|d_dstE_o=  12|d_dstM_o=  15|d_srcA_o=   2|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  14|W_valE_o=   4
-# 
+# e_dst_i=  11|e_vale_i=   1|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  10|M_valE_i=   8
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  14
+#                    4
 # ICMOVQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -735,8 +746,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   3|d_valB_o=   0|d_dstE_o=  13|d_dstM_o=  15|d_srcA_o=   3|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  10|W_valE_o=   8
-# 
+# e_dst_i=  12|e_vale_i=   2|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  11|M_valE_i=   1
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  10
+#                    8
 # ICMOVQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -751,10 +763,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  11|M_dstM_o=  15|M_valA_o=   1|M_pc_o=  72
 # Memory 144: 16 | 136: 16.
 # 
-# IIRMOVQ
+# ICMOVQ
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   3|W_valM_o=   0|W_valE_o=   8|W_dstE_o=  10|W_dstM_o=  15
+# W_icode_o=   2|W_valM_o=   0|W_valE_o=   8|W_dstE_o=  10|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   2|d_srcA_o=   3|d_srcB_o=  15
@@ -795,8 +807,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   8|d_valB_o=   8|d_dstE_o=  10|d_dstM_o=  15|d_srcA_o=   8|d_srcB_o=  10
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  11|W_valE_o=   1
-# 
+# e_dst_i=  13|e_vale_i=   3|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  12|M_valE_i=   2
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  11
+#                    1
 # ICMOVQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -855,8 +868,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   8|d_valB_o=  16|d_dstE_o=  10|d_dstM_o=  15|d_srcA_o=   8|d_srcB_o=  10
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  12|W_valE_o=   2
-# 
+# e_dst_i=  10|e_vale_i=  16|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  13|M_valE_i=   3
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  12
+#                    2
 # IOPQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -916,8 +930,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=  91|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  13|W_valE_o=   3
-# 
+# e_dst_i=  10|e_vale_i=   8|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  10|M_valE_i=  16
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  13
+#                    3
 # IOPQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
@@ -977,8 +992,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  10|W_valE_o=  16
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  10|M_valE_i=   8
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  10
+#                   16
 # IJXX
 # Execute:		E_bubble_i=1
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
@@ -993,10 +1009,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  10|M_dstM_o=  15|M_valA_o=   8|M_pc_o=  80
 # Memory 144: 16 | 136: 16.
 # 
-# ICMOVQ
+# IOPQ
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   2|W_valM_o=   0|W_valE_o=  16|W_dstE_o=  10|W_dstM_o=  15
+# W_icode_o=   6|W_valM_o=   0|W_valE_o=  16|W_dstE_o=  10|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
@@ -1037,8 +1053,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  10|W_valE_o=   8
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  10
+#                    8
 # INOP
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
@@ -1097,8 +1114,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   8|d_valB_o=   8|d_dstE_o=  10|d_dstM_o=  15|d_srcA_o=   8|d_srcB_o=  10
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
@@ -1113,10 +1131,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136: 16.
 # 
-# IOPQ
+# IJXX
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   6|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   7|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   6|d_srcA_o=   8|d_srcB_o=  10
@@ -1157,8 +1175,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o= 102|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  10|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # IOPQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
@@ -1173,10 +1192,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136: 16.
 # 
-# IJXX
+# INOP
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   7|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   7|d_srcA_o=  15|d_srcB_o=  15
@@ -1218,8 +1237,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  10|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # IJXX
 # Execute:		E_bubble_i=1
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -1278,8 +1298,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  10|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  10
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -1294,10 +1315,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o= 102|M_pc_o=  93
 # Memory 144: 16 | 136: 16.
 # 
-# INOP
+# IOPQ
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  10|W_dstM_o=  15
+# W_icode_o=   6|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  10|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
@@ -1338,8 +1359,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   2|d_valB_o=   2|d_dstE_o=   2|d_dstM_o=  15|d_srcA_o=  12|d_srcB_o=   2
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -1354,10 +1376,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136: 16.
 # 
-# IOPQ
+# IJXX
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   6|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   7|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   6|d_srcA_o=  12|d_srcB_o=   2
@@ -1398,8 +1420,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o= 113|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=   2|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # IOPQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -1414,10 +1437,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136: 16.
 # 
-# IJXX
+# INOP
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   7|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   7|d_srcA_o=  15|d_srcB_o=  15
@@ -1459,8 +1482,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=   2|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # IJXX
 # Execute:		E_bubble_i=1
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -1519,8 +1543,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   2|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=   2
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -1535,10 +1560,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o= 113|M_pc_o= 104
 # Memory 144: 16 | 136: 16.
 # 
-# INOP
+# IOPQ
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=   2|W_dstM_o=  15
+# W_icode_o=   6|W_valM_o=   0|W_valE_o=   0|W_dstE_o=   2|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
@@ -1579,8 +1604,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -1595,10 +1621,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136: 16.
 # 
-# IOPQ
+# IJXX
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   6|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   7|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
@@ -1639,8 +1665,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   4|d_valB_o=   3|d_dstE_o=   3|d_dstM_o=  15|d_srcA_o=  14|d_srcB_o=   3
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -1655,10 +1682,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136: 16.
 # 
-# IJXX
+# INOP
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   7|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   6|d_srcA_o=  14|d_srcB_o=   3
@@ -1699,8 +1726,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o= 125|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=   3|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # IOPQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -1760,8 +1788,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=   3|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # IJXX
 # Execute:		E_bubble_i=1
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -1820,8 +1849,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   3|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=   3
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -1836,10 +1866,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o= 125|M_pc_o= 116
 # Memory 144: 16 | 136: 16.
 # 
-# INOP
+# IOPQ
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=   3|W_dstM_o=  15
+# W_icode_o=   6|W_valM_o=   0|W_valE_o=   0|W_dstE_o=   3|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
@@ -1880,8 +1910,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -1896,10 +1927,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136: 16.
 # 
-# IOPQ
+# IJXX
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   6|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   7|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
@@ -1940,8 +1971,9 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   2|d_valB_o= 144|d_dstE_o=   4|d_dstM_o=  15|d_srcA_o=  12|d_srcB_o=   4
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -1956,10 +1988,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136: 16.
 # 
-# IJXX
+# INOP
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   7|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=  10|d_srcA_o=  12|d_srcB_o=   4
@@ -1997,11 +2029,12 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # D_stat_o=   0
 # D_icode_o=  11|D_ifun_o=   0|D_rA_o=   0|D_rB_o=  15
 # D_valC_o=   0|D_valP_o= 130|D_pc_o= 128
-# d_valA_o= 136|d_valB_o=   0|d_dstE_o=   4|d_dstM_o=   0|d_srcA_o=   4|d_srcB_o=  15
+# d_valA_o= 136|d_valB_o= 136|d_dstE_o=   4|d_dstM_o=   0|d_srcA_o=   4|d_srcB_o=   4
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=   4|e_vale_i= 136|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # IPUSHQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -2022,7 +2055,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # W_icode_o=   1|W_valM_o=   0|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
-# D_icode_o=  11|d_srcA_o=   4|d_srcB_o=  15
+# D_icode_o=  11|d_srcA_o=   4|d_srcB_o=   4
 # E_icode_o=  10|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
@@ -2043,6 +2076,8 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
+# ----------------PUSH--------begin-----------------------------------------------
+# ----------------PUSH--------drams[valE=                 136]<=valA=                   2;------------------------------------------------------
 # IJXX
 # 
 # 
@@ -2060,13 +2095,14 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o=   2|d_valB_o=   0|d_dstE_o=   0|d_dstM_o=  15|d_srcA_o=  12|d_srcB_o=   0
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=   4|e_vale_i= 144|M_dstM_i=  15|m_valM_i=   0|M_dstE_i=   4|M_valE_i= 136
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=  15
+#                    0
 # IPOPQ
 # Execute:		E_bubble_i=1
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=  11|E_ifun_o=   0|E_dstE_o=   4|E_valA_o= 136|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=   4|e_cnd_o=   1
+# E_icode_o=  11|E_ifun_o=   0|E_dstE_o=   4|E_valA_o= 136|E_valB_o= 136|E_valC_o=   0
+# e_valE_o= 144|e_dstE_o=   4|e_cnd_o=   1
 # 
 # IPUSHQ
 # Memory:		M_bubble_i=0
@@ -2074,7 +2110,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # m_stat_o=0
 # M_icode_o=  10|m_valM_o=   0|M_valE_o= 136
 # M_dstE_o=   4|M_dstM_o=  15|M_valA_o=   2|M_pc_o= 126
-# Memory 144: 16 | 136: 16.
+# Memory 144: 16 | 136:  2.
 # 
 # INOP
 # WriteBack:		W_stall_i=0
@@ -2102,8 +2138,8 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         13--                   3
 # r         14--                   4
 # r         15--                   x
-# ----------------PUSH--------begin-----------------------------------------------
-# ----------------PUSH--------drams[valE=                 136]<=valA=                   2;------------------------------------------------------
+# ----------------POP--------begin-----------------------------------------------
+# ----------------POP-----valM=   2=drams[valA=                 136];------------------------------------------------------
 # IJXX
 # 
 # 
@@ -2118,11 +2154,12 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # D_stat_o=   0
 # D_icode_o=   6|D_ifun_o=   3|D_rA_o=  12|D_rB_o=   0
 # D_valC_o=   0|D_valP_o= 132|D_pc_o= 130
-# d_valA_o=   2|d_valB_o=   0|d_dstE_o=   0|d_dstM_o=  15|d_srcA_o=  12|d_srcB_o=   0
+# d_valA_o=   2|d_valB_o=   2|d_dstE_o=   0|d_dstM_o=  15|d_srcA_o=  12|d_srcB_o=   0
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   0|W_dstE_o=   4|W_valE_o= 136
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=   0|m_valM_i=   2|M_dstE_i=   4|M_valE_i= 144
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   0|W_valE_o=   4
+#                  136
 # INOP
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
@@ -2133,14 +2170,14 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=  11|m_valM_o=   0|M_valE_o=   0
+# M_icode_o=  11|m_valM_o=   2|M_valE_o= 144
 # M_dstE_o=   4|M_dstM_o=   0|M_valA_o= 136|M_pc_o= 128
 # Memory 144: 16 | 136:  2.
 # 
-# INOP
+# IPUSHQ
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   0|W_valE_o= 136|W_dstE_o=   4|W_dstM_o=  15
+# W_icode_o=  10|W_valM_o=   0|W_valE_o= 136|W_dstE_o=   4|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   6|d_srcA_o=  12|d_srcB_o=   0
@@ -2181,13 +2218,14 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # d_valA_o= 141|d_valB_o=   2|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=   0|W_valM_o=   0|W_dstE_o=   4|W_valE_o=   0
-# 
+# e_dst_i=   0|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   2|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=   0|W_valM_o=   0|W_dstE_o=   2|W_valE_o=   4
+#                  144
 # IOPQ
 # Execute:		E_bubble_i=0
 # E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
-# E_icode_o=   6|E_ifun_o=   3|E_dstE_o=   0|E_valA_o=   2|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   2|e_dstE_o=   0|e_cnd_o=   1
+# E_icode_o=   6|E_ifun_o=   3|E_dstE_o=   0|E_valA_o=   2|E_valB_o=   2|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=   0|e_cnd_o=   1
 # 
 # INOP
 # Memory:		M_bubble_i=0
@@ -2197,10 +2235,10 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136:  2.
 # 
-# IPUSHQ
+# IPOPQ
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=  10|W_valM_o=   0|W_valE_o=   0|W_dstE_o=   4|W_dstM_o=   0
+# W_icode_o=  11|W_valM_o=   2|W_valE_o= 144|W_dstE_o=   4|W_dstM_o=   0
 # 
 # controller:
 # D_icode_o=   7|d_srcA_o=  15|d_srcB_o=  15
@@ -2235,44 +2273,45 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # f_valC_o=   0|f_valP_o= 770
 # 
 # INOP
-# Decode:		D_stall_i=0|D_bubble_i=0
+# Decode:		D_stall_i=0|D_bubble_i=1
 # D_stat_o=   0
 # D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
 # D_valC_o=   0|D_valP_o= 769|D_pc_o= 768
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   2|M_dstE_i=   0|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   2|W_valE_o=  15
+#                    0
 # IJXX
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# Execute:		E_bubble_i=1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
 # E_icode_o=   7|E_ifun_o=   4|E_dstE_o=  15|E_valA_o= 141|E_valB_o=   2|E_valC_o= 768
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   0
 # 
 # IOPQ
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   6|m_valM_o=   2|M_valE_o=   2
+# M_icode_o=   6|m_valM_o=   2|M_valE_o=   0
 # M_dstE_o=   0|M_dstM_o=  15|M_valA_o=   2|M_pc_o= 130
 # Memory 144: 16 | 136:  2.
 # 
-# IPOPQ
+# INOP
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=  11|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   7|E_dstM_o=  15|e_cnd_o=   1
+# E_icode_o=   7|E_dstM_o=  15|e_cnd_o=   0
 # M_icode_o=   6|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
+# r          0--                   2
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -2284,29 +2323,30 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         13--                   3
 # r         14--                   4
 # r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
+# ------------D---bubble-------D_valC_o<=64'b0;------------------
 # INOP
 # 
 # 
 # Time=380000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 770|f_reg= 770|f_pc_o= 770
-# f_valC_o=   0|f_valP_o= 771
+# F_predPC_o= 770|f_reg= 770|f_pc_o= 141
+# f_valC_o=   0|f_valP_o= 142
 # 
 # INOP
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
 # D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 770|D_pc_o= 769
+# D_valC_o=   0|D_valP_o=   0|D_pc_o=   0
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=   0|W_valE_o=   2
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   2|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   2|W_valE_o=   0
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
@@ -2318,81 +2358,21 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_dstE_o=  15|M_dstM_o=  15|M_valA_o= 141|M_pc_o= 132
 # Memory 144: 16 | 136:  2.
 # 
-# INOP
+# IOPQ
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   2|W_dstE_o=   0|W_dstM_o=  15
+# W_icode_o=   6|W_valM_o=   2|W_valE_o=   0|W_dstE_o=   0|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   7|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   0
-# r          1--                   1
-# r          2--                   0
-# r          3--                   0
-# r          4--                   0
-# r          5--                   0
-# r          6--                   0
-# r          7--                   0
-# r          8--                   8
-# r          9--                  33
-# r         10--                   0
-# r         11--                   1
-# r         12--                   2
-# r         13--                   3
-# r         14--                   4
-# r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# INOP
-# 
-# 
-# Time=390000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 771|f_reg= 771|f_pc_o= 771
-# f_valC_o=   0|f_valP_o= 772
-# 
-# INOP
-# Decode:		D_stall_i=0|D_bubble_i=0
-# D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 771|D_pc_o= 770
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
-# 
-# FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
-# INOP
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# INOP
-# Memory:		M_bubble_i=0
-# M_stat_o=0
-# m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 768
-# Memory 144: 16 | 136:  2.
-# 
-# IOPQ
-# WriteBack:		W_stall_i=0
-# W_stat_o=0
-# W_icode_o=   6|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
-# 
-# controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
-# 
 # r          0--                   2
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -2405,28 +2385,29 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
-# INOP
+# IRMMOVQ
 # 
 # 
-# Time=400000
+# Time=390000
 # Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 772|f_reg= 772|f_pc_o= 772
-# f_valC_o=   0|f_valP_o= 773
+# f_icode_o=   4|f_ifun_o=   0|f_rA_o=   d|f_rB_o=   2
+# F_predPC_o= 142|f_reg= 142|f_pc_o= 142
+# f_valC_o=   8|f_valP_o= 152
 # 
 # INOP
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
 # D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 772|D_pc_o= 771
+# D_valC_o=   0|D_valP_o= 142|D_pc_o= 141
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   2|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   2|W_valE_o=  15
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
@@ -2435,7 +2416,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # M_stat_o=0
 # m_stat_o=0
 # M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 769
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136:  2.
 # 
 # IJXX
@@ -2448,11 +2429,11 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -2465,37 +2446,99 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
+# IMRMOVQ
+# 
+# 
+# Time=400000
+# Fetch:		F_stall_i=0
+# f_icode_o=   5|f_ifun_o=   0|f_rA_o=   3|f_rB_o=   2
+# F_predPC_o= 152|f_reg= 152|f_pc_o= 152
+# f_valC_o=   8|f_valP_o= 162
+# 
+# IRMMOVQ
+# Decode:		D_stall_i=0|D_bubble_i=0
+# D_stat_o=   0
+# D_icode_o=   4|D_ifun_o=   0|D_rA_o=  13|D_rB_o=   2
+# D_valC_o=   8|D_valP_o= 152|D_pc_o= 142
+# d_valA_o=   3|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  13|d_srcB_o=   2
+# 
+# FORWARDING:
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   2|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   2|W_valE_o=  15
+#                    0
 # INOP
+# Execute:		E_bubble_i=0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# 
+# INOP
+# Memory:		M_bubble_i=0
+# M_stat_o=0
+# m_stat_o=0
+# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
+# Memory 144: 16 | 136:  2.
+# 
+# INOP
+# WriteBack:		W_stall_i=0
+# W_stat_o=0
+# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# 
+# controller:
+# D_icode_o=   4|d_srcA_o=  13|d_srcB_o=   2
+# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# 
+# r          0--                   0
+# r          1--                   1
+# r          2--                   0
+# r          3--                   0
+# r          4--                 144
+# r          5--                   0
+# r          6--                   0
+# r          7--                   0
+# r          8--                   8
+# r          9--                  33
+# r         10--                   0
+# r         11--                   1
+# r         12--                   2
+# r         13--                   3
+# r         14--                   4
+# r         15--                   x
+# ----------------------D_valC_o<=f_valC_i;------------------
+# IOPQ
 # 
 # 
 # Time=410000
 # Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 773|f_reg= 773|f_pc_o= 773
-# f_valC_o=   0|f_valP_o= 774
+# f_icode_o=   6|f_ifun_o=   3|f_rA_o=   d|f_rB_o=   3
+# F_predPC_o= 162|f_reg= 162|f_pc_o= 162
+# f_valC_o=   0|f_valP_o= 164
 # 
-# INOP
+# IMRMOVQ
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 773|D_pc_o= 772
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   5|D_ifun_o=   0|D_rA_o=   3|D_rB_o=   2
+# D_valC_o=   8|D_valP_o= 162|D_pc_o= 152
+# d_valA_o=   8|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=   3|d_srcA_o=  15|d_srcB_o=   2
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
-# INOP
+# e_dst_i=  15|e_vale_i=   8|M_dstM_i=  15|m_valM_i=   2|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   2|W_valE_o=  15
+#                    0
+# IRMMOVQ
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   4|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   3|E_valB_o=   0|E_valC_o=   8
+# e_valE_o=   8|e_dstE_o=  15|e_cnd_o=   1
 # 
 # INOP
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
 # M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 770
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 141
 # Memory 144: 16 | 136:  2.
 # 
 # INOP
@@ -2504,15 +2547,15 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# D_icode_o=   5|d_srcA_o=  15|d_srcB_o=   2
+# E_icode_o=   4|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -2525,37 +2568,38 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
-# INOP
+# IJXX
 # 
 # 
 # Time=420000
-# Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 774|f_reg= 774|f_pc_o= 774
-# f_valC_o=   0|f_valP_o= 775
+# Fetch:		F_stall_i=1
+# f_icode_o=   7|f_ifun_o=   4|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 164|f_reg= 164|f_pc_o= 164
+# f_valC_o= 768|f_valP_o= 173
 # 
-# INOP
-# Decode:		D_stall_i=0|D_bubble_i=0
+# IOPQ
+# Decode:		D_stall_i=1|D_bubble_i=0
 # D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 774|D_pc_o= 773
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   6|D_ifun_o=   3|D_rA_o=  13|D_rB_o=   3
+# D_valC_o=   0|D_valP_o= 164|D_pc_o= 162
+# d_valA_o=   3|d_valB_o=   0|d_dstE_o=   3|d_dstM_o=  15|d_srcA_o=  13|d_srcB_o=   3
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
+# e_dst_i=  15|e_vale_i=   8|M_dstM_i=  15|m_valM_i=   2|M_dstE_i=  15|M_valE_i=   8
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   2|W_valE_o=  15
+#                    0
+# IMRMOVQ
+# Execute:		E_bubble_i=1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   5|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   8|E_valB_o=   0|E_valC_o=   8
+# e_valE_o=   8|e_dstE_o=  15|e_cnd_o=   1
 # 
-# INOP
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# INOP
+# IRMMOVQ
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 771
+# M_icode_o=   4|m_valM_o=   2|M_valE_o=   8
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   3|M_pc_o= 142
 # Memory 144: 16 | 136:  2.
 # 
 # INOP
@@ -2564,15 +2608,15 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# D_icode_o=   6|d_srcA_o=  13|d_srcB_o=   3
+# E_icode_o=   5|E_dstM_o=   3|e_cnd_o=   1
+# M_icode_o=   4|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -2584,55 +2628,55 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         13--                   3
 # r         14--                   4
 # r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# INOP
+# IJXX
 # 
 # 
 # Time=430000
 # Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 775|f_reg= 775|f_pc_o= 775
-# f_valC_o=   0|f_valP_o= 776
+# f_icode_o=   7|f_ifun_o=   4|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 164|f_reg= 164|f_pc_o= 164
+# f_valC_o= 768|f_valP_o= 173
 # 
-# INOP
+# IOPQ
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 775|D_pc_o= 774
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   6|D_ifun_o=   3|D_rA_o=  13|D_rB_o=   3
+# D_valC_o=   0|D_valP_o= 164|D_pc_o= 162
+# d_valA_o=   3|d_valB_o=   3|d_dstE_o=   3|d_dstM_o=  15|d_srcA_o=  13|d_srcB_o=   3
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=   3|m_valM_i=   3|M_dstE_i=  15|M_valE_i=   8
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   2|W_valE_o=  15
+#                    8
 # INOP
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
-# INOP
+# IMRMOVQ
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 772
+# M_icode_o=   5|m_valM_o=   3|M_valE_o=   8
+# M_dstE_o=  15|M_dstM_o=   3|M_valA_o=   8|M_pc_o= 152
 # Memory 144: 16 | 136:  2.
 # 
-# INOP
+# IRMMOVQ
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   4|W_valM_o=   2|W_valE_o=   8|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   6|d_srcA_o=  13|d_srcB_o=   3
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# M_icode_o=   5|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -2651,48 +2695,49 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # Time=440000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 776|f_reg= 776|f_pc_o= 776
-# f_valC_o=   0|f_valP_o= 777
+# F_predPC_o= 768|f_reg= 768|f_pc_o= 768
+# f_valC_o=   0|f_valP_o= 769
 # 
-# INOP
+# IJXX
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 776|D_pc_o= 775
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   7|D_ifun_o=   4|D_rA_o=  15|D_rB_o=  15
+# D_valC_o= 768|D_valP_o= 173|D_pc_o= 164
+# d_valA_o= 173|d_valB_o=   3|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
-# INOP
+# e_dst_i=   3|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=   3|W_valM_o=   3|W_dstE_o=   3|W_valE_o=  15
+#                    8
+# IOPQ
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   6|E_ifun_o=   3|E_dstE_o=   3|E_valA_o=   3|E_valB_o=   3|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=   3|e_cnd_o=   1
 # 
 # INOP
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 773
+# M_icode_o=   1|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136:  2.
 # 
-# INOP
+# IMRMOVQ
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   5|W_valM_o=   3|W_valE_o=   8|W_dstE_o=  15|W_dstM_o=   3
 # 
 # controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# D_icode_o=   7|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   6|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -2704,6 +2749,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         13--                   3
 # r         14--                   4
 # r         15--                   x
+# cc is set to    4.
 # ----------------------D_valC_o<=f_valC_i;------------------
 # INOP
 # 
@@ -2711,48 +2757,49 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # Time=450000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 777|f_reg= 777|f_pc_o= 777
-# f_valC_o=   0|f_valP_o= 778
+# F_predPC_o= 769|f_reg= 769|f_pc_o= 769
+# f_valC_o=   0|f_valP_o= 770
 # 
 # INOP
-# Decode:		D_stall_i=0|D_bubble_i=0
+# Decode:		D_stall_i=0|D_bubble_i=1
 # D_stat_o=   0
 # D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 777|D_pc_o= 776
+# D_valC_o=   0|D_valP_o= 769|D_pc_o= 768
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=   3|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=  15
+#                    0
+# IJXX
+# Execute:		E_bubble_i=1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   7|E_ifun_o=   4|E_dstE_o=  15|E_valA_o= 173|E_valB_o=   3|E_valC_o= 768
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   0
 # 
-# INOP
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# INOP
+# IOPQ
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 774
+# M_icode_o=   6|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=   3|M_dstM_o=  15|M_valA_o=   3|M_pc_o= 162
 # Memory 144: 16 | 136:  2.
 # 
 # INOP
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   3|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# E_icode_o=   7|E_dstM_o=  15|e_cnd_o=   0
+# M_icode_o=   6|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
-# r          3--                   0
-# r          4--                   0
+# r          3--                   3
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -2764,55 +2811,56 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         13--                   3
 # r         14--                   4
 # r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# INOP
+# ------------D---bubble-------D_valC_o<=64'b0;------------------
+# IOPQ
 # 
 # 
 # Time=460000
 # Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 778|f_reg= 778|f_pc_o= 778
-# f_valC_o=   0|f_valP_o= 779
+# f_icode_o=   6|f_ifun_o=   1|f_rA_o=   0|f_rB_o=   3
+# F_predPC_o= 770|f_reg= 770|f_pc_o= 173
+# f_valC_o=   0|f_valP_o= 175
 # 
 # INOP
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
 # D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 778|D_pc_o= 777
+# D_valC_o=   0|D_valP_o=   0|D_pc_o=   0
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=   3
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
-# INOP
+# IJXX
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 775
+# M_icode_o=   7|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o= 173|M_pc_o= 164
 # Memory 144: 16 | 136:  2.
 # 
-# INOP
+# IOPQ
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   6|W_valM_o=   3|W_valE_o=   0|W_dstE_o=   3|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# M_icode_o=   7|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
-# r          3--                   0
-# r          4--                   0
+# r          3--                   3
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -2825,28 +2873,29 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
-# INOP
+# IJXX
 # 
 # 
 # Time=470000
 # Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 779|f_reg= 779|f_pc_o= 779
-# f_valC_o=   0|f_valP_o= 780
+# f_icode_o=   7|f_ifun_o=   6|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 175|f_reg= 175|f_pc_o= 175
+# f_valC_o= 768|f_valP_o= 184
 # 
-# INOP
+# IOPQ
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 779|D_pc_o= 778
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   6|D_ifun_o=   1|D_rA_o=   0|D_rB_o=   3
+# D_valC_o=   0|D_valP_o= 175|D_pc_o= 173
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=   3|d_dstM_o=  15|d_srcA_o=   0|d_srcB_o=   3
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=  15
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
@@ -2854,25 +2903,25 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 776
+# M_icode_o=   1|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136:  2.
 # 
-# INOP
+# IJXX
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   7|W_valM_o=   3|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   6|d_srcA_o=   0|d_srcB_o=   3
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -2891,48 +2940,49 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # Time=480000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 780|f_reg= 780|f_pc_o= 780
-# f_valC_o=   0|f_valP_o= 781
+# F_predPC_o= 768|f_reg= 768|f_pc_o= 768
+# f_valC_o=   0|f_valP_o= 769
 # 
-# INOP
+# IJXX
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 780|D_pc_o= 779
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   7|D_ifun_o=   6|D_rA_o=  15|D_rB_o=  15
+# D_valC_o= 768|D_valP_o= 184|D_pc_o= 175
+# d_valA_o= 184|d_valB_o=   3|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
-# INOP
+# e_dst_i=   3|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=  15
+#                    0
+# IOPQ
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   6|E_ifun_o=   1|E_dstE_o=   3|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=   3|e_cnd_o=   1
 # 
 # INOP
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 777
+# M_icode_o=   1|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136:  2.
 # 
 # INOP
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   3|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# D_icode_o=   7|d_srcA_o=  15|d_srcB_o=  15
+# E_icode_o=   6|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -2944,6 +2994,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         13--                   3
 # r         14--                   4
 # r         15--                   x
+# cc is set to    4.
 # ----------------------D_valC_o<=f_valC_i;------------------
 # INOP
 # 
@@ -2951,48 +3002,49 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # Time=490000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 781|f_reg= 781|f_pc_o= 781
-# f_valC_o=   0|f_valP_o= 782
+# F_predPC_o= 769|f_reg= 769|f_pc_o= 769
+# f_valC_o=   0|f_valP_o= 770
 # 
 # INOP
-# Decode:		D_stall_i=0|D_bubble_i=0
+# Decode:		D_stall_i=0|D_bubble_i=1
 # D_stat_o=   0
 # D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 781|D_pc_o= 780
+# D_valC_o=   0|D_valP_o= 769|D_pc_o= 768
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=   3|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=  15
+#                    0
+# IJXX
+# Execute:		E_bubble_i=1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   7|E_ifun_o=   6|E_dstE_o=  15|E_valA_o= 184|E_valB_o=   3|E_valC_o= 768
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   0
 # 
-# INOP
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
-# 
-# INOP
+# IOPQ
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 778
+# M_icode_o=   6|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=   3|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 173
 # Memory 144: 16 | 136:  2.
 # 
 # INOP
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   3|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# E_icode_o=   7|E_dstM_o=  15|e_cnd_o=   0
+# M_icode_o=   6|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -3004,55 +3056,56 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         13--                   3
 # r         14--                   4
 # r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# INOP
+# ------------D---bubble-------D_valC_o<=64'b0;------------------
+# IJXX
 # 
 # 
 # Time=500000
 # Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 782|f_reg= 782|f_pc_o= 782
-# f_valC_o=   0|f_valP_o= 783
+# f_icode_o=   7|f_ifun_o=   2|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 770|f_reg= 770|f_pc_o= 184
+# f_valC_o= 768|f_valP_o= 193
 # 
 # INOP
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
 # D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 782|D_pc_o= 781
+# D_valC_o=   0|D_valP_o=   0|D_pc_o=   0
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=   3
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
-# INOP
+# IJXX
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 779
+# M_icode_o=   7|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o= 184|M_pc_o= 175
 # Memory 144: 16 | 136:  2.
 # 
-# INOP
+# IOPQ
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   6|W_valM_o=   3|W_valE_o=   0|W_dstE_o=   3|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# M_icode_o=   7|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -3071,22 +3124,23 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # Time=510000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 783|f_reg= 783|f_pc_o= 783
-# f_valC_o=   0|f_valP_o= 784
+# F_predPC_o= 768|f_reg= 768|f_pc_o= 768
+# f_valC_o=   0|f_valP_o= 769
 # 
-# INOP
+# IJXX
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 783|D_pc_o= 782
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   7|D_ifun_o=   2|D_rA_o=  15|D_rB_o=  15
+# D_valC_o= 768|D_valP_o= 193|D_pc_o= 184
+# d_valA_o= 193|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=  15
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
@@ -3094,25 +3148,25 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 780
+# M_icode_o=   1|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136:  2.
 # 
-# INOP
+# IJXX
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   7|W_valM_o=   3|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   7|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -3131,48 +3185,49 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # Time=520000
 # Fetch:		F_stall_i=0
 # f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 784|f_reg= 784|f_pc_o= 784
-# f_valC_o=   0|f_valP_o= 785
+# F_predPC_o= 769|f_reg= 769|f_pc_o= 769
+# f_valC_o=   0|f_valP_o= 770
 # 
 # INOP
-# Decode:		D_stall_i=0|D_bubble_i=0
+# Decode:		D_stall_i=0|D_bubble_i=1
 # D_stat_o=   0
 # D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 784|D_pc_o= 783
+# D_valC_o=   0|D_valP_o= 769|D_pc_o= 768
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
-# INOP
-# Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=  15
+#                    0
+# IJXX
+# Execute:		E_bubble_i=1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   7|E_ifun_o=   2|E_dstE_o=  15|E_valA_o= 193|E_valB_o=   0|E_valC_o= 768
+# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   0
 # 
 # INOP
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 781
+# M_icode_o=   1|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136:  2.
 # 
 # INOP
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   3|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# E_icode_o=   7|E_dstM_o=  15|e_cnd_o=   0
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -3184,55 +3239,56 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         13--                   3
 # r         14--                   4
 # r         15--                   x
-# ----------------------D_valC_o<=f_valC_i;------------------
-# INOP
+# ------------D---bubble-------D_valC_o<=64'b0;------------------
+# IJXX
 # 
 # 
 # Time=530000
 # Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 785|f_reg= 785|f_pc_o= 785
-# f_valC_o=   0|f_valP_o= 786
+# f_icode_o=   7|f_ifun_o=   3|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 770|f_reg= 770|f_pc_o= 193
+# f_valC_o= 212|f_valP_o= 202
 # 
 # INOP
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
 # D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 785|D_pc_o= 784
+# D_valC_o=   0|D_valP_o=   0|D_pc_o=   0
 # d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=  15
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
-# INOP
+# IJXX
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 782
+# M_icode_o=   7|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o= 193|M_pc_o= 184
 # Memory 144: 16 | 136:  2.
 # 
 # INOP
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   3|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
 # D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# M_icode_o=   7|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -3245,28 +3301,29 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
-# INOP
+# ICALL
 # 
 # 
 # Time=540000
 # Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 786|f_reg= 786|f_pc_o= 786
-# f_valC_o=   0|f_valP_o= 787
+# f_icode_o=   8|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
+# F_predPC_o= 212|f_reg= 212|f_pc_o= 212
+# f_valC_o= 288|f_valP_o= 221
 # 
-# INOP
+# IJXX
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 786|D_pc_o= 785
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   7|D_ifun_o=   3|D_rA_o=  15|D_rB_o=  15
+# D_valC_o= 212|D_valP_o= 202|D_pc_o= 193
+# d_valA_o= 202|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=  15
+#                    0
 # INOP
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
 # E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
@@ -3274,25 +3331,25 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 783
+# M_icode_o=   1|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136:  2.
 # 
-# INOP
+# IJXX
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   7|W_valM_o=   3|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   7|d_srcA_o=  15|d_srcB_o=  15
 # E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -3305,54 +3362,55 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
-# INOP
+# IOPQ
 # 
 # 
 # Time=550000
 # Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 787|f_reg= 787|f_pc_o= 787
-# f_valC_o=   0|f_valP_o= 788
+# f_icode_o=   6|f_ifun_o=   3|f_rA_o=   0|f_rB_o=   0
+# F_predPC_o= 288|f_reg= 288|f_pc_o= 288
+# f_valC_o=   0|f_valP_o= 290
 # 
-# INOP
+# ICALL
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 787|D_pc_o= 786
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   8|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
+# D_valC_o= 288|D_valP_o= 221|D_pc_o= 212
+# d_valA_o= 221|d_valB_o= 144|d_dstE_o=   4|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=   4
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
-# INOP
+# e_dst_i=  15|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=  15
+#                    0
+# IJXX
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   7|E_ifun_o=   3|E_dstE_o=  15|E_valA_o= 202|E_valB_o=   0|E_valC_o= 212
 # e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
 # 
 # INOP
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 784
+# M_icode_o=   1|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o=   0
 # Memory 144: 16 | 136:  2.
 # 
 # INOP
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   3|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
+# D_icode_o=   8|d_srcA_o=  15|d_srcB_o=   4
+# E_icode_o=   7|E_dstM_o=  15|e_cnd_o=   1
 # M_icode_o=   1|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -3365,54 +3423,55 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
-# INOP
+# IOPQ
 # 
 # 
 # Time=560000
 # Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 788|f_reg= 788|f_pc_o= 788
-# f_valC_o=   0|f_valP_o= 789
+# f_icode_o=   6|f_ifun_o=   3|f_rA_o=   0|f_rB_o=   0
+# F_predPC_o= 290|f_reg= 290|f_pc_o= 290
+# f_valC_o=   0|f_valP_o= 292
 # 
-# INOP
+# IOPQ
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 788|D_pc_o= 787
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   6|D_ifun_o=   3|D_rA_o=   0|D_rB_o=   0
+# D_valC_o=   0|D_valP_o= 290|D_pc_o= 288
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=   0|d_dstM_o=  15|d_srcA_o=   0|d_srcB_o=   0
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
-# INOP
+# e_dst_i=   4|e_vale_i= 136|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=  15|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=  15
+#                    0
+# ICALL
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   8|E_ifun_o=   0|E_dstE_o=   4|E_valA_o= 221|E_valB_o= 144|E_valC_o= 288
+# e_valE_o= 136|e_dstE_o=   4|e_cnd_o=   1
 # 
-# INOP
+# IJXX
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 785
+# M_icode_o=   7|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=  15|M_dstM_o=  15|M_valA_o= 202|M_pc_o= 193
 # Memory 144: 16 | 136:  2.
 # 
 # INOP
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   1|W_valM_o=   3|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# D_icode_o=   6|d_srcA_o=   0|d_srcB_o=   0
+# E_icode_o=   8|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   7|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -3425,54 +3484,55 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         14--                   4
 # r         15--                   x
 # ----------------------D_valC_o<=f_valC_i;------------------
-# INOP
+# IOPQ
 # 
 # 
 # Time=570000
 # Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 789|f_reg= 789|f_pc_o= 789
-# f_valC_o=   0|f_valP_o= 790
+# f_icode_o=   6|f_ifun_o=   3|f_rA_o=   0|f_rB_o=   0
+# F_predPC_o= 292|f_reg= 292|f_pc_o= 292
+# f_valC_o=   0|f_valP_o= 294
 # 
-# INOP
+# IOPQ
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 789|D_pc_o= 788
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   6|D_ifun_o=   3|D_rA_o=   0|D_rB_o=   0
+# D_valC_o=   0|D_valP_o= 292|D_pc_o= 290
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=   0|d_dstM_o=  15|d_srcA_o=   0|d_srcB_o=   0
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
-# INOP
+# e_dst_i=   0|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=   4|M_valE_i= 136
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=  15
+#                    0
+# IOPQ
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   6|E_ifun_o=   3|E_dstE_o=   0|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=   0|e_cnd_o=   1
 # 
-# INOP
+# ICALL
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 786
-# Memory 144: 16 | 136:  2.
+# M_icode_o=   8|m_valM_o=   3|M_valE_o= 136
+# M_dstE_o=   4|M_dstM_o=  15|M_valA_o= 221|M_pc_o= 212
+# Memory 144: 16 | 136:221.
 # 
-# INOP
+# IJXX
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   7|W_valM_o=   3|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
 # 
 # controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# D_icode_o=   6|d_srcA_o=   0|d_srcB_o=   0
+# E_icode_o=   6|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   8|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -3484,55 +3544,57 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         13--                   3
 # r         14--                   4
 # r         15--                   x
+# cc is set to    4.
 # ----------------------D_valC_o<=f_valC_i;------------------
-# INOP
+# IOPQ
 # 
 # 
 # Time=580000
 # Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 790|f_reg= 790|f_pc_o= 790
-# f_valC_o=   0|f_valP_o= 791
+# f_icode_o=   6|f_ifun_o=   3|f_rA_o=   0|f_rB_o=   0
+# F_predPC_o= 294|f_reg= 294|f_pc_o= 294
+# f_valC_o=   0|f_valP_o= 296
 # 
-# INOP
+# IOPQ
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 790|D_pc_o= 789
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   6|D_ifun_o=   3|D_rA_o=   0|D_rB_o=   0
+# D_valC_o=   0|D_valP_o= 294|D_pc_o= 292
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=   0|d_dstM_o=  15|d_srcA_o=   0|d_srcB_o=   0
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
-# INOP
+# e_dst_i=   0|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=   0|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=   4
+#                  136
+# IOPQ
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   6|E_ifun_o=   3|E_dstE_o=   0|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=   0|e_cnd_o=   1
 # 
-# INOP
+# IOPQ
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 787
-# Memory 144: 16 | 136:  2.
+# M_icode_o=   6|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=   0|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 288
+# Memory 144: 16 | 136:221.
 # 
-# INOP
+# ICALL
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   8|W_valM_o=   3|W_valE_o= 136|W_dstE_o=   4|W_dstM_o=  15
 # 
 # controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# D_icode_o=   6|d_srcA_o=   0|d_srcB_o=   0
+# E_icode_o=   6|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   6|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 144
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -3544,55 +3606,57 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         13--                   3
 # r         14--                   4
 # r         15--                   x
+# cc is set to    4.
 # ----------------------D_valC_o<=f_valC_i;------------------
-# INOP
+# IOPQ
 # 
 # 
 # Time=590000
 # Fetch:		F_stall_i=0
-# f_icode_o=   1|f_ifun_o=   0|f_rA_o=   f|f_rB_o=   f
-# F_predPC_o= 791|f_reg= 791|f_pc_o= 791
-# f_valC_o=   0|f_valP_o= 792
+# f_icode_o=   6|f_ifun_o=   3|f_rA_o=   0|f_rB_o=   0
+# F_predPC_o= 296|f_reg= 296|f_pc_o= 296
+# f_valC_o=   0|f_valP_o= 298
 # 
-# INOP
+# IOPQ
 # Decode:		D_stall_i=0|D_bubble_i=0
 # D_stat_o=   0
-# D_icode_o=   1|D_ifun_o=   0|D_rA_o=  15|D_rB_o=  15
-# D_valC_o=   0|D_valP_o= 791|D_pc_o= 790
-# d_valA_o=   0|d_valB_o=   0|d_dstE_o=  15|d_dstM_o=  15|d_srcA_o=  15|d_srcB_o=  15
+# D_icode_o=   6|D_ifun_o=   3|D_rA_o=   0|D_rB_o=   0
+# D_valC_o=   0|D_valP_o= 296|D_pc_o= 294
+# d_valA_o=   0|d_valB_o=   0|d_dstE_o=   0|d_dstM_o=  15|d_srcA_o=   0|d_srcB_o=   0
 # 
 # FORWARDING:
-# W_dstM_o=  15|W_valM_o=   2|W_dstE_o=  15|W_valE_o=   0
-# 
-# INOP
+# e_dst_i=   0|e_vale_i=   0|M_dstM_i=  15|m_valM_i=   3|M_dstE_i=   0|M_valE_i=   0
+# W_dstM_o=  15|W_valM_o=  15|W_dstE_o=   3|W_valE_o=   0
+#                    0
+# IOPQ
 # Execute:		E_bubble_i=0
-# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   0
-# E_icode_o=   1|E_ifun_o=   0|E_dstE_o=  15|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
-# e_valE_o=   0|e_dstE_o=  15|e_cnd_o=   1
+# E_stat_o=   0|e_stat_o=   0|cc_debug_o=   4
+# E_icode_o=   6|E_ifun_o=   3|E_dstE_o=   0|E_valA_o=   0|E_valB_o=   0|E_valC_o=   0
+# e_valE_o=   0|e_dstE_o=   0|e_cnd_o=   1
 # 
-# INOP
+# IOPQ
 # Memory:		M_bubble_i=0
 # M_stat_o=0
 # m_stat_o=0
-# M_icode_o=   1|m_valM_o=   2|M_valE_o=   0
-# M_dstE_o=  15|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 788
-# Memory 144: 16 | 136:  2.
+# M_icode_o=   6|m_valM_o=   3|M_valE_o=   0
+# M_dstE_o=   0|M_dstM_o=  15|M_valA_o=   0|M_pc_o= 290
+# Memory 144: 16 | 136:221.
 # 
-# INOP
+# IOPQ
 # WriteBack:		W_stall_i=0
 # W_stat_o=0
-# W_icode_o=   1|W_valM_o=   2|W_valE_o=   0|W_dstE_o=  15|W_dstM_o=  15
+# W_icode_o=   6|W_valM_o=   3|W_valE_o=   0|W_dstE_o=   0|W_dstM_o=  15
 # 
 # controller:
-# D_icode_o=   1|d_srcA_o=  15|d_srcB_o=  15
-# E_icode_o=   1|E_dstM_o=  15|e_cnd_o=   1
-# M_icode_o=   1|m_stat_o=0|W_stat_o=   0
+# D_icode_o=   6|d_srcA_o=   0|d_srcB_o=   0
+# E_icode_o=   6|E_dstM_o=  15|e_cnd_o=   1
+# M_icode_o=   6|m_stat_o=0|W_stat_o=   0
 # 
-# r          0--                   2
+# r          0--                   0
 # r          1--                   1
 # r          2--                   0
 # r          3--                   0
-# r          4--                   0
+# r          4--                 136
 # r          5--                   0
 # r          6--                   0
 # r          7--                   0
@@ -3604,6 +3668,7 @@ Reading D:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl
 # r         13--                   3
 # r         14--                   4
 # r         15--                   x
+# cc is set to    4.
 # ----------------------D_valC_o<=f_valC_i;------------------
 # ** Note: $finish    : test_writeback.v(54)
 #    Time: 600 ns  Iteration: 0  Instance: /test_writeback

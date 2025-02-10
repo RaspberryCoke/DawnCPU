@@ -44,7 +44,7 @@ reg dmem_error;
 
 integer i;
 
-always@(posedge clk_i)begin 
+always@(*)begin 
     if(~rst_n_i)begin
         stat=`SAOK;
         icode=`INOP;
@@ -113,10 +113,13 @@ always@(posedge clk_i)begin
                 end
             `IPOPQ:begin 
                 r_en=1'b1;w_en=1'b0;
+                $display("----------------POP--------begin-----------------------------------------------");
                 if(valA>=1023)begin 
                     dmem_error=1;
+                    $display("----------------POP-ERROR-----------------------------------------------------------",valE,valA);
                 end else begin
                     valM=drams[valA];
+                    $display("----------------POP-----valM=%4d=drams[valA=%d];------------------------------------------------------",valM,valA);
                     end
                 end
             `ICALL:begin 

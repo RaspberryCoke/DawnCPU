@@ -37,9 +37,9 @@ wire sf=cc[1];
 wire zf=cc[2];
 
 assign aluA=(icode_i==`IRRMOVQ||icode_i==`IOPQ)?valA_i:
-            (icode_i==`IIRMOVQ||icode_i==`IRMMOVQ)?valC_i:
+            (icode_i==`IIRMOVQ||icode_i==`IRMMOVQ||icode_i==`IMRMOVQ)?valC_i:///
             (icode_i==`ICALL||icode_i==`IPUSHQ)?-8:
-            (icode_i==`IRET||icode_i==`IPUSHQ)?8:0;
+            (icode_i==`IRET||icode_i==`IPOPQ)?8:0;
 assign aluB=(icode_i==`IRMMOVQ||icode_i==`IMRMOVQ||
             icode_i==`IOPQ||icode_i==`ICALL||
             icode_i==`IPUSHQ||icode_i==`IRET||

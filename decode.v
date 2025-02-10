@@ -43,7 +43,7 @@ assign d_srcA_o=(D_icode_i==`IRRMOVQ || D_icode_i==`IRMMOVQ ||
                 D_icode_i==`IOPQ ||D_icode_i==`IPUSHQ )?D_rA_i:
                 (D_icode_i==`IPOPQ || D_icode_i==`IRET)?`RRSP:`RNONE;
 assign d_srcB_o=(D_icode_i==`IOPQ ||D_icode_i==`IRMMOVQ ||D_icode_i==`IMRMOVQ)?D_rB_i:
-                (D_icode_i==`ICALL||D_icode_i==`IPUSHQ||D_icode_i==`IRET)?`RRSP:`RNONE;
+                (D_icode_i==`ICALL||D_icode_i==`IPUSHQ||D_icode_i==`IPOPQ||D_icode_i==`IRET)?`RRSP:`RNONE;
 assign d_dstE_o=(D_icode_i==`IRRMOVQ||D_icode_i==`IIRMOVQ||D_icode_i==`IOPQ)?D_rB_i:
                 (D_icode_i==`IPUSHQ||D_icode_i==`IPOPQ||
                 D_icode_i==`ICALL||D_icode_i==`IRET)?`RRSP:`RNONE;

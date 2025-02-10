@@ -26,7 +26,7 @@ initial begin
             D_stall_i,D_bubble_i,D_stat_o,D_icode_o,D_ifun_o,D_rA_o,D_rB_o,D_valC_o,D_valP_o,D_pc_o);
 
         $display("d_valA_o=%4d|d_valB_o=%4d|d_dstE_o=%4d|d_dstM_o=%4d|d_srcA_o=%4d|d_srcB_o=%4d\n",d_valA_o,d_valB_o,d_dstE_o,d_dstM_o,d_srcA_o,d_srcB_o);
-        $display("FORWARDING:\nW_dstM_o=%4d|W_valM_o=%4d|W_dstE_o=%4d|W_valE_o=%4d\n",W_dstM_o,W_valM_o,W_dstE_o,W_valE_o);
+        $display("FORWARDING:\ne_dst_i=%4d|e_vale_i=%4d|M_dstM_i=%4d|m_valM_i=%4d|M_dstE_i=%4d|M_valE_i=%4d\nW_dstM_o=%4d|W_valM_o=%4d|W_dstE_o=%4d|W_valE_o=%4d\n",e_dstE_o,e_valE_o,M_dstM_o,m_valM_o,M_dstE_o,M_valE_o,W_dstM_o,W_dstM_o,W_valM_o,W_dstE_o,W_valE_o);
         print_opcode_name(E_icode_o);
         $display("Execute:\t\tE_bubble_i=%1d\nE_stat_o=%4d|e_stat_o=%4d|cc_debug_o=%4d\nE_icode_o=%4d|E_ifun_o=%4d|E_dstE_o=%4d|E_valA_o=%4d|E_valB_o=%4d|E_valC_o=%4d\ne_valE_o=%4d|e_dstE_o=%4d|e_cnd_o=%4d\n",
             E_bubble_i,E_stat_o ,e_stat_o,cc_debug_o,E_icode_o,E_ifun_o,E_dstE_o,E_valA_o,E_valB_o,E_valC_o,e_valE_o,e_dstE_o,e_cnd_o);
@@ -381,10 +381,10 @@ writeback writeback_module(
     .bubble_i(W_bubble_i),
 
     .icode_i(m_icode_o),
-    .valE_i(M_valE_o),
+    .valE_i(m_valE_o),
     .valM_i(m_valM_o),
-    .dstE_i(M_dstE_o),
-    .dstM_i(M_dstM_o),
+    .dstE_i(m_dstE_o),
+    .dstM_i(m_dstM_o),
     .stat_i(m_stat_o),
 
     .valM_o(W_valM_o),
