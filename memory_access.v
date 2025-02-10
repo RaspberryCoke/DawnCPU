@@ -46,94 +46,97 @@ integer i;
 
 always@(posedge clk_i)begin 
     if(~rst_n_i)begin
-        stat<=`SAOK;
-        icode<=`INOP;
+        stat=`SAOK;
+        icode=`INOP;
 
-        valA<=0;
-        valE<=0;
+        valA=0;
+        valE=0;
         valM<=0;
-        dstE<=`RNONE;
-        dstM<=`RNONE;
+        dstE=`RNONE;
+        dstM=`RNONE;
 
-        r_en<=0;
-        w_en<=0;
-        dmem_error<=0;
+        r_en=0;
+        w_en=0;
+        dmem_error=0;
         for(i=0;i<1024;i=i+1)begin 
             drams[i]=8'H10;
         end
     end else if(bubble_i)begin //BUBBLE时，继承的状态是什么
-        stat<=`SAOK;
-        icode<=`INOP;
-        valA<=0;
-        valE<=0;
-        valM<=0;
-        dstE<=`RNONE;
-        dstM<=`RNONE;
-        r_en<=0;
-        w_en<=0;
-        dmem_error<=0;
+        stat=`SAOK;
+        icode=`INOP;
+        valA=0;
+        valE=0;
+        valM=0;
+        dstE=`RNONE;
+        dstM=`RNONE;
+        r_en=0;
+        w_en=0;
+        dmem_error=0;
     end else  if(~stall_i)begin 
-        dmem_error<=0;
-        stat<=stat_i;
-        icode<=icode_i;
-        valA<=valA_i;
-        valE<=valE_i;
-        dstE<=dstE_i;
-        dstM<=dstM_i;
+        dmem_error=0;
+        stat=stat_i;
+        icode=icode_i;
+        valA=valA_i;
+        valE=valE_i;
+        dstE=dstE_i;
+        dstM=dstM_i;
         case(icode_i)
             `IRMMOVQ:begin 
-                r_en<=1'b0;w_en<=1'b1;
+                r_en=1'b0;w_en<=1'b1;
                 if(valE>=1023)begin 
-                    dmem_error<=1;
+                    dmem_error=1;
                 end else begin
-                    drams[valE]<=valA;
+                    drams[valE]=valA;
                     end
                 end
             `IMRMOVQ:begin 
-                r_en<=1'b1;w_en<=1'b0;
+                r_en=1'b1;w_en=1'b0;
                 if(valE>=1023)begin 
-                    dmem_error<=1;
+                    dmem_error=1;
                 end else begin
-                    valM<=drams[valE]; 
+                    valM=drams[valE]; 
                     end
                 end
             `IHALT,`INOP,`IIRMOVQ,`IOPQ,`IJXX,`IRRMOVQ:begin 
-                r_en<=1'b0;w_en<=1'b0;
+                r_en=1'b0;w_en=1'b0;
                 end
             `IPUSHQ:begin 
-                r_en<=1'b0;w_en<=1'b1;
+                r_en=1'b0;w_en=1'b1;
+                $display("----------------PUSH--------begin-----------------------------------------------");
                 if(valE>=1023)begin 
-                    dmem_error<=1;
+                    dmem_error=1;
+                    $display("----------------PUSH-ERROR-------drams[valE=%d]<=valA=%d;------------------------------------------------------",valE,valA);
                 end else begin
-                    drams[valE]<=valA; 
+                    drams[valE]=valA; 
+                    $display("----------------PUSH--------drams[valE=%d]<=valA=%d;------------------------------------------------------",valE,valA);
                     end
                 end
             `IPOPQ:begin 
-                r_en<=1'b1;w_en<=1'b0;
+                r_en=1'b1;w_en=1'b0;
                 if(valA>=1023)begin 
-                    dmem_error<=1;
+                    dmem_error=1;
                 end else begin
-                    valM<=drams[valA];
+                    valM=drams[valA];
                     end
                 end
             `ICALL:begin 
-                r_en<=1'b0;w_en<=1'b1;
+                r_en=1'b0;w_en=1'b1;
                 if(valE>=1023)begin 
-                    dmem_error<=1;
+                    dmem_error=1;
                 end else begin
-                    drams[valE]<=valA; //change from valP_i to valA_i
+                    drams[valE]=valA; //change from valP_i to valA_i
                     end
                 end
             `IRET:begin 
-                r_en<=1'b1;w_en<=1'b0;
+                r_en=1'b1;w_en=1'b0;
                 if(valA>=1023)begin 
-                    dmem_error<=1;
+                    dmem_error=1;
                 end else begin
-                    valM<=drams[valA];
+                    valM=drams[valA];
                     end
                 end
             default:begin 
-                r_en<=1'b0;w_en<=1'b0;
+                r_en=1'b0;w_en=1'b0;
                 end
         endcase
 

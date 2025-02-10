@@ -18,22 +18,23 @@ initial begin
 
     #5 $display("----------begin--------");
     forever begin
-        
+        print_opcode_name(f_icode_o);
         $display("\n\nTime=%0t\nFetch:\t\tF_stall_i=%1d\nf_icode_o=%4h|f_ifun_o=%4h|f_rA_o=%4h|f_rB_o=%4h\nF_predPC_o=%4d|f_reg=%4d|f_pc_o=%4d\nf_valC_o=%4d|f_valP_o=%4d\n",
             $time, F_stall_i,f_icode_o, f_ifun_o,f_rA_o, f_rB_o,F_predPC_o,f_reg.predPC,f_pc_o,f_valC_o,f_valP_o);
-
+        print_opcode_name(D_icode_o);
         $display("Decode:\t\tD_stall_i=%1d|D_bubble_i=%1d\nD_stat_o=%4d\nD_icode_o=%4d|D_ifun_o=%4d|D_rA_o=%4d|D_rB_o=%4d\nD_valC_o=%4d|D_valP_o=%4d|D_pc_o=%4d",
             D_stall_i,D_bubble_i,D_stat_o,D_icode_o,D_ifun_o,D_rA_o,D_rB_o,D_valC_o,D_valP_o,D_pc_o);
 
         $display("d_valA_o=%4d|d_valB_o=%4d|d_dstE_o=%4d|d_dstM_o=%4d|d_srcA_o=%4d|d_srcB_o=%4d\n",d_valA_o,d_valB_o,d_dstE_o,d_dstM_o,d_srcA_o,d_srcB_o);
         $display("FORWARDING:\nW_dstM_o=%4d|W_valM_o=%4d|W_dstE_o=%4d|W_valE_o=%4d\n",W_dstM_o,W_valM_o,W_dstE_o,W_valE_o);
-
+        print_opcode_name(E_icode_o);
         $display("Execute:\t\tE_bubble_i=%1d\nE_stat_o=%4d|e_stat_o=%4d|cc_debug_o=%4d\nE_icode_o=%4d|E_ifun_o=%4d|E_dstE_o=%4d|E_valA_o=%4d|E_valB_o=%4d|E_valC_o=%4d\ne_valE_o=%4d|e_dstE_o=%4d|e_cnd_o=%4d\n",
             E_bubble_i,E_stat_o ,e_stat_o,cc_debug_o,E_icode_o,E_ifun_o,E_dstE_o,E_valA_o,E_valB_o,E_valC_o,e_valE_o,e_dstE_o,e_cnd_o);
-
-        $display("Memory:\t\tM_bubble_i=%1d\nM_stat_o=%1d\nm_stat_o=%1d\nM_icode_o=%4d|m_valM_o=%4d|M_valE_o=%4d\nM_dstE_o=%4d|M_dstM_o=%4d|M_valA_o=%4d|M_pc_o=%4d\n",
+        print_opcode_name(M_icode_o);
+        $display("Memory:\t\tM_bubble_i=%1d\nM_stat_o=%1d\nm_stat_o=%1d\nM_icode_o=%4d|m_valM_o=%4d|M_valE_o=%4d\nM_dstE_o=%4d|M_dstM_o=%4d|M_valA_o=%4d|M_pc_o=%4d",
                     M_bubble_i,M_stat_o,m_stat_o,M_icode_o,m_valM_o,M_valE_o,M_dstE_o,M_dstM_o,M_valA_o,M_pc_o);
-
+        $display("Memory 144:%d | 136:%d.\n",memory_module.drams[144],memory_module.drams[136]);
+        print_opcode_name(W_icode_o);
         $display("WriteBack:\t\tW_stall_i=%1d\nW_stat_o=%1d\nW_icode_o=%4d|W_valM_o=%4d|W_valE_o=%4d|W_dstE_o=%4d|W_dstM_o=%4d\n",
         W_stall_i,W_stat_o,W_icode_o,W_valM_o,W_valE_o,W_dstE_o,W_dstM_o);
 
@@ -412,6 +413,26 @@ controller controller_module(
     .M_bubble_o(M_bubble_i),
     .W_stall_o(W_stall_i)
 );
+
+// 定义打印操作码对应宏名称的任务
+  task print_opcode_name(input [3:0] op);
+    case (op)
+      `IHALT:    $display("IHALT");
+      `INOP:     $display("INOP");
+      `ICMOVQ:   $display("ICMOVQ");
+      `IRRMOVQ:  $display("IRRMOVQ");
+      `IIRMOVQ:  $display("IIRMOVQ");
+      `IRMMOVQ:  $display("IRMMOVQ");
+      `IMRMOVQ:  $display("IMRMOVQ");
+      `IOPQ:     $display("IOPQ");
+      `IJXX:     $display("IJXX");
+      `ICALL:    $display("ICALL");
+      `IRET:     $display("IRET");
+      `IPUSHQ:   $display("IPUSHQ");
+      `IPOPQ:    $display("IPOPQ");
+      default:   $display("Unknown opcode: %h", op);
+    endcase
+  endtask
 
 
 endmodule
